@@ -1,12 +1,14 @@
 # PHP面试问答
 
-PHP Interview Questions and Answers
+结合实际PHP面试，汇总自己遇到的问题，以及网上其他人遇到的问题，尝试提供简洁准确的答案
+
+包含MySQL、Redis、Web、安全、网络协议、PHP、服务器、业务设计、线上故障、个人简历、自我介绍、离职原因、职业规划、准备问题等部分
 
 # 一般面试流程
 
 ![面试流程](./assets/interview-01.png)
 
-# 目录
+# QA目录
 
 MySQL
 
