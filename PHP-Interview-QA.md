@@ -775,3 +775,9 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 - 6.融资计划
 
 - 7.是否有加班费/调休，公司福利，社保公积金缴纳基数
+
+# 结束声明
+
+> 本资料仅供参考，不保证正确性
+
+> 作者：凌枫 Email：colinlets@gmail.com 链接：https://github.com/colinlet/PHP-Interview-QA
