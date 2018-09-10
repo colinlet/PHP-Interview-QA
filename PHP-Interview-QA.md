@@ -286,18 +286,21 @@
 >属性：element、padding、border、margin
 >显示方式：block、inline、flex
 
-## 7.相对定位relative、浮动float、绝对定位absolute区别
+## 7.CSS清除浮动
+
+## 8.相对定位relative、浮动float、绝对定位absolute区别
 
 >相对定位：按一定偏移量依次排列定位
 >浮动定位：浮动框可以向左/右便宜，不影响后续框
 >绝对定位：每个定位框都是一个单独的图层，不会对其他层框的定位产生影响
 
-## 8.vue双向绑定原理
+## 9.vue双向绑定原理
 
 >发布者-订阅模式(backbone.js)、脏值检查(angular.js)、数据劫持(vue.js)
+
 >vue.js则是采用数据劫持结合发布者-订阅者模式的方式，通过Object.defineProperty()来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调
 
-## 9.性能优化
+## 10.性能优化
 
 >js/css合并、使用CDN、图片合并、利用HTTP缓存机制、开启gzip压缩、浏览器加载/解析/渲染机制
 
@@ -548,6 +551,12 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 >php数组实现由hashtable变为zend array
 >函数调用机制，改进函数调用机制，通过优化参数传递环节，减少了一些指令
 
+## 22.构造函数和析构函数
+
+## 23.php不实例化调用方法
+
+>CLASS::METHOD() 静态方法
+
 ## 参考资料
 
 - [深入理解php内核](http://www.php-internals.com/book/)
@@ -556,6 +565,7 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 - [PHP7革新与性能优化](http://hansionxu.blog.163.com/blog/static/24169810920158704014772/)
 - [常用设计模式汇总](https://juejin.im/entry/58041fc10e3dd9005713384e)
 - [腾讯开源Biny框架](https://github.com/Tencent/Biny)
+- [类与对象](http://php.net/manual/zh/language.oop5.php)
 
 # 服务器
 
