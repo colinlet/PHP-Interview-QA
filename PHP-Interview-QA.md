@@ -358,27 +358,31 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 # 网络协议
 
-## 1.HTTP协议
+## 1.UDP的主要特点
+
+>无连接的、尽最大努力交付、面向报文、没有拥塞控制、支持一对一，一对多和多对多的交互通信、首部开销小
+
+## 2.TCP握手三次，断开四次？
+
+![建立TCP连接](./assets/tcp-01.png)
+
+![TCP连接释放](./assets/tcp-02.png)
+
+## 3.socket
+
+>socket：网络中进程通过socket进行通信
+>基本操作：socket()、bind()、listen()/connect()、accept()、read()/write()、close()
+
+## 4.HTTP协议
 
 >http方法
 >http首部字段
 >http状态码
 >http2特点：二进制协议、多路复用、头压缩、服务器推送
 
-## 2.websocket协议
+## 5.websocket协议
 
 >HTTP握手，通过首部字段upgrade标识websocket，切换协议，进行通信
-
-## 3.TCP握手三次，断开四次？
-
->SYN-ACK-SYN、FIN-ACK/CLOSE_WAIT/FIN-ACK
-
-## 4.UDP
-
-## 5.socket
-
->socket：网络中进程通过socket进行通信
->基本操作：socket()、bind()、listen()/connect()、accept()、read()/write()、close()
 
 ## 6.GET与POST请求方式区别
 
