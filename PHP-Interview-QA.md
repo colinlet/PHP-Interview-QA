@@ -203,7 +203,7 @@
 
 >行锁:只锁住特定行的数据，并发能力强，MySQL一般都是用行锁来处理并发事务
 
-## 8.BTree与B-Tree/B+Tree索引原理
+## 8.BTree与BTree-/BTree+索引原理
 
 - BTree
 
@@ -331,7 +331,7 @@
 
 >绝对定位：每个定位框都是一个单独的图层，不会对其他层框的定位产生影响
 
-## 9.vue双向绑定原理
+## 9.VUE双向绑定原理
 
 >发布者-订阅模式(backbone.js)、脏值检查(angular.js)、数据劫持(vue.js)
 
@@ -389,7 +389,7 @@ SELECT * FROM table WHERE id=1;DELECT FROM table WHERE id=1;
 SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 ```
 
-## 4.ip地址能被伪造吗
+## 4.IP地址能被伪造吗
 
 ## 5.include请求参数
 
@@ -408,7 +408,7 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 >无连接的、尽最大努力交付、面向报文、没有拥塞控制、支持一对一，一对多和多对多的交互通信、首部开销小
 
-## 2.TCP握手三次，断开四次？
+## 2.TCP握手三次，断开四次，TIME-WAIT
 
 ![建立TCP连接](./assets/tcp-01.png)
 
@@ -422,13 +422,13 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 ## 4.HTTP协议
 
->http方法
+>HTTP方法
 
->http首部字段
+>HTTP首部字段
 
->http状态码
+>HTTP状态码
 
->http2特点：二进制协议、多路复用、头压缩、服务器推送
+>HTTP2特点：二进制协议、多路复用、头压缩、服务器推送
 
 ## 5.websocket协议
 
@@ -464,13 +464,13 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 > `$GLOBALS`、`$_SERVER`、`$_GET`、`$_POST`、`$_FILES`、`$_COOKIE`、`$_SESSION`、`$_REQUEST`、`$_ENV`
 
-## 3.php支持回调的函数？实现一个？
+## 3.PHP支持回调的函数，实现一个
 
 >array_map、array_filter、array_walk、usort
 
 >is_callable + callbacks + 匿名函数实现
 
-## 4.发起http请求有哪几种方式？它们有何区别？
+## 4.发起HTTP请求有哪几种方式，它们有何区别
 
 >cURL、file_get_contents、fopen、fsockopen
 
@@ -567,7 +567,7 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 >>设计原则：对扩展开放，对修改关闭
 >>使用场景：路由功能
 
-## 10.工厂方法模式与抽象工厂模式区别？
+## 10.工厂方法模式与抽象工厂模式区别
 
 >工厂方法模式只有一个抽象产品类，而抽象工厂模式有多个
 
@@ -579,13 +579,13 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 ## 13.代码执行过程
 
->php代码 => 启动php及zend引擎，加载注册拓展模块 => 对代码进行词法/语法分析 => 编译成opcode(opcache) => 执行opcode
+>PHP代码 => 启动php及zend引擎，加载注册拓展模块 => 对代码进行词法/语法分析 => 编译成opcode(opcache) => 执行opcode
 
 >当前作用域分配内存，充当运行栈，局部变量分配在当前栈，函数调用时压栈，返回时出栈
 
 ## 14.弱类型变量如何实现
 
->php中声明的变量，在zend引擎中都是用结构体zval来保存，通过共同体实现弱类型变量声明
+>PHP中声明的变量，在zend引擎中都是用结构体zval来保存，通过共同体实现弱类型变量声明
 
 ## 15.垃圾回收机制
 
@@ -603,31 +603,31 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 >加锁、队列
 
-## 19.php拓展
+## 19.PHP拓展
 
-## 20.php7新特性
+## 20.PHP7新特性
 
 >标量类型声明、返回值类型声明、通过define()定义常量数组、匿名类、相同命名空间类一次性导入
 
-## 21.php7底层优化
+## 21.PHP7底层优化
 
->zval结构体优化，占用由24字节降低为16字节
+>ZVAL结构体优化，占用由24字节降低为16字节
 
 >内部类型zend_string，结构体成员变量采用char数组，不是用char*
 
->php数组实现由hashtable变为zend array
+>PHP数组实现由hashtable变为zend array
 
 >函数调用机制，改进函数调用机制，通过优化参数传递环节，减少了一些指令
 
 ## 22.构造函数和析构函数
 
-## 23.php不实例化调用方法
+## 23.PHP不实例化调用方法
 
 >CLASS::METHOD() 静态方法
 
 ## 参考资料
 
-- [深入理解php内核](http://www.php-internals.com/book/)
+- [深入理解PHP内核](http://www.php-internals.com/book/)
 - [PHP中的回调、匿名函数与闭包](http://jalan.space/2017/07/21/2017-07-21-php-callback/)
 - [从PHP 5.6.x 移植到 PHP 7.0.x](http://php.net/manual/zh/migration70.php)
 - [PHP7革新与性能优化](http://hansionxu.blog.163.com/blog/static/24169810920158704014772/)
@@ -637,7 +637,7 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 # 服务器
 
-## 1.进程、线程、协程区别？
+## 1.进程、线程、协程区别
 
 - 进程(process)
 
@@ -651,7 +651,7 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 >协程是一种用户态的轻量级线程，又称微线程，英文名Coroutine，协程的调度完全由用户控制
 
-## 2.linux进程
+## 2.Linux进程
 
 >进程属性：进程号pid、父进程号ppid、进程组号pgid
 
@@ -695,15 +695,15 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 ## 5.nginx中fastcgi_pass监听，unix socket和tcp socket的区别
 
->nginx和fastcgi通信方式有两种:tcp、unix socket
+>nginx和fastcgi通信方式有两种:TCP、unix socket
 
->tcp和socket方式区别
+>TCP和socket方式区别
 
 >socket可以很方便进行进程通信，可以使用字节流和数据队列方式，而管道通信只能通过字节流
 
->socket比tcp方式消耗资源更少，高并发时tcp方式更稳定
+>socket比TCP方式消耗资源更少，高并发时tcp方式更稳定
 
->tcp方式做负载均衡更方便
+>TCP方式做负载均衡更方便
 
 ## 6.消息队列
 
@@ -738,7 +738,7 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 ## 1.客户端热更新失败
 
-## 2.redis实例used_memory达到80%
+## 2.Redis实例used_memory达到80%
 
 ## 3.游戏任务完成了进度未更新
 
@@ -762,7 +762,7 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 - 1.工作挑战大不大?
 
-- 2.项目开发是否写测试用例，项目上线先是否会进行压力测试？
+- 2.项目开发是否写测试用例，项目上线先是否会进行压力测试
 
 - 3.业务前景如何?
 
