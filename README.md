@@ -2,6 +2,10 @@
 
 PHP Interview Questions and Answers
 
+# 一般面试流程
+
+![面试流程](./assets/interview-01.png)
+
 # 目录
 
 MySQL
@@ -112,6 +116,8 @@ PHP
 - 游戏任务完成了进度未更新
 - 测试服HTTP请求未响应
 - 游戏账号被盗
+
+个人简历
 
 自我介绍
 
