@@ -11,12 +11,19 @@
 ![体系结构图](./assets/mysql-01.png)
 
 >Connectors：不同语言中与SQL的交互
+
 >Management Serveices & Utilities： 系统管理和控制工具
+
 >Connection Pool: 连接池
+
 >SQL Interface: SQL接口
+
 >Parser: 解析器
+
 >Optimizer: 查询优化器
+
 >Cache和Buffer：查询缓存
+
 >Engine：存储引擎
 
 ## 2.字段类型
