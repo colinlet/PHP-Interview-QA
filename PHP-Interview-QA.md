@@ -579,6 +579,8 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 ## 12.ip2long实现
 
+![ip2long实现](./assets/ip2long.png)
+
 ## 13.代码执行过程
 
 >PHP代码 => 启动php及zend引擎，加载注册拓展模块 => 对代码进行词法/语法分析 => 编译成opcode(opcache) => 执行opcode
