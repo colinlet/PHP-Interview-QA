@@ -573,7 +573,9 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 >工厂方法模式的具体工厂类只能创建一个具体产品类的实例，而抽象工厂模式可以创建多个
 
-## 11.base64实现
+## 11.base64编码原理
+
+![base64编码原理](./assets/base64.png)
 
 ## 12.ip2long实现
 

@@ -6,7 +6,7 @@
 
 # 一般面试流程
 
-![面试流程](./assets/interview-01.png)
+![面试流程](./assets/interview.png)
 
 # QA目录
 
@@ -75,7 +75,7 @@ PHP
 - 常见PHP框架特点
 - 设计模式(design pattern)
 - 工厂方法模式与抽象工厂模式区别
-- base64实现
+- base64编码原理
 - ip2long实现
 - 代码执行过程
 - 弱类型变量如何实现
