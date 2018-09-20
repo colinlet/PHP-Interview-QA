@@ -444,6 +444,8 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 >GET方式和POST方式传递的数据在服务器的获取也不同
 
+## 7.RESTful API
+
 ## 参考资料
 [HTTP/2协议–特性扫盲篇](http://www.cnblogs.com/yingsmirk/p/5248506.html)
 [Socket通信原理和实践](https://blog.csdn.net/dlutbrucezhang/article/details/8577810)
@@ -714,6 +716,10 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 >https://cloud.tencent.com/developer/article/1006035
 >https://www.jianshu.com/p/689ce4205021
 
+## 7.穿透、雪崩
+
+>https://blog.csdn.net/mikeszhang/article/details/47728167
+
 ## 参考资料
 - [进程、线程与协程的比较](https://blog.csdn.net/Blateyang/article/details/78088851)
 - [反向代理服务器的工作原理](https://blog.csdn.net/keyeagle/article/details/6723408)
@@ -735,6 +741,8 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 ## 6.IP对应省市效率尽可能高
 
 ## 7.详细描述输入地址到打开网页过程
+
+## 8.千万用户表设计
 
 ## 参考资料
 
