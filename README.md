@@ -8,7 +8,7 @@
 
 ![面试流程](./assets/interview.png)
 
-# QA目录
+# 目录 - [阅读](./PHP-Interview-QA.md)
 
 MySQL
 
