@@ -611,6 +611,21 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 ## 19.PHP拓展
 
+- 初始化拓展
+
+>$ php /php-src/ext/ext_skel.php --ext <name>
+
+- 定义拓展函数
+
+>zend_module_entry定义Extension name
+>编写PHP_FUNCTION函数
+
+- 编译安装
+
+>$ phpize
+>$ ./configure
+>$ make && make install
+
 ## 20.PHP7新特性
 
 >标量类型声明、返回值类型声明、通过define()定义常量数组、匿名类、相同命名空间类一次性导入
@@ -627,6 +642,14 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 ## 22.构造函数和析构函数
 
+- 构造函数
+
+>PHP5允行开发者在一个类中定义一个方法作为构造函数。具有构造函数的类会在每次创建新对象时先调用此方法，所以非常适合在使用对象之前做一些初始化工作
+
+- 析构函数
+
+>PHP5引入了析构函数的概念，这类似于其它面向对象的语言，如 C++。析构函数会在到某个对象的所有引用都被删除或者当对象被显式销毁时执行。
+
 ## 23.PHP不实例化调用方法
 
 >CLASS::METHOD() 静态方法
@@ -639,6 +662,7 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 - [PHP7革新与性能优化](http://hansionxu.blog.163.com/blog/static/24169810920158704014772/)
 - [常用设计模式汇总](https://juejin.im/entry/58041fc10e3dd9005713384e)
 - [腾讯开源Biny框架](https://github.com/Tencent/Biny)
+- [PHP7拓展](https://www.bo56.com/php7扩展/)
 - [类与对象](http://php.net/manual/zh/language.oop5.php)
 
 # 服务器
