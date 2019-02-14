@@ -429,7 +429,7 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 - HTTP 状态码
 
 |状态码|响应类别|原因短语|
-|-|
+|-|-|-|
 |1XX|信息性状态码(Informational)|服务器正在处理请求|
 |2XX|成功状态码(Success)|请求已正常处理完毕|
 |3XX|重定向状态码(Redirection)|需要进行额外操作以完成请求|
@@ -439,7 +439,7 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 - 常见14种状态码
 
 |状态码|Message|备注|
-|-|
+|-|-|-|
 |200|OK|
 |204|Not Content|不包含实体部分|
 |206|Partial Content|范围请求|
