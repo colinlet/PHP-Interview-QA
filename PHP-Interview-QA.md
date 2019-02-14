@@ -438,6 +438,23 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 - 常见14种状态码
 
+|状态码|Message|备注|
+|-|
+|200|OK|
+|204|Not Content|不包含实体部分|
+|206|Partial Content|范围请求|
+|301|Moved Permanently|永久重定向|
+|302|Found|临时重定向|
+|303|See Other|
+|304|Not Modified|
+|307|Temporary Redirect|临时重定向|
+|400|Bad Request|请求报文存在语法错误|
+|401|Unauthorized|
+|403|Forbidden|访问被服务器拒绝|
+|404|Not Found|
+|500|Internal Server Error|
+|503|Server Unavailable|
+
 - HTTP2 特点：二进制协议、多路复用、头压缩、服务器推送
 
 ## 5.HTTPS 协议
