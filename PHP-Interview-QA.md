@@ -457,7 +457,9 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 
 - HTTP2 特点：二进制协议、多路复用、头压缩、服务器推送
 
-## 5.HTTPS 协议
+## 5.HTTPS 通信原理
+
+![https原理图](./assets/https.png)
 
 ## 6.websocket 协议
 
