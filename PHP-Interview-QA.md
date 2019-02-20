@@ -78,7 +78,7 @@
 
 - char
 
->善于存储经常改变的值，或者长度相对固定的值，比如 type、ip 地址或 md5 之类的数据，不容易产生碎片
+>擅于存储经常改变的值，或者长度相对固定的值，比如 type、ip 地址或 md5 之类的数据，不容易产生碎片
 
 - varchar
 
@@ -249,6 +249,10 @@
 >跳跃表在 Redis 的唯一作用，就是实现有序集数据类型
 
 >跳跃表将指向有序集的 score 值和 member 域的指针作为元素，并以 score 值为索引对有序集元素进行排序
+
+## 4.一致性哈希
+
+## 5.分布式锁
 
 ## 参考资料
 - [跳跃表](https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html)
@@ -436,7 +440,7 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 |4XX|客户端错误状态码(Client Error)|客户端原因导致服务器无法处理请求|
 |5XX|服务器错误状态码(Server Error)|服务器原因导致处理请求出错|
 
-- 常见14种状态码
+- 常见状态码
 
 |状态码|Message|备注|
 |-|-|-|
@@ -453,7 +457,9 @@ SELECT * FROM table WHERE id=1 AND (SELECT COUNT(*) FROM try_table)>-1;
 |403|Forbidden|访问被服务器拒绝|
 |404|Not Found|
 |500|Internal Server Error|
+|502|Bad Gateway|
 |503|Server Unavailable|
+|504|Gateway Timeout|
 
 - HTTP2 特点：二进制协议、多路复用、头压缩、服务器推送
 
