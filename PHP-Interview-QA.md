@@ -252,10 +252,17 @@
 
 ## 4.一致性哈希
 
+> 在使用 Redis 时，为了保证高可用，提高读写性能，常常会使用主从方式或者集群方式
+
+> 使用 Hash 算法支持集群动态扩容，哈希环
+
+> 使用虚拟节点避免哈希环的数据倾斜问题
+
 ## 5.分布式锁
 
 ## 参考资料
 - [跳跃表](https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html)
+- [什么是一致性Hash算法](https://zhuanlan.zhihu.com/p/34985026)
 
 # Web
 
