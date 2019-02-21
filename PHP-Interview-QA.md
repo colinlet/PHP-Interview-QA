@@ -32,13 +32,13 @@
 
 |类型|长度|备注|
 |-|-|-|
-|tinyint|1bit|
-|smallint|2bit|
-|mediumint|3bit|
-|int|4bit|
-|bigint|8bit|
-|float|4bit|8位精度|
-|double|8bit|16位精度|
+|tinyint|1 byte|
+|smallint|2 byte|
+|mediumint|3 byte|
+|int|4 byte|
+|bigint|8 byte|
+|float|4 byte|8位精度|
+|double|8 byte|16位精度|
 
 - 字符类型
 
