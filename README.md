@@ -3,8 +3,6 @@
 > PHP 面试问题 v2.0 版本正在努力撰写中，你可以查看v1.0完成版
 > [v1.0传送门](https://github.com/colinlet/PHP-Interview-QA/tree/1.0)
 
-## 交流
-
 ## 面试流程
 
 ![面试流程](./assets/interview.png)
