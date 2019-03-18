@@ -20,17 +20,17 @@
 
 ### [网络协议](./QA.md#网络协议)
 
-- [UDP 的主要特点](./QA.md#UDP-的主要特点)
+- [UDP 的主要特点](./QA.md#udp-的主要特点)
 
-- [TCP 的主要特点](./QA.md#TCP-的主要特点)
+- [TCP 的主要特点](./QA.md#tcp-的主要特点)
 
-- [如何让不可靠的 UDP 可靠(了解)](./QA.md#如何让不可靠的-UDP-可靠(了解))
+- [如何让不可靠的 UDP 可靠(了解)](./QA.md#如何让不可靠的-UDP-可靠了解)
 
-- [TCP 握手三次，断开四次，TIME-WAIT](./QA.md#TCP-握手三次，断开四次，TIME-WAIT)
+- [TCP 握手三次，断开四次，TIME-WAIT](./QA.md#tcp-握手三次断开四次time-wait)
 
-- [TCP 粘包如何解决](./QA.md#TCP-粘包如何解决)
+- [TCP 粘包如何解决](./QA.md#tcp-粘包如何解决)
 
-- [UDP、TCP 区别，适用场景](./QA.md#UDP、TCP-区别，适用场景)
+- [UDP、TCP 区别，适用场景](./QA.md#udptcp-区别适用场景)
 
 ### 数据结构与算法
 
