@@ -1,7 +1,7 @@
 # PHP 面试问答 v2.0
 
 > PHP 面试问题 v2.0 版本正在努力撰写中，你可以查看v1.0完成版
-[v1.0传送门](https://github.com/colinlet/PHP-Interview-QA/tree/1.0)
+> [v1.0传送门](https://github.com/colinlet/PHP-Interview-QA/tree/1.0)
 
 ## 前言
 
