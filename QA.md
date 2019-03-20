@@ -124,11 +124,17 @@
 
 > 远程登录(telnet SSH 对数据准确性有要求，有连接的概念)
 
-### socket ?
+### 建立 socket 需要哪些步骤
 
-### HTTP request 报文结构是怎样的？
+### TCP socket 和 UNIX socket 区别
 
-### HTTP response 报文结构是怎样的？
+### 本地 socket 与 网络 socket
+
+### socket 如何实现多进程之间通信的
+
+### HTTP request 报文结构是怎样的
+
+### HTTP response 报文结构是怎样的
 
 ### HTTP 协议？
 
@@ -151,6 +157,10 @@
 ### HTTPS 是怎么保证安全的？
 
 ### 流与数据报的区别
+
+### epoll是怎么回事
+
+### epoll有两种模式，你知道吗
 
 ### 拓展资料
 
@@ -201,7 +211,7 @@
 ### MVC 的理解
 ### php 执行默认超时时间？
 ### 类的静态调用和实例化调用
-### for 与 foreach 哪个更快？
+### php for while foreach 迭代数组时候，哪个效率最高
 ### 如何异步执行命令？
 ### 常见 PHP 框架特点
 ThinkPHP（TP）、CodeIgniter（CI）、Zend（非 OOP 系列）
@@ -258,6 +268,7 @@ Swoole、Workerman （网络编程框架）
 ### yield 核心原理是什么
 ### PDO prepare 原理
 ### Swoole 适用场景，协程实现方式
+那你知道swoole的进程模型
 ### PHP 中 json_encode(['key'=>123]); 与 return json_encode([]); 区别，会产生什么问题？如何解决
 ### ZVAL
 > https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/PHP-Zval%E7%BB%93%E6%9E%84.md
@@ -337,6 +348,7 @@ CSS 在头部，JS 在尾部的优化（原理）
 Slow log(有什么用，什么时候需要)
 ### 三范式、反三范式
 ### 锁，共享锁、排它锁、乐观锁、悲观锁、死锁
+### 画下innodb主键索引的数据结构
 
 ## Redis
 
@@ -352,6 +364,9 @@ Slow log(有什么用，什么时候需要)
 ### 事务支持
 ### 你之前为了解决什么问题使用的什么，为什么选它？
 ### Redis 与 Memcache 区别
+### redis为啥单线程
+### 给我说一下redis的set是怎么实现的
+### 画画redis的zset是怎么实现的
 
 ## Linux
 
