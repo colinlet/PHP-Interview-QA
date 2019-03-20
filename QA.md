@@ -132,19 +132,72 @@
 
 ### socket 如何实现多进程之间通信的
 
-### HTTP request 报文结构是怎样的
+### HTTP 状态码
 
-### HTTP response 报文结构是怎样的
+- 状态码类别
 
-### HTTP 协议？
+|状态码|响应类别|原因短语|
+|-|-|-|
+|1XX|信息性状态码(Informational)|服务器正在处理请求|
+|2XX|成功状态码(Success)|请求已正常处理完毕|
+|3XX|重定向状态码(Redirection)|需要进行额外操作以完成请求|
+|4XX|客户端错误状态码(Client Error)|客户端原因导致服务器无法处理请求|
+|5XX|服务器错误状态码(Server Error)|服务器原因导致处理请求出错|
 
-### HTTP 状态码？
+- 常见状态码
 
-### HTTPS 通信原理？
+|状态码|Message|备注|
+|-|-|-|
+|200|OK|
+|204|Not Content|不包含实体部分|
+|206|Partial Content|范围请求|
+|301|Moved Permanently|永久重定向|
+|302|Found|临时重定向|
+|303|See Other|
+|304|Not Modified|
+|307|Temporary Redirect|临时重定向|
+|400|Bad Request|请求报文存在语法错误|
+|401|Unauthorized|
+|403|Forbidden|访问被服务器拒绝|
+|404|Not Found|
+|500|Internal Server Error|
+|502|Bad Gateway|
+|503|Server Unavailable|
+|504|Gateway Timeout|
 
-### GET 与 POST 请求方式区别？
+- 错误原因
 
-### HTTP 应用场景
+### HTTP 请求报文构成
+
+> 方法、URI、协议版本、请求首部字段、内容实体
+
+### HTTP 响应报文构成
+
+> 协议版本、状态码、状态码的原因短语、响应首部字段
+
+### GET 与 POST 请求方式区别
+
+|GET|POST|
+|-|-|
+|后退按钮/刷新无害|数据会被重新提交|
+|数据长度限制/URL长度2048字符|长度无限制|
+|数据可见/安全性差|不可见/更安全|
+|可以被缓存|不可以被缓存|
+|书签可收藏|书签不可收藏|
+
+### HTTP 优缺点
+
+> 基于应用级的接口，使用方便
+
+> 传输速度慢，数据包大；如实现实时交互，服务器性能压力大；数据传输安全性差
+
+### HTTPS 通信原理
+
+![《图解HTTP》-HTTPS通信原理](./assets/net-https.png)
+
+### HTTP 2.0
+
+> 多路复用、客户端拉拽/服务器推送、流量控制、WebSocket
 
 ### DNS 主要作用是什么？
 

@@ -1,6 +1,6 @@
 # PHP 面试问答 v2.0
 
-> PHP 面试问题 v2.0 版本正在努力撰写中，你可以查看v1.0完成版
+> PHP 面试问答 v2.0 版本正在努力撰写中，你可以查看v1.0完成版
 > [v1.0传送门](https://github.com/colinlet/PHP-Interview-QA/tree/1.0)
 
 ## 面试流程
@@ -42,6 +42,22 @@
 - [TCP 粘包如何解决](./QA.md#tcp-粘包如何解决)
 
 - [UDP、TCP 区别，适用场景](./QA.md#udptcp-区别适用场景)
+
+- 建立 socket 需要哪些步骤
+
+- TCP socket 和 UNIX socket 区别
+
+- 本地 socket 与 网络 socket
+
+- socket 如何实现多进程之间通信的
+
+- [HTTP 状态码](./QA.md#http-状态码)
+
+- [HTTP 请求报文构成](./QA.md#http-请求报文构成)
+
+- [HTTP 优缺点](./QA.md#HTTP-优缺点)
+
+- [HTTPS 通信原理](./QA.md#HTTPS-通信原理)
 
 ### 数据结构与算法
 
