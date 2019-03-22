@@ -316,32 +316,89 @@
 ## PHP
 
 ### echo、print、print_r、var_dump 的区别
+
+> echo：输出一个或多个字符串
+
+> print：输出字符串
+
+> print_r：打印关于变量的易于理解的信息
+
+> var_dump：打印关于变量的易于理解的信息(带类型)
+
 ### 单引号和双引号的区别
+
 ### isset 和 empty 的区别
+
 ### static、$this、self 区别，static作用
-### 超全局变量
-### php 执行默认超时时间
-### MVC 的理解
-### 传值和传引用的区别
-### 魔术方法
-### private、protected、public、final 区别
-### \_\_construct 与 \_\_destruct 区别
-### PHP 中 json_encode(['key'=>123]); 与 return json_encode([]); 区别，会产生什么问题？如何解决
-### 构造函数和析构函数
-### 客户端/服务端 IP 获取？了解代理透传 实际IP 的概念
-### 类的静态调用和实例化调用
-### php.ini 有哪些参数、display_errors、ini_set动态设置
-### PHP 不实例化调用方法
-### 了解大部分数组处理函数
-### Cookie 和 Session 的区别和关系，Session 共享、存活时间
-### 如何返回一个301重定向
+
 ### include、require、include_once、require_once
-### PDO prepare 原理
+
+### 了解大部分数组处理函数
+
+### Cookie 和 Session 的区别和关系，Session 共享、存活时间
+
+### 预定义变量
+
+> 对于全部脚本而言，PHP 提供了大量的预定义变量
+
+```text
+超全局变量 — 超全局变量是在全部作用域中始终可用的内置变量
+$GLOBALS — 引用全局作用域中可用的全部变量
+$_SERVER — 服务器和执行环境信息
+$_GET — HTTP GET 变量
+$_POST — HTTP POST 变量
+$_FILES — HTTP 文件上传变量
+$_REQUEST — HTTP Request 变量
+$_SESSION — Session 变量
+$_ENV — 环境变量
+$_COOKIE — HTTP Cookies
+$php_errormsg — 前一个错误信息
+$HTTP_RAW_POST_DATA — 原生POST数据
+$http_response_header — HTTP 响应头
+$argc — 传递给脚本的参数数目
+$argv — 传递给脚本的参数数组
+```
+
+- 超全局变量
+
+> PHP 中的许多预定义变量都是“超全局的”，这意味着它们在一个脚本的全部作用域中都可用。在函数或方法中无需执行 global $variable; 就可以访问它们
+
+> 超全局变量：$GLOBALS、$\_SERVER、$\_GET、$\_POST、$\_FILES、$\_COOKIE、$\_SESSION、$\_REQUEST、$\_ENV
+
+### 传值和传引用的区别
+
+### 构造函数和析构函数
+
+### 魔术方法
+
+### \_\_construct 与 \_\_destruct 区别
+
+### private、protected、public、final 区别
+
+### PHP 中 json_encode(['key'=>123]); 与 return json_encode([]); 区别，会产生什么问题？如何解决
+
+### 客户端/服务端 IP 获取？了解代理透传 实际IP 的概念
+
+### 类的静态调用和实例化调用
+
+### PHP 不实例化调用方法
+
+### php.ini 有哪些参数、display_errors、ini_set动态设置，php 执行默认超时时间
+
+### 如何返回一个301重定向
+
+### PHP与MySQL连接方式
+
+### MySQL、MySQLi、PDO区别
 
 ### 代码执行过程
 
 ### base64 编码原理
+
 ### ip2long 实现
+
+### MVC 的理解
+
 ### 常见 PHP 框架特点
 ThinkPHP（TP）、CodeIgniter（CI）、Zend（非 OOP 系列）
 Yaf、Phalcon（C 扩展系）
@@ -354,51 +411,102 @@ Swoole、Workerman （网络编程框架）
 黑盒（相比 C 扩展系）
 运行速度（如：Laravel 加载一大堆东西）
 内存占用
-### 对象关系映射/ORM(Object Relational Mapping)
+
+### 对象关系映射/ORM
+
+- 优点
+
+> 缩短编码时间、减少甚至免除对 model 的编码，降低数据库学习成本
+
+> 动态的数据表映射，在表结构发生改变时，减少代码修改
+
+> 可以很方便的引入附加功能(cache 层)
+
+- 缺点
+
+> 映射消耗性能、ORM 对象消耗内存
+
+SQL 语句较为复杂时，ORM 语法可读性不高(使用原生 SQL)
+
 ### 链式调用实现
+
 ### 异常处理
+
 ### 如何异步执行命令？
+
 ### 多进程同时写一个文件
+
 ### PHP 进程模型，进程通讯方式，进程线程区别
 
-### PHP 支持回调的函数，实现一个？
+### PHP 支持回调的函数，实现一个
+
+> array_map、array_filter、array_walk、usort
+
+> is_callable + callbacks + 匿名函数实现
+
 ### 发起 HTTP 请求有哪几种方式，它们有何区别
+
+> cURL、file_get_contents、fopen、fsockopen
+
 ### php for while foreach 迭代数组时候，哪个效率最高
+
 ### 弱类型变量如何实现
+
 ### PHP 拓展开发
+
 ### 如何获取扩展安装路径
+
 ### 垃圾回收机制
+
 ### Trait 是什么东西
+
 ### yield 是什么，说个使用场景 yield、yield 核心原理是什么
+
 ### traits 与 interfaces 区别 及 traits 解决了什么痛点？
+
 ### 如何 foreach 迭代对象、如何数组化操作对象 $obj[key]、如何函数化对象 $obj(123);
 
 ### Swoole 适用场景，协程实现方式
+
 那你知道swoole的进程模型
 
 ### PHP 数组底层实现 （HashTable + Linked list）
+
 ### Copy on write 原理，何时 GC
+
 ### 如何解决 PHP 内存溢出问题
+
 ### ZVAL
 > https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/PHP-Zval%E7%BB%93%E6%9E%84.md
+
 ### HashTable
 > https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/PHP7-HashTable.md
+
 ### PHP7 新特性
+
 ### PHP7 底层优化
 > https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/php7.md
 
 ### PSR 介绍，PSR-1, 2, 4, 7
+
 ### Xhprof 、Xdebug 性能调试工具使用
+
 ### 字符串、数字比较大小的原理，注意 0 开头的8进制、0x 开头16进制
+
 ### BOM 头是什么，怎么除去
+
 ### 模板引擎是什么，解决什么问题、实现原理（Smarty、Twig、Blade）
 
 ## Web
 
 ### SEO 哪些需要注意的？
+
 ### img 标签的 title 和 alt 有什么区别？
+
 ### 如何进行网站性能优化？
+
 ### 从浏览器地址栏输入 url 到显示页面的步骤
+
 ### 什么是渐进增强？
 ### CSS 选择器有哪些？优先级？
 ### CSS sprite 是什么，有什么优缺点？
