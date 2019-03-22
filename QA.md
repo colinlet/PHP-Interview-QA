@@ -315,19 +315,33 @@
 
 ## PHP
 
-### echo、print、print_r、var_dump 的区别？
-### 单引号和双引号的区别？
-### isset 和 empty 的区别？
-### 超全局变量？
-### 客户端/服务端 IP 获取？了解代理透传 实际IP 的概念
-### PHP 支持回调的函数，实现一个？
-### 发起 HTTP 请求有哪几种方式，它们有何区别
-### 对象关系映射/ORM(Object Relational Mapping)
+### echo、print、print_r、var_dump 的区别
+### 单引号和双引号的区别
+### isset 和 empty 的区别
+### static、$this、self 区别，static作用
+### 超全局变量
+### php 执行默认超时时间
 ### MVC 的理解
-### php 执行默认超时时间？
+### 传值和传引用的区别
+### 魔术方法
+### private、protected、public、final 区别
+### \_\_construct 与 \_\_destruct 区别
+### PHP 中 json_encode(['key'=>123]); 与 return json_encode([]); 区别，会产生什么问题？如何解决
+### 构造函数和析构函数
+### 客户端/服务端 IP 获取？了解代理透传 实际IP 的概念
 ### 类的静态调用和实例化调用
-### php for while foreach 迭代数组时候，哪个效率最高
-### 如何异步执行命令？
+### php.ini 有哪些参数、display_errors、ini_set动态设置
+### PHP 不实例化调用方法
+### 了解大部分数组处理函数
+### Cookie 和 Session 的区别和关系，Session 共享、存活时间
+### 如何返回一个301重定向
+### include、require、include_once、require_once
+### PDO prepare 原理
+
+### 代码执行过程
+
+### base64 编码原理
+### ip2long 实现
 ### 常见 PHP 框架特点
 ThinkPHP（TP）、CodeIgniter（CI）、Zend（非 OOP 系列）
 Yaf、Phalcon（C 扩展系）
@@ -340,55 +354,44 @@ Swoole、Workerman （网络编程框架）
 黑盒（相比 C 扩展系）
 运行速度（如：Laravel 加载一大堆东西）
 内存占用
-### base64 编码原理
-### ip2long 实现
-### 代码执行过程
-### 弱类型变量如何实现
-### 垃圾回收机制
-### 进程间通信方式
+### 对象关系映射/ORM(Object Relational Mapping)
 ### 链式调用实现
-### 多进程同时写一个文件
-### PHP 拓展开发
-### PHP7 新特性
-### PHP7 底层优化
-> https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/php7.md
-### 构造函数和析构函数
-### PHP 不实例化调用方法
-### 了解大部分数组处理函数
-### Trait 是什么东西
-### yield 是什么，说个使用场景 yield
-### php.ini 有哪些参数、display_errors、ini_set动态设置
-### 传值和传引用的区别？
-### Cookie 和 Session 的区别和关系，Session 共享、存活时间
-### 如何解决 PHP 内存溢出问题
-### static、$this、self 区别，static作用？
-### private、protected、public、final 区别
-### \_\_construct 与 \_\_destruct 区别
-### 魔术方法
-### PSR 介绍，PSR-1, 2, 4, 7
 ### 异常处理
-### 如何 foreach 迭代对象、如何数组化操作对象 $obj[key]、如何函数化对象 $obj(123);
-### 如何返回一个301重定向
-### 如何获取扩展安装路径
-### 字符串、数字比较大小的原理，注意 0 开头的8进制、0x 开头16进制
-### BOM 头是什么，怎么除去
-### 如何异步执行命令
-### 模板引擎是什么，解决什么问题、实现原理（Smarty、Twig、Blade）
-### Xhprof 、Xdebug 性能调试工具使用
-### include、require、include_once、require_once
-### traits 与 interfaces 区别 及 traits 解决了什么痛点？
-### PHP 数组底层实现 （HashTable + Linked list）
-### Copy on write 原理，何时 GC
+### 如何异步执行命令？
+### 多进程同时写一个文件
 ### PHP 进程模型，进程通讯方式，进程线程区别
-### yield 核心原理是什么
-### PDO prepare 原理
+
+### PHP 支持回调的函数，实现一个？
+### 发起 HTTP 请求有哪几种方式，它们有何区别
+### php for while foreach 迭代数组时候，哪个效率最高
+### 弱类型变量如何实现
+### PHP 拓展开发
+### 如何获取扩展安装路径
+### 垃圾回收机制
+### Trait 是什么东西
+### yield 是什么，说个使用场景 yield、yield 核心原理是什么
+### traits 与 interfaces 区别 及 traits 解决了什么痛点？
+### 如何 foreach 迭代对象、如何数组化操作对象 $obj[key]、如何函数化对象 $obj(123);
+
 ### Swoole 适用场景，协程实现方式
 那你知道swoole的进程模型
-### PHP 中 json_encode(['key'=>123]); 与 return json_encode([]); 区别，会产生什么问题？如何解决
+
+### PHP 数组底层实现 （HashTable + Linked list）
+### Copy on write 原理，何时 GC
+### 如何解决 PHP 内存溢出问题
 ### ZVAL
 > https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/PHP-Zval%E7%BB%93%E6%9E%84.md
 ### HashTable
 > https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/PHP7-HashTable.md
+### PHP7 新特性
+### PHP7 底层优化
+> https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/php7.md
+
+### PSR 介绍，PSR-1, 2, 4, 7
+### Xhprof 、Xdebug 性能调试工具使用
+### 字符串、数字比较大小的原理，注意 0 开头的8进制、0x 开头16进制
+### BOM 头是什么，怎么除去
+### 模板引擎是什么，解决什么问题、实现原理（Smarty、Twig、Blade）
 
 ## Web
 
