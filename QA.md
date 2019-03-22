@@ -383,6 +383,8 @@ $argv — 传递给脚本的参数数组
 
 ### PHP 不实例化调用方法
 
+> CLASS::METHOD() 静态方法
+
 ### php.ini 有哪些参数、display_errors、ini_set动态设置，php 执行默认超时时间
 
 ### 如何返回一个301重定向
@@ -393,15 +395,48 @@ $argv — 传递给脚本的参数数组
 
 ### 代码执行过程
 
+> PHP 代码 => 启动 php 及 zend 引擎，加载注册拓展模块 => 对代码进行词法/语法分析 => 编译成opcode(opcache) => 执行 opcode
+
+> 当前作用域分配内存，充当运行栈，局部变量分配在当前栈，函数调用时压栈，返回时出栈
+
 ### base64 编码原理
 
+![base64](./assets/php-base64.png)
+
 ### ip2long 实现
+
+![ip2long](./assets/php-ip2long.png)
 
 ### MVC 的理解
 
 > MVC 架构中 M 是指数据模型，V 是指用户界面，C 则是控制器；MVC 的思想是模块化分离，为了代码的重用和增强代码的维护性和扩展性出发的，其中 MVC 的实现有一定的思想和原则
 
 ### 常见 PHP 框架特点
+
+- ThinkPHP
+
+> URL 模式：系统支持普通模式、PATHINFO 模式、REWRITE 模式和兼容模式的 URL 方式，支持不同的服务器和运行模式的部署，配合 URL 路由功能，可以随心所欲地构建需要的 URL 地址和进行 SEO 优化工作
+
+> 查询语句：内建丰富的查询机制，包括组合查询、符合查询、区域查询、统计查询、定位查询、动态查询、和原生查询、让数据查询简洁高效
+
+> 分组模块：不用担心大项目的分工协调和部署问题，分组模块解决跨项目的难题
+
+- Laravel
+
+> 包含 Web 开发、包管理、代码生成、ORM、常见组件(cache/log)、路由管理、中间件、依赖注入
+
+- Biny
+
+> 支持跨库连表，条件复合筛选，查询 PK 缓存等
+
+> 同步异步请求分离，类的自动化加载管理
+
+> 支持 Form 表单验证，支持事件触发机制
+
+> 支持浏览器端调试，快速定位程序问题和性能瓶颈
+
+> 具有 sql 防注入，html 自动防 xss 等特性
+
 ThinkPHP（TP）、CodeIgniter（CI）、Zend（非 OOP 系列）
 Yaf、Phalcon（C 扩展系）
 Yii、Laravel、Symfony（纯 OOP 系列）
@@ -432,13 +467,19 @@ Swoole、Workerman （网络编程框架）
 
 ### 链式调用实现
 
+> 类定义一个内置变量，让类中其他定义方法可访问到
+
 ### 异常处理
 
 ### 如何异步执行命令？
 
 ### 多进程同时写一个文件
 
+> 加锁、队列
+
 ### PHP 进程模型，进程通讯方式，进程线程区别
+
+> 消息队列、socket、信号量、共享内存、信号、管道
 
 ### PHP 支持回调的函数，实现一个
 
@@ -454,11 +495,28 @@ Swoole、Workerman （网络编程框架）
 
 ### 弱类型变量如何实现
 
-### PHP 拓展开发
+> PHP 中声明的变量，在 zend 引擎中都是用结构体 zval 来保存，通过共同体实现弱类型变量声明
+
+### PHP 拓展初始化
+
+- 初始化拓展
+```shell
+$ php /php-src/ext/ext_skel.php --ext
+```
+
+- 定义拓展函数
+> zend_module_entry 定义 Extension name 编写 PHP_FUNCTION 函数
+
+- 编译安装
+```shell
+$ phpize $ ./configure $ make && make install
+```
 
 ### 如何获取扩展安装路径
 
 ### 垃圾回收机制
+
+> 引用计数器
 
 ### Trait 是什么东西
 
@@ -486,7 +544,18 @@ Swoole、Workerman （网络编程框架）
 
 ### PHP7 新特性
 
+> 标量类型声明、返回值类型声明、通过 define() 定义常量数组、匿名类、相同命名空间类一次性导入
+
 ### PHP7 底层优化
+
+> ZVAL 结构体优化，占用由24字节降低为16字节
+
+> 内部类型 zend_string，结构体成员变量采用 char 数组，不是用 char*
+
+> PHP 数组实现由 hashtable 变为 zend array
+
+> 函数调用机制，改进函数调用机制，通过优化参数传递环节，减少了一些指令
+
 > https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/php7.md
 
 ### PSR 介绍，PSR-1, 2, 4, 7
