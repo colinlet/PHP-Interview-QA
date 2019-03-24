@@ -471,43 +471,43 @@ header('Location: https://blog.maplemark.cn');
 
 > MVC 架构中 M 是指数据模型，V 是指用户界面，C 则是控制器；MVC 的思想是模块化分离，为了代码的重用和增强代码的维护性和扩展性出发的，其中 MVC 的实现有一定的思想和原则
 
-### 常见 PHP 框架特点
-
-- ThinkPHP
-
-> URL 模式：系统支持普通模式、PATHINFO 模式、REWRITE 模式和兼容模式的 URL 方式，支持不同的服务器和运行模式的部署，配合 URL 路由功能，可以随心所欲地构建需要的 URL 地址和进行 SEO 优化工作
-
-> 查询语句：内建丰富的查询机制，包括组合查询、符合查询、区域查询、统计查询、定位查询、动态查询、和原生查询、让数据查询简洁高效
-
-> 分组模块：不用担心大项目的分工协调和部署问题，分组模块解决跨项目的难题
+### 主流 PHP 框架特点
 
 - Laravel
 
-> 包含 Web 开发、包管理、代码生成、ORM、常见组件(cache/log)、路由管理、中间件、依赖注入
+> Simple, fast routing engine
+> Powerful dependency injection container.
+> Multiple back-ends for session and cache storage.
+> Expressive, intuitive database ORM.
+> Database agnostic schema migrations.
+> Robust background job processing.
+> Real-time event broadcasting.
 
-- Biny
+- Symfony
 
-> 支持跨库连表，条件复合筛选，查询 PK 缓存等
+> Database engine-independent
+> Simple to use, in most cases, but still flexible enough to adapt to complex cases
+> Based on the premise of convention over configuration--the developer needs to configure only the unconventional
+> Compliant with most web best practices and design patterns
+> Enterprise-ready--adaptable to existing information technology (IT) policies and architectures, and stable enough for long-term projects
+> Very readable code, with phpDocumentor comments, for easy maintenance
+> Easy to extend, allowing for integration with other vendor libraries
 
-> 同步异步请求分离，类的自动化加载管理
+- CodeIgniter
 
-> 支持 Form 表单验证，支持事件触发机制
+> https://www.codeigniter.com/userguide3/overview/features.html
 
-> 支持浏览器端调试，快速定位程序问题和性能瓶颈
+- ThinkPHP
 
-> 具有 sql 防注入，html 自动防 xss 等特性
-
-ThinkPHP（TP）、CodeIgniter（CI）、Zend（非 OOP 系列）
-Yaf、Phalcon（C 扩展系）
-Yii、Laravel、Symfony（纯 OOP 系列）
-Swoole、Workerman （网络编程框架）
-对比框架区别几个方向点
-是否纯 OOP
-类库加载方式（自己写 autoload 对比 composer 标准）
-易用性方向（CI 基础框架，Laravel 这种就是高开发效率框架以及基础组件多少）
-黑盒（相比 C 扩展系）
-运行速度（如：Laravel 加载一大堆东西）
-内存占用
+> MVC支持-基于多层模型（M）、视图（V）、控制器（C）的设计模式
+> ORM支持-提供了全功能和高性能的ORM支持，支持大部分数据库
+> 模板引擎支持-内置了高性能的基于标签库和XML标签的编译型模板引擎
+> RESTFul支持-通过REST控制器扩展提供了RESTFul支持，为你打造全新的URL设计和访问体验
+> 云平台支持-提供了对新浪SAE平台和百度BAE平台的强力支持，具备“横跨性”和“平滑性”，支持本地化开发和调试以及部署切换，让你轻松过渡，打造全新的开发体验。
+> CLI支持-支持基于命令行的应用开发
+> RPC支持-提供包括PHPRpc、HProse、jsonRPC和Yar在内远程调用解决方案
+> MongoDb支持-提供NoSQL的支持
+> 缓存支持-提供了包括文件、数据库、Memcache、Xcache、Redis等多种类型的缓存支持
 
 ### 对象关系映射/ORM
 
