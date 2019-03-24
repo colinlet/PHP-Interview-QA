@@ -29,6 +29,10 @@
 
 > [术语对照表](./Terminology.md)：顾名思义，帮助联想知识点
 
+## 交流讨论组
+
+![PHP求职交流群](./assets/wechat-groups.png)
+
 ## 问题列表
 
 ### [网络协议](./QA.md#网络协议)
