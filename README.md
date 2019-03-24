@@ -119,35 +119,35 @@
 
 - [魔术方法](./QA.md#魔术方法)
 
-- public、protected、private、final 区别
+- [public、protected、private、final 区别](./QA.md#publicprotectedprivatefinal-区别)
 
-- 客户端/服务端 IP 获取，了解代理透传 实际IP 的概念
+- [客户端/服务端 IP 获取，了解代理透传 实际IP 的概念](./QA.md#客户端服务端-ip-获取了解代理透传-实际ip-的概念)
 
-- 类的静态调用和实例化调用
+- [类的静态调用和实例化调用](./QA.md#类的静态调用和实例化调用)
 
-- PHP 不实例化调用方法
+- [PHP 不实例化调用方法](./QA.md#php-不实例化调用方法)
 
-- php.ini 配置选项，ini_set 动态设置
+- [php.ini 配置选项，ini_set 动态设置](./QA.md#phpini-配置选项ini_set-动态设置)
 
-- 如何返回一个301重定向
+- [如何返回一个301重定向](./QA.md#如何返回一个301重定向)
 
-- PHP 与 MySQL 连接方式
+- [PHP 与 MySQL 连接方式](./QA.md#php-与-mysql-连接方式)
 
-- MySQL、MySQLi、PDO 区别
+- [MySQL、MySQLi、PDO 区别](./QA.md#mysqlmysqlipdo-区别)
 
-- MySQL 连接池
+- [MySQL 连接池](./QA.md#mysql-连接池)
 
-- 代码执行过程
+- [代码执行过程](./QA.md#代码执行过程)
 
-- base64 编码原理
+- [base64 编码原理](./QA.md#base64-编码原理)
 
-- ip2long 实现
+- [ip2long 实现](./QA.md#ip2long-实现)
 
-- MVC 的理解
+- [MVC 的理解](./QA.md#mvc-的理解)
 
-- 常见 PHP 框架特点
+- [常见 PHP 框架特点](./QA.md#常见-php-框架特点)
 
-- 对象关系映射/ORM
+- [对象关系映射/ORM](./QA.md#对象关系映射orm)
 
 ### Web
 
