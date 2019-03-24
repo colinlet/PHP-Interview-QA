@@ -476,21 +476,33 @@ header('Location: https://blog.maplemark.cn');
 - Laravel
 
 > Simple, fast routing engine
+
 > Powerful dependency injection container.
+
 > Multiple back-ends for session and cache storage.
+
 > Expressive, intuitive database ORM.
+
 > Database agnostic schema migrations.
+
 > Robust background job processing.
+
 > Real-time event broadcasting.
 
 - Symfony
 
 > Database engine-independent
+
 > Simple to use, in most cases, but still flexible enough to adapt to complex cases
+
 > Based on the premise of convention over configuration--the developer needs to configure only the unconventional
+
 > Compliant with most web best practices and design patterns
+
 > Enterprise-ready--adaptable to existing information technology (IT) policies and architectures, and stable enough for long-term projects
+
 > Very readable code, with phpDocumentor comments, for easy maintenance
+
 > Easy to extend, allowing for integration with other vendor libraries
 
 - CodeIgniter
@@ -500,13 +512,21 @@ header('Location: https://blog.maplemark.cn');
 - ThinkPHP
 
 > MVC支持-基于多层模型（M）、视图（V）、控制器（C）的设计模式
+
 > ORM支持-提供了全功能和高性能的ORM支持，支持大部分数据库
+
 > 模板引擎支持-内置了高性能的基于标签库和XML标签的编译型模板引擎
+
 > RESTFul支持-通过REST控制器扩展提供了RESTFul支持，为你打造全新的URL设计和访问体验
-> 云平台支持-提供了对新浪SAE平台和百度BAE平台的强力支持，具备“横跨性”和“平滑性”，支持本地化开发和调试以及部署切换，让你轻松过渡，打造全新的开发体验。
+
+> 云平台支持-提供了对新浪SAE平台和百度BAE平台的强力支持，具备“横跨性”和“平滑性”，支持本地化开发和调试以及部署切换，让你轻松过渡，打造全新的开发体验
+
 > CLI支持-支持基于命令行的应用开发
+
 > RPC支持-提供包括PHPRpc、HProse、jsonRPC和Yar在内远程调用解决方案
+
 > MongoDb支持-提供NoSQL的支持
+
 > 缓存支持-提供了包括文件、数据库、Memcache、Xcache、Redis等多种类型的缓存支持
 
 ### 对象关系映射/ORM
