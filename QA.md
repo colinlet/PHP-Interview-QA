@@ -445,11 +445,11 @@ header('Location: https://blog.maplemark.cn');
 
 ### MySQL、MySQLi、PDO 区别
 
-> MySQL：面向过程，已废弃
+> MySQL：最常用，是过程式风格的一组应用
 
-> MySQLi：面向对象，支持事务特性，支持预处理，有效防止 SQL 注入。只支持 MySQL 连接，不支持其它数据库
+> MySQLi：是 MySQL 函数的增强改进版，提供过程化和面向对象两种风格的 API，增加了预编译和参数绑定等新的特性
 
-> PDO：包含 MySQLi 特性，可很方便的切换各种数据库。不支持多语句查询
+> PDO：从语法上讲，PDO 更接近 MySQLi
 
 ### MySQL 连接池
 
