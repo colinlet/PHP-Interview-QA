@@ -97,6 +97,24 @@
 
 ### PHP
 
+- [echo、print、print_r、var_dump 的区别](./QA.md#echoprintprint_rvar_dump-的区别)
+
+- [单引号和双引号的区别](./QA.md#单引号和双引号的区别)
+
+- [isset 和 empty 的区别](./QA.md#isset-和-empty-的区别)
+
+- [static、self、$this 的区别](./QA.md#staticselfthis-的区别)
+
+- [include、require、include_once、require_once 的区别](./QA.md#includerequireinclude_oncerequire_once-的区别)
+
+- 数组处理函数
+
+- [Cookie 和 Session](./QA.md#cookie-和-session)
+
+- [预定义变量](./QA.md#预定义变量)
+
+- [传值和传引用的区别](./QA.md#传值和传引用的区别)
+
 ### Web
 
 ### MySQL
