@@ -115,6 +115,40 @@
 
 - [传值和传引用的区别](./QA.md#传值和传引用的区别)
 
+- [构造函数和析构函数](./QA.md#构造函数和析构函数)
+
+- [魔术方法](./QA.md#魔术方法)
+
+- public、protected、private、final 区别
+
+- 客户端/服务端 IP 获取，了解代理透传 实际IP 的概念
+
+- 类的静态调用和实例化调用
+
+- PHP 不实例化调用方法
+
+- php.ini 配置选项，ini_set 动态设置
+
+- 如何返回一个301重定向
+
+- PHP 与 MySQL 连接方式
+
+- MySQL、MySQLi、PDO 区别
+
+- MySQL 连接池
+
+- 代码执行过程
+
+- base64 编码原理
+
+- ip2long 实现
+
+- MVC 的理解
+
+- 常见 PHP 框架特点
+
+- 对象关系映射/ORM
+
 ### Web
 
 ### MySQL

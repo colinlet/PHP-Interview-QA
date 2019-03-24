@@ -391,29 +391,67 @@ $argv — 传递给脚本的参数数组
 
 ### 构造函数和析构函数
 
+> 构造函数：PHP 5 允行开发者在一个类中定义一个方法作为构造函数。具有构造函数的类会在每次创建新对象时先调用此方法，所以非常适合在使用对象之前做一些初始化工作
+
+> 析构函数：PHP 5 引入了析构函数的概念，这类似于其它面向对象的语言，如 C++。析构函数会在到某个对象的所有引用都被删除或者当对象被显式销毁时执行
+
 ### 魔术方法
 
-### \_\_construct 与 \_\_destruct 区别
+> \_\_construct()， \_\_destruct()， \_\_call()， \_\_callStatic()， \_\_get()， \_\_set()， \_\_isset()， \_\_unset()， \_\_sleep()， \_\_wakeup()， \_\_toString()， \_\_invoke() 等方法在 PHP 中被称为"魔术方法"（Magic methods）
 
-### private、protected、public、final 区别
+### public、protected、private、final 区别
 
-### PHP 中 json_encode(['key'=>123]); 与 return json_encode([]); 区别，会产生什么问题？如何解决
+> 对属性或方法的访问控制，是通过在前面添加关键字 public（公有），protected（受保护）或 private（私有）来实现的。被定义为公有的类成员可以在任何地方被访问
 
-### 客户端/服务端 IP 获取？了解代理透传 实际IP 的概念
+> PHP 5 新增了一个 final 关键字。如果父类中的方法被声明为 final，则子类无法覆盖该方法。如果一个类被声明为 final，则不能被继承
+
+### 客户端/服务端 IP 获取，了解代理透传 实际IP 的概念
+
+> 客户端IP: $\_SERVER['REMOTE_ADDR']
+
+> 服务端IP: $\_SERVER['SERVER_ADDR']
+
+> 客户端IP(代理透传): $\_SERVER['HTTP_X_FORWARDED_FOR']
 
 ### 类的静态调用和实例化调用
 
 ### PHP 不实例化调用方法
 
-> CLASS::METHOD() 静态方法
+> 使用 PHP 反射方式
 
-### php.ini 有哪些参数、display_errors、ini_set动态设置，php 执行默认超时时间
+### php.ini 配置选项，ini_set 动态设置
+
+- 配置选项列表
+
+|名字|默认|备注|
+|-|-|-|
+|error_log|NULL|设置脚本错误将被记录到的文件|
+|max_execution_time|30|最大执行时间|
+
+- 动态设置
+
+```php
+ini_set(string $varname , string $newvalue);
+```
 
 ### 如何返回一个301重定向
 
-### PHP与MySQL连接方式
+```php
+header('HTTP/1.1 301 Moved Permanently');
+header('Location: https://blog.maplemark.cn');
+```
 
-### MySQL、MySQLi、PDO区别
+### PHP 与 MySQL 连接方式
+
+### MySQL、MySQLi、PDO 区别
+
+> MySQL：面向过程，已废弃
+
+> MySQLi：面向对象，支持事务特性，支持预处理，有效防止 SQL 注入。只支持 MySQL 连接，不支持其它数据库
+
+> PDO：包含 MySQLi 特性，可很方便的切换各种数据库。不支持多语句查询
+
+### MySQL 连接池
 
 ### 代码执行过程
 
