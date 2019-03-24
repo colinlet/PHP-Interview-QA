@@ -327,15 +327,35 @@
 
 ### 单引号和双引号的区别
 
+> 双引号可以被分析器解析，单引号则不行
+
 ### isset 和 empty 的区别
 
-### static、$this、self 区别，static作用
+> isset：检测变量是否已设置并且非 NULL
 
-### include、require、include_once、require_once
+> empty：判断变量是否为空，变量为 0/false 也会被认为是空；变量不存在，不会产生警告
 
-### 了解大部分数组处理函数
+### static、self、$this 的区别
 
-### Cookie 和 Session 的区别和关系，Session 共享、存活时间
+> static：static 可以用于静态或非静态方法中，也可以访问类的静态属性、静态方法、常量和非静态方法，但不能访问非静态属性
+
+> self：可以用于访问类的静态属性、静态方法和常量，但 self 指向的是当前定义所在的类，这是 self 的限制
+
+> $this：指向的是实际调用时的对象，也就是说，实际运行过程中，谁调用了类的属性或方法，$this 指向的就是哪个对象。但 $this 不能访问类的静态属性和常量，且 $this 不能存在于静态方法中
+
+### include、require、include_once、require_once 的区别
+
+> require 和 include 几乎完全一样，除了处理失败的方式不同之外。require 在出错时产生 E_COMPILE_ERROR 级别的错误。换句话说将导致脚本中止而 include 只产生警告（E_WARNING），脚本会继续运行
+
+> include_once 语句在脚本执行期间包含并运行指定文件。此行为和 include 语句类似，唯一区别是如果该文件中已经被包含过，则不会再次包含。如同此语句名字暗示的那样，只会包含一次
+
+### 数组处理函数
+
+### Cookie 和 Session
+
+> Cookie：PHP 透明的支持 HTTP cookie 。cookie 是一种远程浏览器端存储数据并以此来跟踪和识别用户的机制
+
+> Session：会话机制(Session)在 PHP 中用于保持用户连续访问Web应用时的相关数据
 
 ### 预定义变量
 
@@ -571,46 +591,41 @@ $ phpize $ ./configure $ make && make install
 ## Web
 
 ### SEO 哪些需要注意的？
-
-### img 标签的 title 和 alt 有什么区别？
-
-### 如何进行网站性能优化？
+### img 标签的 title 和 alt 有什么区别
 
 ### 从浏览器地址栏输入 url 到显示页面的步骤
+### 什么是渐进增强
 
-### 什么是渐进增强？
-### CSS 选择器有哪些？优先级？
-### CSS sprite 是什么，有什么优缺点？
-### display: none;与visibility: hidden;的区别？
-### display: block; 和 display: inline; 的区别？
-### link 与 @import 的区别？
-### PNG,GIF,JPG 的区别及如何选？
-### 容器包含若干浮动元素时如何清理（包含）浮动？
+### CSS 选择器有哪些，优先级
+### CSS sprite 是什么，有什么优缺点
+### display: none;与visibility: hidden;的区别
+### display: block; 和 display: inline; 的区别
+### CSS 文件、style 标签、行内 style 属性优先级
+### link 与 @import 的区别
+### 盒子模型
+
+### 容器包含若干浮动元素时如何清理（包含）浮动
 ### 如何水平居中一个元素
 ### 如何竖直居中一个元素
+### 介绍下 CSS 盒子模型，与 flex 有什么区别
+### 相对定位、浮动定位、绝对定位区别
+
+### PNG,GIF,JPG 的区别及如何选
+
 ### 为什么把 JavaScript 文件放在 Html 底部
-### 介绍下 CSS 盒子模型？与 flex 有什么区别？
-### 相对定位、浮动定位、绝对定位区别？
-### JavaScript 数据类型？
-### Javascript有哪几种方法定义函数？
-### JavaScript 事件的三个阶段？
-### 闭包原理及应用？
-### 如何解决跨域问题？
-### JSONP 原理？
-### 客户端存储 localStorage 和 sessionStorage？
-### Vue.js 双向绑定原理？
+### JavaScript 数据类型
+### Javascript有哪几种方法定义函数
+### JavaScript 事件的三个阶段
 ### 原生获取 DOM 节点，属性
-### 盒子模型
-### CSS 文件、style 标签、行内 style 属性优先级
-### 类型判断
+### 闭包原理及应用
+
+### 如何解决跨域问题
+### JSONP 原理
 ### Cookie 读写
-### 新技术（了解）
-ES6
-模块化
-打包
-构建工具
-vue、react、webpack、
-前端 mvc
+### 客户端存储 localStorage 和 sessionStorage
+### Vue.js 双向绑定原理
+
+### 如何进行网站性能优化
 ### 优化
 浏览器单域名并发数限制
 静态资源缓存 304 （If-Modified-Since 以及 Etag 原理）
@@ -620,6 +635,13 @@ CDN
 静态资源延迟加载技术、预加载技术
 keep-alive
 CSS 在头部，JS 在尾部的优化（原理）
+### 新技术（了解）
+ES6
+模块化
+打包
+构建工具
+vue、react、webpack、
+前端 MVVM
 
 
 ## MySQL
@@ -630,14 +652,15 @@ CSS 在头部，JS 在尾部的优化（原理）
 ### UNION
 ### GROUP BY + COUNT + WHERE 组合案例
 ### 常用 MySQL 函数，如：now()、md5()、concat()、uuid()等
+
 ### 了解触发器是什么，说个使用场景
-### 常见存储引擎，有什么区别？
-### 常见索引？有什么特点？
-### 聚族索引与非聚族索引的区别？
-### 事务机制？
-### BTree 与 BTree-/BTree+ 索引原理？
-### 分表数量级？
-### 数据库优化手段？
+### 常见存储引擎，有什么区别
+### 常见索引？有什么特点
+### 聚族索引与非聚族索引的区别
+### 事务机制
+### BTree 与 BTree-/BTree+ 索引原理
+### 分表数量级
+### 数据库优化手段
 索引、联合索引(命中条件)
 分库分表(水平分表、垂直分表)
 分区
