@@ -443,6 +443,58 @@ header('Location: https://blog.maplemark.cn');
 
 ### PHP 与 MySQL 连接方式
 
+- MySQL
+
+```php
+$conn = mysql_connect('127.0.0.1:3306', 'root', '123456');
+if (!$conn) die(mysql_error() . "\n");
+mysql_query("SET NAMES 'utf8'");
+$select_db = mysql_select_db('app');
+if (!$select_db) die(mysql_error() . "\n");
+$sql = "SELECT * FROM `user` LIMIT 1";
+$res = mysql_query($sql);
+if (!$res) die(mysql_error() . "\n");
+while ($row = mysql_fetch_assoc($res)) {
+    var_dump($row);
+}
+mysql_close($conn);
+```
+
+- MySQLi
+
+```php
+$conn = @new mysqli('127.0.0.1:3306', 'root', '123456');
+if ($conn->connect_errno) die($conn->connect_error . "\n");
+$conn->query("set names 'utf8';");
+$select_db = $conn->select_db('user');
+if (!$select_db) die($conn->error . "\n");
+$sql = "SELECT * FROM `user` LIMIT 1";
+$res = $conn->query($sql);
+if (!$res) die($conn->error . "\n");
+while ($row = $res->fetch_assoc()) {
+    var_dump($row);
+}
+$res->free();
+$conn->close();
+```
+
+- PDO
+
+```php
+$pdo = new PDO('mysql:host=127.0.0.1:3306;dbname=user', 'root', '123456');
+$pdo->exec("set names 'utf8'");
+$sql = "SELECT * FROM `user` LIMIT 1";
+$stmt = $pdo->prepare($sql);
+$stmt->bindValue(1, 1, PDO::PARAM_STR);
+$rs = $stmt->execute();
+if ($rs) {
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        var_dump($row);
+    }
+}
+$pdo = null;
+```
+
 ### MySQL、MySQLi、PDO 区别
 
 > MySQL：最常用，是过程式风格的一组应用
@@ -551,7 +603,28 @@ header('Location: https://blog.maplemark.cn');
 
 ### 异常处理
 
-### 如何异步执行命令？
+> set_exception_handler — 设置用户自定义的异常处理函数
+
+> 使用 try / catch 捕获
+
+### 如何实现异步调用
+
+```php
+$fp = fsockopen("blog.maplemark.cn", 80, $errno, $errstr, 30);
+if (!$fp) {
+    echo "$errstr ($errno)<br />\n";
+} else {
+    $out = "GET /backend.php  / HTTP/1.1\r\n";
+    $out .= "Host: blog.maplemark.cn\r\n";
+    $out .= "Connection: Close\r\n\r\n";
+    fwrite($fp, $out);
+    /*忽略执行结果
+    while (!feof($fp)) {
+        echo fgets($fp, 128);
+    }*/
+    fclose($fp);
+}
+```
 
 ### 多进程同时写一个文件
 
@@ -580,14 +653,17 @@ header('Location: https://blog.maplemark.cn');
 ### PHP 拓展初始化
 
 - 初始化拓展
+
 ```shell
 $ php /php-src/ext/ext_skel.php --ext
 ```
 
 - 定义拓展函数
+
 > zend_module_entry 定义 Extension name 编写 PHP_FUNCTION 函数
 
 - 编译安装
+
 ```shell
 $ phpize $ ./configure $ make && make install
 ```
@@ -598,11 +674,15 @@ $ phpize $ ./configure $ make && make install
 
 > 引用计数器
 
-### Trait 是什么东西
+### Trait
+
+> 自 PHP 5.4.0 起，PHP 实现了一种代码复用的方法，称为 trait
 
 ### yield 是什么，说个使用场景 yield、yield 核心原理是什么
 
-### traits 与 interfaces 区别 及 traits 解决了什么痛点？
+> 一个生成器函数看起来像一个普通的函数，不同的是普通函数返回一个值，而一个生成器可以yield生成许多它所需要的值
+
+### traits 与 interfaces 区别 及 traits 解决了什么痛点
 
 ### 如何 foreach 迭代对象、如何数组化操作对象 $obj[key]、如何函数化对象 $obj(123);
 
@@ -732,21 +812,21 @@ Slow log(有什么用，什么时候需要)
 
 ## Redis
 
-### Redis 特点？
-### Redis 有哪些数据类型？
+### Redis 特点
+### Redis 有哪些数据类型
 ### 有序集合底层实现？跳跃表和平衡二叉树效率对比？
 ### 一致性哈希？
-### 如何实现分布式锁？
+### 如何实现分布式锁
 ### Redis 如何实现持久化
-### 可利用CPU多核心
+### 可利用 CPU 多核心
 ### 内存淘汰机制
 ### 集群 cluster
 ### 事务支持
 ### 你之前为了解决什么问题使用的什么，为什么选它？
 ### Redis 与 Memcache 区别
-### redis为啥单线程
-### 给我说一下redis的set是怎么实现的
-### 画画redis的zset是怎么实现的
+### redis 为啥单线程
+### 给我说一下 redis 的 set 是怎么实现的
+### 画画 redis 的 zset 是怎么实现的
 
 ## Linux
 
