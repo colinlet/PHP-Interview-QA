@@ -444,7 +444,6 @@ header('Location: https://blog.maplemark.cn');
 ### PHP 与 MySQL 连接方式
 
 - MySQL
-
 ```php
 $conn = mysql_connect('127.0.0.1:3306', 'root', '123456');
 if (!$conn) die(mysql_error() . "\n");
@@ -461,7 +460,6 @@ mysql_close($conn);
 ```
 
 - MySQLi
-
 ```php
 $conn = @new mysqli('127.0.0.1:3306', 'root', '123456');
 if ($conn->connect_errno) die($conn->connect_error . "\n");
@@ -479,7 +477,6 @@ $conn->close();
 ```
 
 - PDO
-
 ```php
 $pdo = new PDO('mysql:host=127.0.0.1:3306;dbname=user', 'root', '123456');
 $pdo->exec("set names 'utf8'");
