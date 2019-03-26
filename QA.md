@@ -820,32 +820,128 @@ $ phpize $ ./configure $ make && make install
 > 读屏器不会读取display: none;元素内容；会读取visibility: hidden;元素内容
 
 ### display: block; 和 display: inline; 的区别
+
+- block元素特点：
+
+> 1.处于常规流中时，如果 width 没有设置，会自动填充满父容器
+
+> 2.可以应用margin/padding
+
+> 3.在没有设置高度的情况下会扩展高度以包含常规流中的子元素 
+
+> 4.处于常规流中时布局时在前后元素位置之间（独占一个水平空间）
+
+> 5.忽略vertical-align
+
+- inline元素特点
+
+> 1.水平方向上根据direction依次布局
+
+> 2.不会在元素前后进行换行
+
+> 3.受white-space控制
+
+> 4.margin/padding在竖直方向上无效，水平方向上有效
+
+> 5.width/height属性对非替换行内元素无效，宽度由元素内容决定
+
+> 6.非替换行内元素的行框高由line-height确定，替换行内元素的行框高由height,margin,padding,border决定
+
+> 7.浮动或绝对定位时会转换为block
+
+> 8.vertical-align属性生效
+
 ### CSS 文件、style 标签、行内 style 属性优先级
+
 ### link 与 @import 的区别
+
+> link是HTML方式， @import是CSS方式
+
+> link最大限度支持并行下载，@import过多嵌套导致串行下载，出现FOUC
+
+> link可以通过rel="alternate stylesheet"指定候选样式
+
+> 浏览器对link支持早于@import，可以使用@import对老浏览器隐藏样式
+
+> @import必须在样式规则之前，可以在css文件中引用其他文件
+
+> 总体来说：link优于@import
+
 ### 盒子模型
 
 ### 容器包含若干浮动元素时如何清理（包含）浮动
+
+> 容器元素闭合标签前添加额外元素并设置clear: both
+
+> 父元素触发块级格式化上下文(见块级可视化上下文部分)
+
+> 设置容器元素伪元素进行清理推荐的清理浮动方法
+
+```html
+/**
+* 在标准浏览器下使用
+* 1 content内容为空格用于修复opera下文档中出现
+*   contenteditable属性时在清理浮动元素上下的空白
+* 2 使用display使用table而不是block：可以防止容器和
+*   子元素top-margin折叠,这样能使清理效果与BFC，IE6/7
+*   zoom: 1;一致
+**/
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+```
+
 ### 如何水平居中一个元素
+
 ### 如何竖直居中一个元素
+
 ### 介绍下 CSS 盒子模型，与 flex 有什么区别
+
 ### 相对定位、浮动定位、绝对定位区别
 
 ### PNG,GIF,JPG 的区别及如何选
 
+- GIF
+
+> 8位像素，256色；无损压缩；支持简单动画；支持boolean透明；适合简单动画
+
+- JPEG
+
+> 颜色限于256；有损压缩；可控制压缩质量；不支持透明；适合照片
+
+- PNG
+
+> 有PNG8和truecolor PNG；PNG8类似GIF颜色上限为256，文件小，支持alpha透明度，无动画；适合图标、背景、按钮
+
 ### 为什么把 JavaScript 文件放在 Html 底部
+
 ### JavaScript 数据类型
-### Javascript有哪几种方法定义函数
+
+### Javascript 有哪几种方法定义函数
+
 ### JavaScript 事件的三个阶段
+
 ### 原生获取 DOM 节点，属性
+
 ### 闭包原理及应用
 
 ### 如何解决跨域问题
+
 ### JSONP 原理
+
 ### Cookie 读写
+
 ### 客户端存储 localStorage 和 sessionStorage
+
 ### Vue.js 双向绑定原理
 
 ### 如何进行网站性能优化
+
 ### 优化
 浏览器单域名并发数限制
 静态资源缓存 304 （If-Modified-Since 以及 Etag 原理）
@@ -867,19 +963,31 @@ vue、react、webpack、
 ## MySQL
 
 ### CRUD 基础
-### char 和 varchar 数据类型区别？
-### JOIN、LEFT JOIN 、RIGHT JOIN、INNER JOIN？
+
+### char 和 varchar 数据类型区别
+
+### JOIN、LEFT JOIN 、RIGHT JOIN、INNER JOIN
+
 ### UNION
+
 ### GROUP BY + COUNT + WHERE 组合案例
+
 ### 常用 MySQL 函数，如：now()、md5()、concat()、uuid()等
 
 ### 了解触发器是什么，说个使用场景
+
 ### 常见存储引擎，有什么区别
+
 ### 常见索引？有什么特点
+
 ### 聚族索引与非聚族索引的区别
+
 ### 事务机制
+
 ### BTree 与 BTree-/BTree+ 索引原理
+
 ### 分表数量级
+
 ### 数据库优化手段
 索引、联合索引(命中条件)
 分库分表(水平分表、垂直分表)
@@ -893,85 +1001,149 @@ Slow log(有什么用，什么时候需要)
 ## Redis
 
 ### Redis 特点
+
 ### Redis 有哪些数据类型
-### 有序集合底层实现？跳跃表和平衡二叉树效率对比？
-### 一致性哈希？
+
+### 有序集合底层实现？跳跃表和平衡二叉树效率对比
+
+### 一致性哈希
+
 ### 如何实现分布式锁
+
 ### Redis 如何实现持久化
+
 ### 可利用 CPU 多核心
+
 ### 内存淘汰机制
+
 ### 集群 cluster
+
 ### 事务支持
-### 你之前为了解决什么问题使用的什么，为什么选它？
+
+### 你之前为了解决什么问题使用的什么，为什么选它
+
 ### Redis 与 Memcache 区别
+
 ### redis 为啥单线程
+
 ### 给我说一下 redis 的 set 是怎么实现的
+
 ### 画画 redis 的 zset 是怎么实现的
 
 ## Linux
 
 ### 查看 CPU、内存、时间、系统版本等信息
+
 ### find 、grep 查找文件
+
 ### 批量删除文件
+
 ### sed、awk使用
+
 ### crontab
+
 ### vim快捷键
+
 ### 负载查看
+
 ### 如何查看 PHP 进程的内存、CPU 占用
+
 ### Linux进程
+
 ### 进程、线程、协程区别
-### 502 大概什么什么原因？ 如何排查 504呢？
+
+### 502 大概什么什么原因？ 如何排查 504呢
+
 ### 进程间通信几种方式，最快的是哪种？
 
 ## 安全
 
-### CSRF 攻击？请描述一个实例？
-### XSS 攻击？
-### SQL 注入？
-### IP 地址能被伪造吗？
-### include 请求参数？
-### md5 逆向原理？
-### DOS 攻击？
+### CSRF 攻击？请描述一个实例
+
+### XSS 攻击
+
+### SQL 注入
+
+### IP 地址能被伪造吗
+
+### include 请求参数
+
+### md5 逆向原理
+
+### DOS 攻击
+
 ### 数据库存储用户密码时，应该是怎么做才安全
+
 ### 目录权限安全
+
 ### disable_functions 关闭高危函数
+
 ### 文件上传 PHP 脚本
+
 ### eval 函数执行脚本
+
 ### 了解 Hash 与 Encrypt 区别
 
 ## 设计模式
 
-### Autoload、Composer 原理?
-### OOP 思想？
+### Autoload、Composer 原理
+
+### OOP 思想
+
 ### 抽象类、接口 分别使用场景
+
 ### 依赖注入实现原理
-### 单例模式？
-### 工厂模式？
-### 观察者模式？
-### 适配器模式？
-### 依赖注入模式？
-### 门面模式？
+
+### 单例模式
+
+### 工厂模式
+
+### 观察者模式
+
+### 适配器模式
+
+### 依赖注入模式
+
+### 门面模式
 
 ## 架构
 
 ### 负载均衡有哪几种，挑一种你熟悉的说明其原理
+
 ### 介绍下 nginx
+
 ### 反向代理
+
 ### nginx 中 fastcgi_pass 监听，unix socket 和 tcp socket 的区别
+
 ### 消息队列？RabbitMQ、ActiveMq、Nsq、kafka
+
 ### 穿透、雪崩
+
 ### DB 主从、读写分离
+
 ### 如何保障数据的可用性，即使被删库了也能恢复到分钟级别。你会怎么做
-### 数据库连接过多，超过最大值，如何优化架构。从哪些方便处理？
+
+### 数据库连接过多，超过最大值，如何优化架构。从哪些方便处理
+
 ### 数据冗余、备份（MySQL增量、全量 原理）
+
 ### 画出常见 PHP 应用架构图
+
 ### 介绍下 RESTful API
-### API 请求如何保证数据不被篡改？
+
+### API 请求如何保证数据不被篡改
+
 ### API 版本兼容怎么处理
+
 ### 限流（木桶、令牌桶）
+
 ### OAuth 2 主要用在哪些场景下
+
 ### JWT
+
 ### 了解常用语言特性，及不同场景适用性。
+
 PHP VS Golang
 PHP VS Python
 PHP VS JAVA
