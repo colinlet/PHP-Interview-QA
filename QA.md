@@ -770,13 +770,21 @@ $ phpize $ ./configure $ make && make install
 ### CSS 选择器有哪些，优先级
 
 > \*通用选择器：选择所有元素，不参与计算优先级，兼容性IE6+
+
 > \#X id选择器：选择id值为X的元素，兼容性：IE6+
+
 > .X 类选择器： 选择class包含X的元素，兼容性：IE6+
+
 > X Y后代选择器： 选择满足X选择器的后代节点中满足Y选择器的元素，兼容性：IE6+
+
 > X 元素选择器： 选择标所有签为X的元素，兼容性：IE6+
+
 > :link，：visited，：focus，：hover，：active链接状态： 选择特定状态的链接元素，顺序LoVe HAte，兼容性: IE4+
+
 > X + Y直接兄弟选择器：在X之后第一个兄弟节点中选择满足Y选择器的元素，兼容性： IE7+
+
 > X > Y子选择器： 选择X的子元素中满足Y选择器的元素，兼容性： IE7+
+
 > X ~ Y兄弟： 选择X之后所有兄弟节点中满足Y选择器的元素，兼容性： IE7+
 
 ### CSS sprite 是什么，有什么优缺点
@@ -786,12 +794,15 @@ $ phpize $ ./configure $ make && make install
 - 优点：
 
 > 减少HTTP请求数，极大地提高页面加载速度
+
 > 增加图片信息重复度，提高压缩比，减少图片大小
+
 > 更换风格方便，只需在一张或几张图片上修改颜色或样式即可实现
 
 - 缺点：
 
 > 图片合并麻烦
+
 > 维护麻烦，修改一个图片可能需要从新布局整个图片，样式
 
 ### display: none;与visibility: hidden;的区别
@@ -801,8 +812,11 @@ $ phpize $ ./configure $ make && make install
 - 区别：
 
 > display:none;会让元素完全从渲染树中消失，渲染的时候不占据任何空间；visibility: hidden;不会让元素从渲染树消失，渲染师元素继续占据空间，只是内容不可见
+
 > display: none;是非继承属性，子孙节点消失由于元素从渲染树消失造成，通过修改子孙节点属性无法显示；visibility: hidden;是继承属性，子孙节点消失由于继承了hidden，通过设置visibility: visible;可以让子孙节点显式
-> 修改常规流中元素的display通常会造成文档重排。修改visibility属性只会造成本元素的重绘。
+
+> 修改常规流中元素的display通常会造成文档重排。修改visibility属性只会造成本元素的重绘
+
 > 读屏器不会读取display: none;元素内容；会读取visibility: hidden;元素内容
 
 ### display: block; 和 display: inline; 的区别
