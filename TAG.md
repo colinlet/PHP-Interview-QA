@@ -39,12 +39,17 @@
 
 ## Web
 
+- SEO
+
 - HTML
+	- 历史
+	- 标记
+	- 语义化
 	- HTML5
 
 - CSS
+	- 基础
 	- CSS3
-	- canvas
 
 - JavaScript
 
@@ -56,6 +61,10 @@
 - 自动化部署工具
 	- webpack
 	- gulp
+
+- 浏览器兼容性
+
+- 编程部分
 
 ## MySQL
 
