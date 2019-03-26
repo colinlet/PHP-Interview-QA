@@ -6,6 +6,7 @@
 - [PHP-Interview](https://github.com/xianyunyh/PHP-Interview)
 - [FE-interview](https://github.com/qiu-deqing/FE-interview)
 - [JavaGuide](https://github.com/Snailclimb/JavaGuide)
+- [后端架构师技术图谱](https://github.com/xingshaocheng/architect-awesome)
 - [HTML 基础](http://www.runoob.com/html/html-tutorial.html)
 - [CSS 基础](http://www.runoob.com/css/css-tutorial.html)
 - [JavaScript 标准参考教程（alpha）](https://wangdoc.com/javascript/)
