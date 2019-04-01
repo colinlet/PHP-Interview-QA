@@ -151,11 +151,11 @@
 
 ### Web
 
-- [SEO 有哪些需要注意的](./QA.md#seo-哪些需要注意的)
+- [SEO 有哪些需要注意的](./QA.md#seo-有哪些需要注意的)
 
-- [img 标签的 title 和 alt 有什么区别]
+- [img 标签的 title 和 alt 有什么区别](./QA.md#img-标签的-title-和-alt-有什么区别)
 
-- [渐进增强]
+- [渐进增强](./QA.md#css-选择器优先级)
 
 ### MySQL
 
