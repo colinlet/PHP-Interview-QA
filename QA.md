@@ -727,7 +727,7 @@ $ phpize $ ./configure $ make && make install
 
 ## Web
 
-### SEO 哪些需要注意的
+### SEO 有哪些需要注意的
 
 > 合理的 title、description、keywords
 
