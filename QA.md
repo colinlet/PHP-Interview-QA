@@ -743,7 +743,7 @@ $ phpize $ ./configure $ make && make install
 
 > 提高网站速度：网站速度是搜索引擎排序的一个重要指标
 
-拓展阅读[《初探 SEO》](./Web/01.初探SEO.md)
+拓展阅读[《初探 SEO》](./04.Web/01.初探SEO.md)
 
 ### img 标签的 title 和 alt 有什么区别
 
