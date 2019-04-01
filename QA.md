@@ -743,6 +743,8 @@ $ phpize $ ./configure $ make && make install
 
 > 提高网站速度：网站速度是搜索引擎排序的一个重要指标
 
+拓展阅读[《初探 SEO》](./Web/01.初探SEO.md)
+
 ### img 标签的 title 和 alt 有什么区别
 
 > title是global attributes之一，用于为元素提供附加的advisory information。通常当鼠标滑动到元素上的时候显示
