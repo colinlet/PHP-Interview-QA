@@ -751,25 +751,57 @@ $ phpize $ ./configure $ make && make install
 
 > alt 是<img\>标签的特有属性，是图片内容的等价描述。图片无法加载时显示。搜索引擎会重点分析
 
-### CSS 选择器有哪些，优先级
+### CSS 选择器，优先级
 
-> \*通用选择器：选择所有元素，不参与计算优先级，兼容性IE6+
+- 通配选择器
 
-> \#X id选择器：选择id值为X的元素，兼容性：IE6+
+```css
+* {color: red;}
+```
 
-> .X 类选择器： 选择class包含X的元素，兼容性：IE6+
+- 类选择器
 
-> X Y后代选择器： 选择满足X选择器的后代节点中满足Y选择器的元素，兼容性：IE6+
+```css
+*.warning {font-weight: bold;}
+p.warning {font-weight: bold;}
+.warning {font-weight: bold;}
+```
 
-> X 元素选择器： 选择标所有签为X的元素，兼容性：IE6+
+> 多类选择器
 
-> :link，：visited，：focus，：hover，：active链接状态： 选择特定状态的链接元素，顺序LoVe HAte，兼容性: IE4+
+```css
+.warning {font-weight: bold;}
+.urgent {font-style: italic;}
+.warning.urgent {background: silver;}
+```
 
-> X + Y直接兄弟选择器：在X之后第一个兄弟节点中选择满足Y选择器的元素，兼容性： IE7+
+- ID 选择器
 
-> X > Y子选择器： 选择X的子元素中满足Y选择器的元素，兼容性： IE7+
+```css
+*#first-para {font-weight: bold;}
+#first-para {font-weight: bold;}
+```
 
-> X ~ Y兄弟： 选择X之后所有兄弟节点中满足Y选择器的元素，兼容性： IE7+
+- 属性选择器
+
+> 简单属性选择
+
+```html
+<h1 class="hoopla">Hello</h1>
+<h1 class="severe">Serenity</h1>
+<h1 class="fancy">Fooling</h1>
+```
+
+```css
+h1[class] {color: silver;}
+```
+
+```css
+img[alt] {border: 3px solid red;} //对所有带有 alt 属性的图像应用样式
+*[title] {font-weight: bold;} //包含标题(title)信息的所有元素变为粗体显示
+```
+
+> 根据具体属性值选择
 
 ### CSS sprite 是什么，有什么优缺点
 
