@@ -31,7 +31,7 @@
 
 ## 交流讨论组
 
-![PHP求职交流群](./assets/wechat-groups.png)
+<p align="left"><img width="320" src="./assets/wechat-groups.jpg" alt="wechat groups"></a></p>
 
 ## 问题列表
 
@@ -152,6 +152,10 @@
 ### Web
 
 - [SEO 有哪些需要注意的](./QA.md#seo-哪些需要注意的)
+
+- [img 标签的 title 和 alt 有什么区别]
+
+- [渐进增强]
 
 ### MySQL
 
