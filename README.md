@@ -155,7 +155,7 @@
 
 - [img 标签的 title 和 alt 有什么区别](./QA.md#img-标签的-title-和-alt-有什么区别)
 
-- [CSS 选择器，优先级](./QA.md#css-选择器优先级)
+- [CSS 选择器的分类及优先级](./QA.md#css选择器的分类及优先级)
 
 - [渐进增强](./QA.md#css-选择器优先级)
 
