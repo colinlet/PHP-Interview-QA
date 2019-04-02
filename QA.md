@@ -757,7 +757,7 @@ $ phpize $ ./configure $ make && make install
 
 > 优先级：ID选择器 > 属性选择器 > 类选择器 > 通配选择器
 
-拓展阅读[《CSS选择器的分类及优先级》](./04.Web/02.css选择器的分类及优先级.md)
+拓展阅读[《CSS选择器的分类及优先级》](./04.Web/02.CSS选择器的分类及优先级.md)
 
 ### CSS sprite 是什么，有什么优缺点
 
