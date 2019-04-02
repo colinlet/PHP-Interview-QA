@@ -755,6 +755,8 @@ $ phpize $ ./configure $ make && make install
 
 ![CSS选择器](./assets/web-css-CSS选择器.png)
 
+> 优先级：ID选择器 > 属性选择器 > 类选择器 > 通配选择器
+
 拓展阅读[《CSS选择器》](./04.Web/02.CSS选择器.md)
 
 ### CSS sprite 是什么，有什么优缺点
