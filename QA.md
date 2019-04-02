@@ -761,7 +761,7 @@ $ phpize $ ./configure $ make && make install
 
 ### CSS sprite 是什么，有什么优缺点
 
-> 概念：将多个小图片拼接到一个图片中。通过background-position和元素尺寸调节需要显示的背景图案。
+> 概念：将多个小图片拼接到一个图片中。通过 background-position 和元素尺寸调节需要显示的背景图案。
 
 - 优点：
 
