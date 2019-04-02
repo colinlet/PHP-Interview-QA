@@ -753,55 +753,9 @@ $ phpize $ ./configure $ make && make install
 
 ### CSS 选择器，优先级
 
-- 通配选择器
+![CSS选择器](./assets/web-css-CSS选择器.png)
 
-```css
-* {color: red;}
-```
-
-- 类选择器
-
-```css
-*.warning {font-weight: bold;}
-p.warning {font-weight: bold;}
-.warning {font-weight: bold;}
-```
-
-> 多类选择器
-
-```css
-.warning {font-weight: bold;}
-.urgent {font-style: italic;}
-.warning.urgent {background: silver;}
-```
-
-- ID 选择器
-
-```css
-*#first-para {font-weight: bold;}
-#first-para {font-weight: bold;}
-```
-
-- 属性选择器
-
-> 简单属性选择
-
-```html
-<h1 class="hoopla">Hello</h1>
-<h1 class="severe">Serenity</h1>
-<h1 class="fancy">Fooling</h1>
-```
-
-```css
-h1[class] {color: silver;}
-```
-
-```css
-img[alt] {border: 3px solid red;} //对所有带有 alt 属性的图像应用样式
-*[title] {font-weight: bold;} //包含标题(title)信息的所有元素变为粗体显示
-```
-
-> 根据具体属性值选择
+拓展阅读[《CSS选择器》](./04.Web/02.CSS选择器.md)
 
 ### CSS sprite 是什么，有什么优缺点
 
