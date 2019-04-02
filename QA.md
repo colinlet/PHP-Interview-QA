@@ -751,7 +751,7 @@ $ phpize $ ./configure $ make && make install
 
 > alt 是<img\>标签的特有属性，是图片内容的等价描述。图片无法加载时显示。搜索引擎会重点分析
 
-### CSS 选择器，优先级
+### CSS 选择器的分类及优先级
 
 ![CSS选择器](./assets/web-css-CSS选择器.png)
 
