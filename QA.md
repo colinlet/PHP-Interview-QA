@@ -775,6 +775,8 @@ $ phpize $ ./configure $ make && make install
 
 > 维护麻烦，修改一个图片可能需要从新布局整个图片，样式
 
+拓展阅读《雪碧图CSS Sprite的应用》
+
 ### display: none 与 visibility: hidden 的区别
 
 - 用途
@@ -825,23 +827,33 @@ $ phpize $ ./configure $ make && make install
 
 ### CSS 文件、style 标签、行内 style 属性优先级
 
+> 最近的祖先样式比其他祖先样式优先级高
+
+> "直接样式"比"祖先样式"优先级高
+
 ### link 与 @import 的区别
 
-> link是HTML方式， @import是CSS方式
+> link 是 HTML 方式， @import 是 CSS 方式
 
-> link最大限度支持并行下载，@import过多嵌套导致串行下载，出现FOUC
+> link 最大限度支持并行下载，@import 过多嵌套导致串行下载，出现FOUC
 
-> link可以通过rel="alternate stylesheet"指定候选样式
+> link 可以通过 rel="alternate stylesheet"指定候选样式
 
-> 浏览器对link支持早于@import，可以使用@import对老浏览器隐藏样式
+> 浏览器对 link 支持早于 @import，可以使用 @import 对老浏览器隐藏样式
 
-> @import必须在样式规则之前，可以在css文件中引用其他文件
+> @import 必须在样式规则之前，可以在 css 文件中引用其他文件
 
-> 总体来说：link优于@import
+> 总体来说：link 优于 @import
 
 ### 盒子模型
 
-### 容器包含若干浮动元素时如何清理（包含）浮动
+![CSS框模型](./assets/web-css-CSS框模型.jpg)
+
+> 具备属性：内容(content)、填充(padding)、边框(border)、边界(margin)
+
+拓展阅读《CSS盒模型》
+
+### 容器包含若干浮动元素时如何清理(包含)浮动
 
 > 容器元素闭合标签前添加额外元素并设置clear: both
 
@@ -870,9 +882,29 @@ $ phpize $ ./configure $ make && make install
 
 ### 如何水平居中一个元素
 
+> 被设置元素为文本、图片等行内元素时，水平居中是通过给父元素设置 text-align:center 来实现的
+
+> 定宽和块状可以通过设置 “左右margin” 值为 “auto” 实现居中
+
+> 不定宽块状使用 float:left 实现居中
+
+拓展阅读《CSS 水平居中设置》
+
 ### 如何竖直居中一个元素
 
-### 介绍下 CSS 盒子模型，与 flex 有什么区别
+> 父元素高度确定的单行文本
+
+> 父元素高度确定的多行文本
+
+拓展阅读《CSS 垂直居中设置》
+
+### flex 与 CSS 盒子模型有什么区别
+
+> 布局的传统解决方案，基于盒状模型，依赖 display 属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现
+
+> Flex 布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能
+
+拓展阅读 《flex 布局的基本概念》
 
 ### 相对定位、浮动定位、绝对定位区别
 
