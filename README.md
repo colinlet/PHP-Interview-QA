@@ -157,6 +157,12 @@
 
 - [CSS 选择器的分类](./QA.md#css-选择器的分类)
 
+- [CSS sprite 是什么，有什么优缺点](./QA.md#css-sprite-是什么有什么优缺点)
+
+- display: none 与 visibility: hidden 的区别
+
+- display: block 和 display: inline 的区别
+
 - [渐进增强](./QA.md#渐进增强)
 
 ### MySQL

@@ -761,65 +761,67 @@ $ phpize $ ./configure $ make && make install
 
 > 概念：将多个小图片拼接到一个图片中。通过 background-position 和元素尺寸调节需要显示的背景图案。
 
-- 优点：
+- 优点
 
-> 减少HTTP请求数，极大地提高页面加载速度
+> 减少 HTTP 请求数，极大地提高页面加载速度
 
 > 增加图片信息重复度，提高压缩比，减少图片大小
 
 > 更换风格方便，只需在一张或几张图片上修改颜色或样式即可实现
 
-- 缺点：
+- 缺点
 
 > 图片合并麻烦
 
 > 维护麻烦，修改一个图片可能需要从新布局整个图片，样式
 
-### display: none;与visibility: hidden;的区别
+### display: none 与 visibility: hidden 的区别
 
-> 联系：它们都能让元素不可见
+- 用途
 
-- 区别：
+> 通过为属性设置一个值来影响用户代理显示的方式
 
-> display:none;会让元素完全从渲染树中消失，渲染的时候不占据任何空间；visibility: hidden;不会让元素从渲染树消失，渲染师元素继续占据空间，只是内容不可见
+- 区别
 
-> display: none;是非继承属性，子孙节点消失由于元素从渲染树消失造成，通过修改子孙节点属性无法显示；visibility: hidden;是继承属性，子孙节点消失由于继承了hidden，通过设置visibility: visible;可以让子孙节点显式
+> display:none 会让元素完全从渲染树中消失，渲染的时候不占据任何空间；visibility: hidden 不会让元素从渲染树消失，渲染师元素继续占据空间，只是内容不可见
 
-> 修改常规流中元素的display通常会造成文档重排。修改visibility属性只会造成本元素的重绘
+> display: none 是非继承属性，子孙节点消失由于元素从渲染树消失造成，通过修改子孙节点属性无法显示；visibility: hidden 是继承属性，子孙节点消失由于继承了hidden，通过设置visibility: visible 可以让子孙节点显式
 
-> 读屏器不会读取display: none;元素内容；会读取visibility: hidden;元素内容
+> 修改常规流中元素的 display 通常会造成文档重排。修改 visibility 属性只会造成本元素的重绘
 
-### display: block; 和 display: inline; 的区别
+> 读屏器不会读取 display: none 元素内容；会读取 visibility: hidden 元素内容
 
-- block元素特点：
+### display: block 和 display: inline 的区别
 
-> 1.处于常规流中时，如果 width 没有设置，会自动填充满父容器
+- block 元素特点
 
-> 2.可以应用margin/padding
+> 处于常规流中时，如果 width 没有设置，会自动填充满父容器
 
-> 3.在没有设置高度的情况下会扩展高度以包含常规流中的子元素 
+> 可以应用 margin/padding
 
-> 4.处于常规流中时布局时在前后元素位置之间（独占一个水平空间）
+> 在没有设置高度的情况下会扩展高度以包含常规流中的子元素 
 
-> 5.忽略vertical-align
+> 处于常规流中时布局时在前后元素位置之间（独占一个水平空间）
 
-- inline元素特点
+> 忽略 vertical-align
 
-> 1.水平方向上根据direction依次布局
+- inline 元素特点
 
-> 2.不会在元素前后进行换行
+> 水平方向上根据 direction 依次布局
 
-> 3.受white-space控制
+> 不会在元素前后进行换行
 
-> 4.margin/padding在竖直方向上无效，水平方向上有效
+> 受 white-space 控制
 
-> 5.width/height属性对非替换行内元素无效，宽度由元素内容决定
+> margin/padding 在竖直方向上无效，水平方向上有效
 
-> 6.非替换行内元素的行框高由line-height确定，替换行内元素的行框高由height,margin,padding,border决定
+> width/height 属性对非替换行内元素无效，宽度由元素内容决定
 
-> 7.浮动或绝对定位时会转换为block
+> 非替换行内元素的行框高由 line-height 确定，替换行内元素的行框高由 height,margin,padding,border 决定
 
-> 8.vertical-align属性生效
+> 浮动或绝对定位时会转换为 block
+
+> vertical-align 属性生效
 
 ### CSS 文件、style 标签、行内 style 属性优先级
 
