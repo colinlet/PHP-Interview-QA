@@ -936,15 +936,84 @@ $ phpize $ ./configure $ make && make install
 
 ### JavaScript 数据类型
 
-### Javascript 有哪几种方法定义函数
+### 原生js操作DOM的方法有哪些
 
-### JavaScript 事件的三个阶段
+> 获取节点的方法getElementById、getElementsByClassName、getElementsByTagName、 getElementsByName、querySelector、querySelectorAll,对元素属性进行操作的 getAttribute、 setAttribute、removeAttribute方法，对节点进行增删改的appendChild、insertBefore、replaceChild、removeChild、 createElement等
 
-### 原生获取 DOM 节点，属性
+### 原生js字符串方法有哪些
+
+> 简单分为获取类方法，获取类方法有charAt方法用来获取指定位置的字符，获取指定位置字符的unicode编码的charCodeAt方法， 与之相反的fromCharCode方法，通过传入的unicode返回字符串。查找类方法有indexof()、lastIndexOf()、search()、match() 方法。截取类的方法有substring、slice、substr三个方法，其他的还有replace、split、toLowerCase、toUpperCase方法
+
+### 原生js字符串截取方法有哪些？有什么区别
+
+> js字符串截取方法有substring、slice、substr三个方法，substring和slice都是指定截取的首尾索引值，不同的是传递负值的时候 substring会当做0来处理，而slice传入负值的规则是-1指最后一个字符，substr方法则是第一个参数是开始截取的字符串，第二个是截取的字符数量， 和slice类似，传入负值也是从尾部算起的。
+
+### setTimeout和setInterval的区别
+
+> setTimeout表示间隔一段时间之后执行一次调用，而setInterval则是每间隔一段时间循环调用，直至clearInterval结束。 内存方面，setTimeout只需要进入一次队列，不会造成内存溢出，setInterval因为不计算代码执行时间，有可能同时执行多次代码， 导致内存溢出
+
+### 使用new操作符实例化一个对象的具体步骤
+
+- 构造一个新的对象
+
+- 将构造函数的作用域赋给新对象（也就是说this指向了新的对象）
+
+- 执行构造函数中的代码
+
+- 返回新对象
+
+### 如何实现 ajax 请求
+
+> 通过实例化一个XMLHttpRequest对象得到一个实例，调用实例的open方法为这次 ajax请求设定相应的http方法、相应的地址和以及是否异步，当然大多数情况下我们都是选异步， 以异步为例，之后调用send方法ajax请求，这个方法可以设定需要发送的报文主体，然后通过 监听readystatechange事件，通过这个实例的readyState属性来判断这个ajax请求的状态，其中分为0,1,2,3,4这四种 状态，当状态为4的时候也就是接收数据完成的时候，这时候可以通过实例的status属性判断这个请求是否成功
+
+```javascript
+var xhr = new XMLHttpRequest();
+xhr.open('get', 'aabb.php', true);
+xhr.send(null);
+xhr.onreadystatechange = function() {
+  if(xhr.readyState==4) {
+    if(xhr.status==200) {
+      console.log(xhr.responseText);
+    }
+  }
+}
+```
+
+### 同源策略是什么
+
+> 同源策略是指只有具有相同源的页面才能够共享数据，比如cookie，同源是指页面具有相同的协议、域名、端口号，有一项不同就不是同源。 有同源策略能够保证web网页的安全性
+
+### 如何解决跨域问题
+
+### 引起内存泄漏的操作有哪些
+
+- 全局变量引起
+
+- 闭包引起
+
+- dom清空，事件未清除
+
+- 子元素存在引用
+
+- 被遗忘的计时器
 
 ### 闭包原理及应用
 
-### 如何解决跨域问题
+### 对js原型的理解
+
+> 我们知道在es6之前，js没有类和继承的概念，js是通过原型来实现继承的。在js中一个构造函数默认自带有一个prototype属性， 这个的属性值是一个对象，同时这个prototype对象自带有一个constructor属性，这个属性指向这个构造函数，同时每一个实例 都有一个__proto__属性指向这个prototype对象，我们可以将这个叫做隐式原型，我们在使用一个实例的方法的时候，会先检查 这个实例中是否有这个方法，没有则会继续向上查找这个prototype对象是否有这个方法，刚刚我们说到prototype是一个对象， 那么也即是说这个是一个对象的实例，那么这个对象同样也会有一个__proto__属性指向对象的prototype对象。
+
+### 对js模块化的理解
+
+> 在ES6出现之前，js没有标准的模块化概念，这也就造成了js多人写作开发容易造成全局污染的情况，以前我们可能会采用立即执行 函数、对象等方式来尽量减少变量这种情况，后面社区为了解决这个问题陆续提出了AMD规范和CMD规范，这里不同于Node.js的 CommonJS的原因在于服务端所有的模块都是存在于硬盘中的，加载和读取几乎是不需要时间的，而浏览器端因为加载速度取决于网速， 因此需要采用异步加载，AMD规范中使用define来定义一个模块，使用require方法来加载一个模块，现在ES6也推出了标准的模块 加载方案，通过export和import来导出和导入模块。
+
+### js如何判断网页中图片加载成功或者失败
+
+> 使用onload事件运行加载成功，使用onerror事件判断失败
+
+### 如何实现懒加载
+
+> 懒加载就是根据用户的浏览需要记载内容，也就是在用户即将浏览完当前的内容时进行继续加载内容，这种技术常常用来加载图片的时候使用。我们判断用户是否即将浏览到底部之后进行在家内容 这时候可能会需要加载大量的内容，可以使用fragment来优化一下，因为大部分是使用滑动和滚轮来触发的，因此很有可能会不断触发，可以使用函数节流做一个优化，防止用户不断触发
 
 ### JSONP 原理
 
@@ -992,6 +1061,7 @@ ES6
 构建工具
 vue、react、webpack、
 前端 MVVM
+### 简要介绍 ES6
 
 
 ## MySQL
