@@ -177,6 +177,10 @@
 
 - [flex 与 CSS 盒子模型有什么区别](./QA.md#flex-与-css-盒子模型有什么区别)
 
+- Position 属性
+
+- PNG,GIF,JPG 的区别及如何选
+
 - [渐进增强](./QA.md#渐进增强)
 
 ### MySQL
