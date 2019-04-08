@@ -65,7 +65,7 @@
 
 - [HTTP 优缺点](./QA.md#http-优缺点)
 
-- [HTTPS 通信原理](./QA.md#http-通信原理)
+- [HTTPS 通信原理](./QA.md#https-通信原理)
 
 - [HTTP 2.0](./QA.md#http-2.0)
 
@@ -181,11 +181,11 @@
 
 - [PNG,GIF,JPG 的区别及如何选](./QA.md#pnggifjpg-的区别及如何选)
 
-- 为什么把 JavaScript 文件放在 Html 底部
+- [为什么把 JavaScript 文件放在 Html 底部](./QA.md#为什么把-javascript-文件放在-html-底部)
 
-- JavaScript 数据类型
+- [JavaScript 数据类型](./QA.md#javascript-数据类型)
 
-- JavaScript 操作 DOM 的方法有哪些
+- [JavaScript 操作 DOM 的方法有哪些](./QA.md#javascript-操作-dom-的方法有哪些)
 
 - [渐进增强](./QA.md#渐进增强)
 
