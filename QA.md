@@ -934,9 +934,15 @@ $ phpize $ ./configure $ make && make install
 
 ### 为什么把 JavaScript 文件放在 Html 底部
 
+> 脚本会阻塞页面其他资源的下载，因此推荐将所有`<script>`标签尽可能放到`<body>`标签的底部，以尽量减少对整个页面下载的影响
+
+拓展阅读 [《JavaScript 的性能优化：加载和执行》](./04.Web/09.JavaScript的性能优化-加载和执行.md)
+
 ### JavaScript 数据类型
 
-### 原生js操作DOM的方法有哪些
+![JavaScript 数据类型](./assets/web-javascript-数据类型.png)
+
+### JavaScript 操作 DOM 的方法有哪些
 
 > 获取节点的方法getElementById、getElementsByClassName、getElementsByTagName、 getElementsByName、querySelector、querySelectorAll,对元素属性进行操作的 getAttribute、 setAttribute、removeAttribute方法，对节点进行增删改的appendChild、insertBefore、replaceChild、removeChild、 createElement等
 

@@ -181,6 +181,12 @@
 
 - [PNG,GIF,JPG 的区别及如何选](./QA.md#pnggifjpg-的区别及如何选)
 
+- 为什么把 JavaScript 文件放在 Html 底部
+
+- JavaScript 数据类型
+
+- JavaScript 操作 DOM 的方法有哪些
+
 - [渐进增强](./QA.md#渐进增强)
 
 ### MySQL
