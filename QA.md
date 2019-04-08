@@ -942,9 +942,13 @@ $ phpize $ ./configure $ make && make install
 
 ![JavaScript 数据类型](./assets/web-javascript-数据类型.png)
 
+拓展阅读 [《JavaScript 数据类型和数据结构》](./04.Web/10.JavaScript数据类型和数据结构.md)
+
 ### JavaScript 操作 DOM 的方法有哪些
 
 > 获取节点的方法getElementById、getElementsByClassName、getElementsByTagName、 getElementsByName、querySelector、querySelectorAll,对元素属性进行操作的 getAttribute、 setAttribute、removeAttribute方法，对节点进行增删改的appendChild、insertBefore、replaceChild、removeChild、 createElement等
+
+拓展阅读 [《JavaScript操作DOM常用的API》](./04.Web/11.JavaScript操作DOM常用的API.md)
 
 ### JavaScript 字符串方法有哪些
 
