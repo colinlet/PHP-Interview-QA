@@ -187,6 +187,42 @@
 
 - [JavaScript 操作 DOM 的方法有哪些](./QA.md#javascript-操作-dom-的方法有哪些)
 
+- JavaScript 字符串方法有哪些
+
+- JavaScript 字符串截取方法有哪些？有什么区别
+
+- setTimeout 和 setInterval 的区别
+
+- 使用new操作符实例化一个对象的具体步骤
+
+- 如何实现 ajax 请求
+
+- 同源策略是什么
+
+- 如何解决跨域问题
+
+- 引起内存泄漏的操作有哪些
+
+- 闭包原理及应用
+
+- 对 JavaScript 原型的理解
+
+- 对 JavaScript 模块化的理解
+
+- 如何判断网页中图片加载成功或者失败
+
+- 如何实现懒加载
+
+- JSONP 原理
+
+- Cookie 读写
+
+- 从浏览器地址栏输入 URL 到显示页面的步骤
+
+- Vue.js 双向绑定原理
+
+- 如何进行网站性能优化
+
 - [渐进增强](./QA.md#渐进增强)
 
 ### MySQL

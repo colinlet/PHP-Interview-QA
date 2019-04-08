@@ -946,15 +946,15 @@ $ phpize $ ./configure $ make && make install
 
 > 获取节点的方法getElementById、getElementsByClassName、getElementsByTagName、 getElementsByName、querySelector、querySelectorAll,对元素属性进行操作的 getAttribute、 setAttribute、removeAttribute方法，对节点进行增删改的appendChild、insertBefore、replaceChild、removeChild、 createElement等
 
-### 原生js字符串方法有哪些
+### JavaScript 字符串方法有哪些
 
 > 简单分为获取类方法，获取类方法有charAt方法用来获取指定位置的字符，获取指定位置字符的unicode编码的charCodeAt方法， 与之相反的fromCharCode方法，通过传入的unicode返回字符串。查找类方法有indexof()、lastIndexOf()、search()、match() 方法。截取类的方法有substring、slice、substr三个方法，其他的还有replace、split、toLowerCase、toUpperCase方法
 
-### 原生js字符串截取方法有哪些？有什么区别
+### JavaScript 字符串截取方法有哪些？有什么区别
 
-> js字符串截取方法有substring、slice、substr三个方法，substring和slice都是指定截取的首尾索引值，不同的是传递负值的时候 substring会当做0来处理，而slice传入负值的规则是-1指最后一个字符，substr方法则是第一个参数是开始截取的字符串，第二个是截取的字符数量， 和slice类似，传入负值也是从尾部算起的。
+> js字符串截取方法有substring、slice、substr三个方法，substring和slice都是指定截取的首尾索引值，不同的是传递负值的时候 substring会当做0来处理，而slice传入负值的规则是-1指最后一个字符，substr方法则是第一个参数是开始截取的字符串，第二个是截取的字符数量， 和slice类似，传入负值也是从尾部算起的
 
-### setTimeout和setInterval的区别
+### setTimeout 和 setInterval 的区别
 
 > setTimeout表示间隔一段时间之后执行一次调用，而setInterval则是每间隔一段时间循环调用，直至clearInterval结束。 内存方面，setTimeout只需要进入一次队列，不会造成内存溢出，setInterval因为不计算代码执行时间，有可能同时执行多次代码， 导致内存溢出
 
@@ -1005,15 +1005,15 @@ xhr.onreadystatechange = function() {
 
 ### 闭包原理及应用
 
-### 对js原型的理解
+### 对 JavaScript 原型的理解
 
-> 我们知道在es6之前，js没有类和继承的概念，js是通过原型来实现继承的。在js中一个构造函数默认自带有一个prototype属性， 这个的属性值是一个对象，同时这个prototype对象自带有一个constructor属性，这个属性指向这个构造函数，同时每一个实例 都有一个__proto__属性指向这个prototype对象，我们可以将这个叫做隐式原型，我们在使用一个实例的方法的时候，会先检查 这个实例中是否有这个方法，没有则会继续向上查找这个prototype对象是否有这个方法，刚刚我们说到prototype是一个对象， 那么也即是说这个是一个对象的实例，那么这个对象同样也会有一个__proto__属性指向对象的prototype对象。
+> 我们知道在es6之前，js没有类和继承的概念，js是通过原型来实现继承的。在js中一个构造函数默认自带有一个prototype属性， 这个的属性值是一个对象，同时这个prototype对象自带有一个constructor属性，这个属性指向这个构造函数，同时每一个实例 都有一个__proto__属性指向这个prototype对象，我们可以将这个叫做隐式原型，我们在使用一个实例的方法的时候，会先检查 这个实例中是否有这个方法，没有则会继续向上查找这个prototype对象是否有这个方法，刚刚我们说到prototype是一个对象， 那么也即是说这个是一个对象的实例，那么这个对象同样也会有一个__proto__属性指向对象的prototype对象
 
-### 对js模块化的理解
+### 对 JavaScript 模块化的理解
 
 > 在ES6出现之前，js没有标准的模块化概念，这也就造成了js多人写作开发容易造成全局污染的情况，以前我们可能会采用立即执行 函数、对象等方式来尽量减少变量这种情况，后面社区为了解决这个问题陆续提出了AMD规范和CMD规范，这里不同于Node.js的 CommonJS的原因在于服务端所有的模块都是存在于硬盘中的，加载和读取几乎是不需要时间的，而浏览器端因为加载速度取决于网速， 因此需要采用异步加载，AMD规范中使用define来定义一个模块，使用require方法来加载一个模块，现在ES6也推出了标准的模块 加载方案，通过export和import来导出和导入模块。
 
-### js如何判断网页中图片加载成功或者失败
+### 如何判断网页中图片加载成功或者失败
 
 > 使用onload事件运行加载成功，使用onerror事件判断失败
 
@@ -1025,13 +1025,11 @@ xhr.onreadystatechange = function() {
 
 ### Cookie 读写
 
-### 客户端存储 localStorage 和 sessionStorage
-
 ### 渐进增强
 
 > 渐进增强(英语：Progressive enhancement)是网页设计的一种策略，强调可访问性，语义 HTML 标记，外部样式表和脚本技术。渐进增强使用 Web 技术以分层的方式，允许所有人访问网页的基本内容和功能，使用任何浏览器或互联网连接，同时还给更先进的浏览器软件或更大的带宽提供了这些页面的一个增强版本
 
-- 核心原则
+核心原则
 
 > 基本内容应该是被所有网络浏览器访问
 
@@ -1045,28 +1043,17 @@ xhr.onreadystatechange = function() {
 
 > 最终用户的网络浏览器偏好被受到尊重
 
-### 从浏览器地址栏输入 url 到显示页面的步骤
+### 从浏览器地址栏输入 URL 到显示页面的步骤
 
 ### Vue.js 双向绑定原理
 
 ### 如何进行网站性能优化
 
 ### 优化
-浏览器单域名并发数限制
-静态资源缓存 304 （If-Modified-Since 以及 Etag 原理）
-多个小图标合并使用 position 定位技术 减少请求
-静态资源合为单次请求 并压缩
-CDN
-静态资源延迟加载技术、预加载技术
-keep-alive
-CSS 在头部，JS 在尾部的优化（原理）
+浏览器单域名并发数限制、静态资源缓存 304 （If-Modified-Since 以及 Etag 原理）、多个小图标合并使用 position 定位技术 减少请求、静态资源合为单次请求 并压缩、CDN、静态资源延迟加载技术、预加载技术、keep-alive、CSS 在头部，JS 在尾部的优化（原理）
+
 ### 新技术（了解）
-ES6
-模块化
-打包
-构建工具
-vue、react、webpack、
-前端 MVVM
+ES6、模块化、打包、构建工具、vue、react、webpack、前端 MVVM
 ### 简要介绍 ES6
 
 
