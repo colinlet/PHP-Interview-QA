@@ -958,7 +958,7 @@ $ phpize $ ./configure $ make && make install
 
 > setTimeout表示间隔一段时间之后执行一次调用，而setInterval则是每间隔一段时间循环调用，直至clearInterval结束。 内存方面，setTimeout只需要进入一次队列，不会造成内存溢出，setInterval因为不计算代码执行时间，有可能同时执行多次代码， 导致内存溢出
 
-### 使用new操作符实例化一个对象的具体步骤
+### 使用 new 操作符实例化一个对象的具体步骤
 
 - 构造一个新的对象
 

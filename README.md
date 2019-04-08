@@ -187,31 +187,31 @@
 
 - [JavaScript 操作 DOM 的方法有哪些](./QA.md#javascript-操作-dom-的方法有哪些)
 
-- JavaScript 字符串方法有哪些
+- [JavaScript 字符串方法有哪些](./QA.md#javascript-字符串方法有哪些)
 
-- JavaScript 字符串截取方法有哪些？有什么区别
+- [JavaScript 字符串截取方法有哪些？有什么区别](./QA.md#javascript-字符串截取方法有哪些有什么区别)
 
-- setTimeout 和 setInterval 的区别
+- [setTimeout 和 setInterval 的区别](./QA.md#settimeout-和-setinterval-的区别)
 
-- 使用new操作符实例化一个对象的具体步骤
+- [使用 new 操作符实例化一个对象的具体步骤](./QA.md#使用-new-操作符实例化一个对象的具体步骤)
 
-- 如何实现 ajax 请求
+- [如何实现 ajax 请求](./QA.md#如何实现-ajax-请求)
 
-- 同源策略是什么
+- [同源策略是什么](./QA.md#同源策略是什么)
 
 - 如何解决跨域问题
 
-- 引起内存泄漏的操作有哪些
+- [引起内存泄漏的操作有哪些](./QA.md#引起内存泄漏的操作有哪些)
 
 - 闭包原理及应用
 
-- 对 JavaScript 原型的理解
+- [对 JavaScript 原型的理解](./QA.md#对-javascript-原型的理解)
 
-- 对 JavaScript 模块化的理解
+- [对 JavaScript 模块化的理解](./QA.md#对-javascript-模块化的理解)
 
-- 如何判断网页中图片加载成功或者失败
+- [如何判断网页中图片加载成功或者失败](./QA.md#如何判断网页中图片加载成功或者失败)
 
-- 如何实现懒加载
+- [如何实现懒加载](./QA.md#如何实现懒加载)
 
 - JSONP 原理
 
