@@ -997,6 +997,18 @@ xhr.onreadystatechange = function() {
 
 ### 如何解决跨域问题
 
+- 通过 JSONP 跨域
+- document.domain + iframe 跨域
+- location.hash + iframe
+- window.name + iframe 跨域
+- postMessage 跨域
+- 跨域资源共享（CORS）
+- nginx 代理跨域
+- nodejs 中间件代理跨域
+- WebSocket 协议跨域
+
+拓展阅读 [《前端常见跨域解决方案》](./04.Web/13.前端常见跨域解决方案.md)
+
 ### 引起内存泄漏的操作有哪些
 
 - 全局变量引起
