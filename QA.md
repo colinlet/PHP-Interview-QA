@@ -1053,9 +1053,24 @@ xhr.onreadystatechange = function() {
 
 创建一个回调函数，然后在远程服务上调用这个函数并且将 JSON 数据形式作为参数传递，完成回调
 
-拓展阅读 [《JavaScript闭包》](./04.Web/15.jsonp的原理与简单实现.md)
+拓展阅读 [《jsonp的原理与简单实现》](./04.Web/15.jsonp的原理与简单实现.md)
 
 ### Cookie 读写
+
+```javascript
+document.cookie = "name=oeschger";
+document.cookie = "favorite_food=tripe";
+alert(document.cookie);
+// 显示: name=oeschger;favorite_food=tripe
+```
+
+```javascript
+document.cookie = "test1=Hello";
+document.cookie = "test2=World";
+var myCookie = document.cookie.replace(/(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+alert(myCookie);
+// 显示: World
+```
 
 ### 渐进增强
 
@@ -1078,6 +1093,8 @@ xhr.onreadystatechange = function() {
 ### 从浏览器地址栏输入 URL 到显示页面的步骤
 
 ### Vue.js 双向绑定原理
+
+拓展阅读 [《vue的双向绑定原理及实现》](./04.Web/16.vue的双向绑定原理及实现.md)
 
 ### 如何进行网站性能优化
 
