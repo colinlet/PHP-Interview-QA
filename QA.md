@@ -1021,7 +1021,17 @@ xhr.onreadystatechange = function() {
 
 - 被遗忘的计时器
 
-### 闭包原理及应用
+### 闭包理解及应用
+
+闭包是函数和声明该函数的词法环境的组合
+
+应用
+
+- 定义事件行为
+
+- 模拟私有方法，用于定义公共函数
+
+拓展阅读 [《JavaScript闭包》](./04.Web/14.JavaScript闭包.md)
 
 ### 对 JavaScript 原型的理解
 
