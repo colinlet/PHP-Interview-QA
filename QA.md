@@ -1051,6 +1051,10 @@ xhr.onreadystatechange = function() {
 
 ### JSONP 原理
 
+创建一个回调函数，然后在远程服务上调用这个函数并且将 JSON 数据形式作为参数传递，完成回调
+
+拓展阅读 [《JavaScript闭包》](./04.Web/15.jsonp的原理与简单实现.md)
+
 ### Cookie 读写
 
 ### 渐进增强
