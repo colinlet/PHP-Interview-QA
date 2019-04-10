@@ -1132,6 +1132,8 @@ RIGHT JOIN（右连接）： 与 LEFT JOIN 相反，用于获取右表所有记�
 
 INNER JOIN（内连接,或等值连接）：获取两个表中字段匹配关系的记录
 
+拓展阅读 [《MySQL 连接的使用》](./05.MySQL/01.MySQL连接的使用.md)
+
 ### UNION
 
 ### GROUP BY + COUNT + WHERE 组合案例

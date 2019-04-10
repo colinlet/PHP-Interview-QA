@@ -226,11 +226,11 @@ PHP 面试问答 v2.0 版本正在努力撰写中，你可以查看v1.0完成版
 
 ### MySQL
 
-- CRUD 基础
+- [基础操作](./QA.md#基础操作)
 
-- char 和 varchar 数据类型区别
+- [char 和 varchar 数据类型区别](./QA.md#char-和-varchar-数据类型区别)
 
-- JOIN、LEFT JOIN 、RIGHT JOIN、INNER JOIN
+- [JOIN、LEFT JOIN 、RIGHT JOIN、INNER JOIN](./QA.md#left-join-right-joininner-join)
 
 - UNION
 
