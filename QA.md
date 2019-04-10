@@ -1108,11 +1108,29 @@ ES6、模块化、打包、构建工具、vue、react、webpack、前端 MVVM
 
 ## MySQL
 
-### CRUD 基础
+### 基础操作
+
+- 数据库管理
+
+连接、创建库、删除库、选择库、创建表、删除表
+
+- CRUD
+
+INSERT、SELECT、UPDATE、DELETE
 
 ### char 和 varchar 数据类型区别
 
-### JOIN、LEFT JOIN 、RIGHT JOIN、INNER JOIN
+char：擅于存储经常改变的值，或者长度相对固定的值，比如 type、ip 地址或 md5 之类的数据，不容易产生碎片
+
+varchar：善于存储值的长短不一的列，也是用的最多的一种类型，节省磁盘空间 保存可变长度字符串，范围0-65535（但受到单行最大64kb的限制）。比如用 varchar(30) 去存放 abcd，实际使用5个字节，因为还需要使用额外1个字节来标识字串长度（0-255使用1个字节，超过255需要2个字节） update 时 varchar 列时，如果新数据比原数据大，数据库需要重新开辟空间，这一点会有性能略有损耗，但 innodb 引擎下查询效率比 char 高一点。这也是 innodb 官方推荐的类型
+
+### LEFT JOIN 、RIGHT JOIN、INNER JOIN
+
+LEFT JOIN（左连接）：获取左表所有记录，即使右表没有对应匹配的记录
+
+RIGHT JOIN（右连接）： 与 LEFT JOIN 相反，用于获取右表所有记录，即使左表没有对应匹配的记录
+
+INNER JOIN（内连接,或等值连接）：获取两个表中字段匹配关系的记录
 
 ### UNION
 
