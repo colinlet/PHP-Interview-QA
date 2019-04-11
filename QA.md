@@ -1108,6 +1108,23 @@ ES6、模块化、打包、构建工具、vue、react、webpack、前端 MVVM
 
 ## MySQL
 
+### 体系结构
+
+组成部分：SQL 接口，解析器，优化器，缓存，存储引擎
+
+![体系结构图](./assets/mysql-system-10.png)
+
+- Connectors：不同语言中与 SQL 的交互
+- Management Serveices & Utilities： 系统管理和控制工具
+- Connection Pool: 连接池
+- SQL Interface: SQL 接口
+- Parser: 解析器
+- Optimizer: 查询优化器
+- Cache 和 Buffer：查询缓存
+- Engine：存储引擎
+
+拓展阅读 [《MySQL体系结构》](./05.MySQL/02.MySQL体系结构.md)
+
 ### 基础操作
 
 - 数据库管理
@@ -1134,11 +1151,31 @@ INNER JOIN（内连接,或等值连接）：获取两个表中字段匹配关系
 
 拓展阅读 [《MySQL 连接的使用》](./05.MySQL/01.MySQL连接的使用.md)
 
-### UNION
+### UNION、UNION ALL
+
+UNION 操作符用于连接两个以上的 SELECT 语句的结果组合到一个结果集合中。多个 SELECT 语句会删除重复的数据
+
+UNION ALL 操作符重复数据全部显示，不去重
 
 ### GROUP BY + COUNT + WHERE 组合案例
 
+GROUP BY 语句根据一个或多个列对结果集进行分组
+
 ### 常用 MySQL 函数，如：now()、md5()、concat()、uuid()等
+
+- 数学函数
+
+- 字符串函数
+
+- 日期和时间函数
+
+- 条件判断函数
+
+- 系统信息函数
+
+- 加密函数
+
+- 格式化函数
 
 ### 了解触发器是什么，说个使用场景
 
