@@ -1,6 +1,6 @@
-# PHP 面试问答 v2.0
+# PHP 面试问答
 
-PHP 面试问答 v2.0 版本正在努力撰写中，你可以查看v1.0完成版 [v1.0传送门](https://github.com/colinlet/PHP-Interview-QA/tree/1.0)
+问题来自真实面试，答案搬自各类砖头书。为了让你有份工作，我也是操碎了心~~
 
 ## 面试流程
 
@@ -31,6 +31,10 @@ PHP 面试问答 v2.0 版本正在努力撰写中，你可以查看v1.0完成版
 ## 交流讨论组
 
 <p align="left"><img width="320" src="./assets/wechat-groups.jpg" alt="wechat groups"></a></p>
+
+## 赞赏
+
+<p align="left"><img width="320" src="./assets/wechat-tips.jpg" alt="wechat tips"></a></p>
 
 ## 问题列表
 
