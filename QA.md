@@ -122,38 +122,61 @@ TIME-WAIT 是一种 TCP 状态。等待 2MLS 可以保证客户端最后一个�
 
 ### HTTP 状态码
 
-#### 状态码类别
+> HTTP 状态码用来告诉客户端，发生了什么事情，状态码位于响应的起始行中
 
-|状态码|响应类别|原因短语|
-|-|-|-|
-|1XX|信息性状态码(Informational)|服务器正在处理请求|
-|2XX|成功状态码(Success)|请求已正常处理完毕|
-|3XX|重定向状态码(Redirection)|需要进行额外操作以完成请求|
-|4XX|客户端错误状态码(Client Error)|客户端原因导致服务器无法处理请求|
-|5XX|服务器错误状态码(Server Error)|服务器原因导致处理请求出错|
+#### 状态码分类
+
+|状态码|整体范围|已定义范围|分类|
+|-|-|-|-|
+|1XX|100~199|100~101|信息提示|
+|2XX|200~299|200~206|成功|
+|3XX|300~399|300~305|重定向|
+|4XX|400~499|400~415|客户端错误|
+|5XX|500~599|500~505|服务器错误|
 
 #### 常见状态码
 
-|状态码|Message|备注|
-|-|-|-|
-|200|OK|
-|204|Not Content|不包含实体部分|
-|206|Partial Content|范围请求|
-|301|Moved Permanently|永久重定向|
-|302|Found|临时重定向|
-|303|See Other|
-|304|Not Modified|
-|307|Temporary Redirect|临时重定向|
-|400|Bad Request|请求报文存在语法错误|
-|401|Unauthorized|
-|403|Forbidden|访问被服务器拒绝|
-|404|Not Found|
-|500|Internal Server Error|
-|502|Bad Gateway|
-|503|Server Unavailable|
-|504|Gateway Timeout|
+|状态码|原因短语|含义|考察概率|
+|-|-|-|-|
+|100|Continue|收到了请求的初始部分，请客户端继续||
+|101|Switching Protocols|正在将协议切换成客户端指定协议||
+|200|OK|请求没有问题|***|
+|201|Created|用于创建服务器对象的请求||
+|202|Accepted|请求已接收，服务器还未执行操作||
+|203|Non-Authoritative Information|实体首部包含信息来自资源副本||
+|204|No Content|响应报文中没有实体的主体部分||
+|205|Reset Content|告知浏览器清除 HTML 表单元素||
+|206|Partial Content|部分或 Range(范围) 请求|*|
+|300|Multiple Choices|请求指向多个资源的链接||
+|301|Moved Permanently|在请求的链接被移除时使用|**|
+|302|Found|在请求临时的链接使用|**|
+|303|See Other|告知使用另外一个链接来获取资源||
+|304|Not Modified|资源未被修改可使用旧资源|**|
+|305|Use Proxy|必须使用代理来访问资源||
+|307|Temporary Redirect|在请求临时的链接使用|**|
+|400|Bad Request|告知客户端发送了错误请求|***|
+|401|Unauthorized|获取资源许先进行认证||
+|403|Forbidden|请求被服务器拒绝|***|
+|404|Not Found|无法找到所请求的 URL|***|
+|405|Method Not Allowed|不支持该请求方法||
+|406|Not Acceptable|无可接受实体||
+|408|Request Timeout|完成请求耗时太长服务器关闭连接||
+|409|Conflict|请求可能在资源上引发冲突||
+|500|Internal Server Error|服务器遇到错误|***|
+|501|Not Implemented|请求超过服务器的能力范围||
+|502|Bad Gateway|代理或网关错误(无法连接到其父网关)|***|
+|503|Service Unavailable|无法为请求提供服务|***|
+|504|Gateway Timeout|代理或网关超时(等待另一服务器响应超时)|***|
 
 #### 错误原因
+
+- 500
+
+- 502
+
+- 503
+
+- 504
 
 ### HTTP 请求报文构成
 
