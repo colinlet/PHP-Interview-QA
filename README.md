@@ -50,7 +50,7 @@ PHP 面试问答 v2.0 版本正在努力撰写中，你可以查看v1.0完成版
 
 - [TIME-WAIT 是什么，为什么必须等待 2MLS](./QA.md#time-wait-是什么为什么必须等待-2mls)
 
-- [TCP 粘包如何解决](./QA.md#tcp-粘包如何解决)
+- [TCP 粘包问题](./QA.md#tcp-粘包问题)
 
 - [UDP、TCP 区别，适用场景](./QA.md#udptcp-区别适用场景)
 
