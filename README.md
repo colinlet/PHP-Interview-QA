@@ -60,17 +60,17 @@
 
 - [建立 socket 需要哪些步骤](./QA.md#建立-socket-需要哪些步骤)
 
-- [HTTP 状态码](./QA.md#http-状态码)
+- [DNS 主要作用是什么](./QA.md#dns-主要作用是什么)
 
-- [HTTP 请求报文构成](./QA.md#http-请求报文构成)
+- [HTTP 报文组成](./QA.md#http-报文组成)
+
+- [HTTP 状态码](./QA.md#http-状态码)
 
 - [HTTP 优缺点](./QA.md#http-优缺点)
 
 - [HTTPS 通信原理](./QA.md#https-通信原理)
 
 - [HTTP 2.0](./QA.md#http-2.0)
-
-- [DNS 主要作用是什么](./QA.md#dns-主要作用是什么)
 
 - [IPv6 与 IPv4 有什么变化](./QA.md#ipv6-与-ipv4-有什么变化)
 
