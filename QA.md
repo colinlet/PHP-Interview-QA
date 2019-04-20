@@ -188,9 +188,11 @@ HTTP 报文组成部分
 
 500、502、503、504(待补充，暂未找到靠谱来源)
 
-### 常用的 HTTP 方法
+### 常见的 HTTP 方法
 
 ![HTTP方法](./assets/01-net/http-method.png)
+
+拓展阅读 [《HTTP方法详解》](./01.网络协议/06.HTTP方法详解.md)
 
 ### GET 与 POST 请求方式区别
 
@@ -1376,6 +1378,7 @@ PHP VS JAVA
 ### 离职原因
 ### 职业规划
 ### 准备问题
+### 劳动合同
 
 > https://github.com/xianyunyh/PHP-Interview/blob/master/%E9%9D%A2%E8%AF%95/README.md
 

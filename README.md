@@ -32,10 +32,6 @@
 
 <p align="left"><img width="320" src="./assets/wechat-groups.jpg" alt="wechat groups"></a></p>
 
-## 赞赏
-
-<p align="left"><img width="320" src="./assets/wechat-tips.jpg" alt="wechat tips"></a></p>
-
 ## 问题列表
 
 ### 网络协议
@@ -66,7 +62,7 @@
 
 - [HTTP 状态码](./QA.md#http-状态码)
 
-- [常用的 HTTP 方法](./QA.md#常用的-http-方法)
+- [常见的 HTTP 方法](./QA.md#常见的-http-方法)
 
 - [HTTP 优缺点](./QA.md#http-优缺点)
 
@@ -389,6 +385,10 @@
 - JWT
 
 - 了解常用语言特性，及不同场景适用性
+
+## 赞赏
+
+<p align="left"><img width="320" src="./assets/wechat-tips.jpg" alt="wechat tips"></a></p>
 
 ## 声明
 
