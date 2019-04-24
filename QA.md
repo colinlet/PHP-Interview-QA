@@ -214,6 +214,10 @@ HTTP 报文组成部分
 
 ![HTTPS通信原理](./assets/01-net/https.png)
 
+拓展阅读 [《HTTPS细节介绍》](./01.网络协议/07.HTTPS细节介绍.md)
+
+拓展阅读 [《SSL/TLS协议运行机制的概述》](./01.网络协议/08.SSL-TLS协议运行机制的概述.md)
+
 ### HTTP 2.0
 
 多路复用、客户端拉拽/服务器推送、流量控制、WebSocket
