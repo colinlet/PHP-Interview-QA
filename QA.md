@@ -363,16 +363,27 @@ include_once 语句在脚本执行期间包含并运行指定文件。此行为�
 ### 常见数组函数
 
 array_count_values — 统计数组中所有的值
+
 array_flip — 交换数组中的键和值
+
 array_merge — 合并一个或多个数组
+
 array_multisort — 对多个数组或多维数组进行排序
+
 array_pad — 以指定长度将一个值填充进数组
+
 array_pop — 弹出数组最后一个单元(出栈)
+
 array_push — 将一个或多个单元压入数组的末尾(入栈)
+
 array_rand — 从数组中随机(伪随机)取出一个或多个单元
+
 array_keys — 返回数组中部分的或所有的键名
+
 array_values — 返回数组中所有的值
+
 count — 计算数组中的单元数目，或对象中的属性个数
+
 sort — 对数组排序
 
 ### Cookie 和 Session
@@ -385,8 +396,9 @@ Session：会话机制(Session)在 PHP 中用于保持用户连续访问Web应�
 
 对于全部脚本而言，PHP 提供了大量的预定义变量
 
-```text
 超全局变量 — 超全局变量是在全部作用域中始终可用的内置变量
+
+```text
 $GLOBALS — 引用全局作用域中可用的全部变量
 $_SERVER — 服务器和执行环境信息
 $_GET — HTTP GET 变量
@@ -548,85 +560,85 @@ MVC 架构中 M 是指数据模型，V 是指用户界面，C 则是控制器；
 
 - Laravel
 
-> Simple, fast routing engine
+Simple, fast routing engine
 
-> Powerful dependency injection container.
+Powerful dependency injection container.
 
-> Multiple back-ends for session and cache storage.
+Multiple back-ends for session and cache storage.
 
-> Expressive, intuitive database ORM.
+Expressive, intuitive database ORM.
 
-> Database agnostic schema migrations.
+Database agnostic schema migrations.
 
-> Robust background job processing.
+Robust background job processing.
 
-> Real-time event broadcasting.
+Real-time event broadcasting.
 
 - Symfony
 
-> Database engine-independent
+Database engine-independent
 
-> Simple to use, in most cases, but still flexible enough to adapt to complex cases
+Simple to use, in most cases, but still flexible enough to adapt to complex cases
 
-> Based on the premise of convention over configuration--the developer needs to configure only the unconventional
+Based on the premise of convention over configuration--the developer needs to configure only the unconventional
 
-> Compliant with most web best practices and design patterns
+Compliant with most web best practices and design patterns
 
-> Enterprise-ready--adaptable to existing information technology (IT) policies and architectures, and stable enough for long-term projects
+Enterprise-ready--adaptable to existing information technology (IT) policies and architectures, and stable enough for long-term projects
 
-> Very readable code, with phpDocumentor comments, for easy maintenance
+Very readable code, with phpDocumentor comments, for easy maintenance
 
-> Easy to extend, allowing for integration with other vendor libraries
+Easy to extend, allowing for integration with other vendor libraries
 
 - CodeIgniter
 
-> https://www.codeigniter.com/userguide3/overview/features.html
+https://www.codeigniter.com/userguide3/overview/features.html
 
 - ThinkPHP
 
-> MVC支持-基于多层模型（M）、视图（V）、控制器（C）的设计模式
+MVC支持-基于多层模型（M）、视图（V）、控制器（C）的设计模式
 
-> ORM支持-提供了全功能和高性能的ORM支持，支持大部分数据库
+ORM支持-提供了全功能和高性能的ORM支持，支持大部分数据库
 
-> 模板引擎支持-内置了高性能的基于标签库和XML标签的编译型模板引擎
+模板引擎支持-内置了高性能的基于标签库和XML标签的编译型模板引擎
 
-> RESTFul支持-通过REST控制器扩展提供了RESTFul支持，为你打造全新的URL设计和访问体验
+RESTFul支持-通过REST控制器扩展提供了RESTFul支持，为你打造全新的URL设计和访问体验
 
-> 云平台支持-提供了对新浪SAE平台和百度BAE平台的强力支持，具备“横跨性”和“平滑性”，支持本地化开发和调试以及部署切换，让你轻松过渡，打造全新的开发体验
+云平台支持-提供了对新浪SAE平台和百度BAE平台的强力支持，具备“横跨性”和“平滑性”，支持本地化开发和调试以及部署切换，让你轻松过渡，打造全新的开发体验
 
-> CLI支持-支持基于命令行的应用开发
+CLI支持-支持基于命令行的应用开发
 
-> RPC支持-提供包括PHPRpc、HProse、jsonRPC和Yar在内远程调用解决方案
+RPC支持-提供包括PHPRpc、HProse、jsonRPC和Yar在内远程调用解决方案
 
-> MongoDb支持-提供NoSQL的支持
+MongoDb支持-提供NoSQL的支持
 
-> 缓存支持-提供了包括文件、数据库、Memcache、Xcache、Redis等多种类型的缓存支持
+缓存支持-提供了包括文件、数据库、Memcache、Xcache、Redis等多种类型的缓存支持
 
 ### 对象关系映射/ORM
 
 - 优点
 
-> 缩短编码时间、减少甚至免除对 model 的编码，降低数据库学习成本
+缩短编码时间、减少甚至免除对 model 的编码，降低数据库学习成本
 
-> 动态的数据表映射，在表结构发生改变时，减少代码修改
+动态的数据表映射，在表结构发生改变时，减少代码修改
 
-> 可以很方便的引入附加功能(cache 层)
+可以很方便的引入附加功能(cache 层)
 
 - 缺点
 
-> 映射消耗性能、ORM 对象消耗内存
+映射消耗性能、ORM 对象消耗内存
 
-> SQL 语句较为复杂时，ORM 语法可读性不高(使用原生 SQL)
+SQL 语句较为复杂时，ORM 语法可读性不高(使用原生 SQL)
 
 ### 链式调用实现
 
-> 类定义一个内置变量，让类中其他定义方法可访问到
+类定义一个内置变量，让类中其他定义方法可访问到
 
 ### 异常处理
 
-> set_exception_handler — 设置用户自定义的异常处理函数
+set_exception_handler — 设置用户自定义的异常处理函数
 
-> 使用 try / catch 捕获
+使用 try / catch 捕获
 
 ### 如何实现异步调用
 
@@ -649,27 +661,27 @@ if (!$fp) {
 
 ### 多进程同时写一个文件
 
-> 加锁、队列
+加锁、队列
 
 ### PHP 进程模型，进程通讯方式，进程线程区别
 
-> 消息队列、socket、信号量、共享内存、信号、管道
+消息队列、socket、信号量、共享内存、信号、管道
 
 ### PHP 支持回调的函数，实现一个
 
-> array_map、array_filter、array_walk、usort
+array_map、array_filter、array_walk、usort
 
-> is_callable + callbacks + 匿名函数实现
+is_callable + callbacks + 匿名函数实现
 
 ### 发起 HTTP 请求有哪几种方式，它们有何区别
 
-> cURL、file_get_contents、fopen、fsockopen
+cURL、file_get_contents、fopen、fsockopen
 
 ### php for while foreach 迭代数组时候，哪个效率最高
 
 ### 弱类型变量如何实现
 
-> PHP 中声明的变量，在 zend 引擎中都是用结构体 zval 来保存，通过共同体实现弱类型变量声明
+PHP 中声明的变量，在 zend 引擎中都是用结构体 zval 来保存，通过共同体实现弱类型变量声明
 
 ### PHP 拓展初始化
 
@@ -681,7 +693,7 @@ $ php /php-src/ext/ext_skel.php --ext
 
 - 定义拓展函数
 
-> zend_module_entry 定义 Extension name 编写 PHP_FUNCTION 函数
+zend_module_entry 定义 Extension name 编写 PHP_FUNCTION 函数
 
 - 编译安装
 
@@ -693,15 +705,15 @@ $ phpize $ ./configure $ make && make install
 
 ### 垃圾回收机制
 
-> 引用计数器
+引用计数器
 
 ### Trait
 
-> 自 PHP 5.4.0 起，PHP 实现了一种代码复用的方法，称为 trait
+自 PHP 5.4.0 起，PHP 实现了一种代码复用的方法，称为 trait
 
 ### yield 是什么，说个使用场景 yield、yield 核心原理是什么
 
-> 一个生成器函数看起来像一个普通的函数，不同的是普通函数返回一个值，而一个生成器可以yield生成许多它所需要的值
+一个生成器函数看起来像一个普通的函数，不同的是普通函数返回一个值，而一个生成器可以yield生成许多它所需要的值
 
 ### traits 与 interfaces 区别 及 traits 解决了什么痛点
 
@@ -718,26 +730,26 @@ $ phpize $ ./configure $ make && make install
 ### 如何解决 PHP 内存溢出问题
 
 ### ZVAL
-> https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/PHP-Zval%E7%BB%93%E6%9E%84.md
+https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/PHP-Zval%E7%BB%93%E6%9E%84.md
 
 ### HashTable
-> https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/PHP7-HashTable.md
+https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/PHP7-HashTable.md
 
 ### PHP7 新特性
 
-> 标量类型声明、返回值类型声明、通过 define() 定义常量数组、匿名类、相同命名空间类一次性导入
+标量类型声明、返回值类型声明、通过 define() 定义常量数组、匿名类、相同命名空间类一次性导入
 
 ### PHP7 底层优化
 
-> ZVAL 结构体优化，占用由24字节降低为16字节
+ZVAL 结构体优化，占用由24字节降低为16字节
 
-> 内部类型 zend_string，结构体成员变量采用 char 数组，不是用 char*
+内部类型 zend_string，结构体成员变量采用 char 数组，不是用 char*
 
-> PHP 数组实现由 hashtable 变为 zend array
+PHP 数组实现由 hashtable 变为 zend array
 
-> 函数调用机制，改进函数调用机制，通过优化参数传递环节，减少了一些指令
+函数调用机制，改进函数调用机制，通过优化参数传递环节，减少了一些指令
 
-> https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/php7.md
+https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/php7.md
 
 ### PSR 介绍，PSR-1, 2, 4, 7
 
@@ -753,27 +765,27 @@ $ phpize $ ./configure $ make && make install
 
 ### SEO 有哪些需要注意的
 
-> 合理的 title、description、keywords
+合理的 title、description、keywords
 
-> 语义化的 HTML 代码，符合 W3C 规范：语义化代码让搜索引擎容易理解网页
+语义化的 HTML 代码，符合 W3C 规范：语义化代码让搜索引擎容易理解网页
 
-> 重要内容 HTML 代码放在最前：搜索引擎抓取 HTML 顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容一定会被抓取
+重要内容 HTML 代码放在最前：搜索引擎抓取 HTML 顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容一定会被抓取
 
-> 重要内容不要用 js 输出：爬虫不会执行 js 获取内容
+重要内容不要用 js 输出：爬虫不会执行 js 获取内容
 
-> 少用 iframe：搜索引擎不会抓取 iframe 中的内容
+少用 iframe：搜索引擎不会抓取 iframe 中的内容
 
-> 非装饰性图片必须加 alt
+非装饰性图片必须加 alt
 
-> 提高网站速度：网站速度是搜索引擎排序的一个重要指标
+提高网站速度：网站速度是搜索引擎排序的一个重要指标
 
 拓展阅读[《初探 SEO》](./04.Web/01.初探SEO.md)
 
 ### img 标签的 title 和 alt 有什么区别
 
-> title 属性规定关于元素的额外信息，这些信息通常会在鼠标移到元素上时显示一段提示文本
+title 属性规定关于元素的额外信息，这些信息通常会在鼠标移到元素上时显示一段提示文本
 
-> alt 是<img\>标签的特有属性，是图片内容的等价描述。图片无法加载时显示。搜索引擎会重点分析
+alt 是<img\>标签的特有属性，是图片内容的等价描述。图片无法加载时显示。搜索引擎会重点分析
 
 ### CSS 选择器的分类
 
@@ -783,21 +795,21 @@ $ phpize $ ./configure $ make && make install
 
 ### CSS sprite 是什么，有什么优缺点
 
-> 概念：将多个小图片拼接到一个图片中。通过 background-position 和元素尺寸调节需要显示的背景图案。
+概念：将多个小图片拼接到一个图片中。通过 background-position 和元素尺寸调节需要显示的背景图案。
 
 - 优点
 
-> 减少 HTTP 请求数，极大地提高页面加载速度
+减少 HTTP 请求数，极大地提高页面加载速度
 
-> 增加图片信息重复度，提高压缩比，减少图片大小
+增加图片信息重复度，提高压缩比，减少图片大小
 
-> 更换风格方便，只需在一张或几张图片上修改颜色或样式即可实现
+更换风格方便，只需在一张或几张图片上修改颜色或样式即可实现
 
 - 缺点
 
-> 图片合并麻烦
+图片合并麻烦
 
-> 维护麻烦，修改一个图片可能需要从新布局整个图片，样式
+维护麻烦，修改一个图片可能需要从新布局整个图片，样式
 
 拓展阅读[《雪碧图CSS Sprite的应用》](./04.Web/03.CSS-Sprite的应用.md)
 
@@ -805,85 +817,85 @@ $ phpize $ ./configure $ make && make install
 
 - 用途
 
-> 通过为属性设置一个值来影响用户代理显示的方式
+通过为属性设置一个值来影响用户代理显示的方式
 
 - 区别
 
-> display:none 会让元素完全从渲染树中消失，渲染的时候不占据任何空间；visibility: hidden 不会让元素从渲染树消失，渲染师元素继续占据空间，只是内容不可见
+display:none 会让元素完全从渲染树中消失，渲染的时候不占据任何空间；visibility: hidden 不会让元素从渲染树消失，渲染师元素继续占据空间，只是内容不可见
 
-> display: none 是非继承属性，子孙节点消失由于元素从渲染树消失造成，通过修改子孙节点属性无法显示；visibility: hidden 是继承属性，子孙节点消失由于继承了hidden，通过设置visibility: visible 可以让子孙节点显式
+display: none 是非继承属性，子孙节点消失由于元素从渲染树消失造成，通过修改子孙节点属性无法显示；visibility: hidden 是继承属性，子孙节点消失由于继承了hidden，通过设置visibility: visible 可以让子孙节点显式
 
-> 修改常规流中元素的 display 通常会造成文档重排。修改 visibility 属性只会造成本元素的重绘
+修改常规流中元素的 display 通常会造成文档重排。修改 visibility 属性只会造成本元素的重绘
 
-> 读屏器不会读取 display: none 元素内容；会读取 visibility: hidden 元素内容
+读屏器不会读取 display: none 元素内容；会读取 visibility: hidden 元素内容
 
 ### display: block 和 display: inline 的区别
 
 - block 元素特点
 
-> 处于常规流中时，如果 width 没有设置，会自动填充满父容器
+处于常规流中时，如果 width 没有设置，会自动填充满父容器
 
-> 可以应用 margin/padding
+可以应用 margin/padding
 
-> 在没有设置高度的情况下会扩展高度以包含常规流中的子元素 
+在没有设置高度的情况下会扩展高度以包含常规流中的子元素 
 
-> 处于常规流中时布局时在前后元素位置之间（独占一个水平空间）
+处于常规流中时布局时在前后元素位置之间（独占一个水平空间）
 
-> 忽略 vertical-align
+忽略 vertical-align
 
 - inline 元素特点
 
-> 水平方向上根据 direction 依次布局
+水平方向上根据 direction 依次布局
 
-> 不会在元素前后进行换行
+不会在元素前后进行换行
 
-> 受 white-space 控制
+受 white-space 控制
 
-> margin/padding 在竖直方向上无效，水平方向上有效
+margin/padding 在竖直方向上无效，水平方向上有效
 
-> width/height 属性对非替换行内元素无效，宽度由元素内容决定
+width/height 属性对非替换行内元素无效，宽度由元素内容决定
 
-> 非替换行内元素的行框高由 line-height 确定，替换行内元素的行框高由 height,margin,padding,border 决定
+非替换行内元素的行框高由 line-height 确定，替换行内元素的行框高由 height,margin,padding,border 决定
 
-> 浮动或绝对定位时会转换为 block
+浮动或绝对定位时会转换为 block
 
-> vertical-align 属性生效
+vertical-align 属性生效
 
 ### CSS 文件、style 标签、行内 style 属性优先级
 
-> 最近的祖先样式比其他祖先样式优先级高
+最近的祖先样式比其他祖先样式优先级高
 
-> "直接样式"比"祖先样式"优先级高
+"直接样式"比"祖先样式"优先级高
 
 ### link 与 @import 的区别
 
-> link 是 HTML 方式， @import 是 CSS 方式
+link 是 HTML 方式， @import 是 CSS 方式
 
-> link 最大限度支持并行下载，@import 过多嵌套导致串行下载，出现FOUC
+link 最大限度支持并行下载，@import 过多嵌套导致串行下载，出现FOUC
 
-> link 可以通过 rel="alternate stylesheet"指定候选样式
+link 可以通过 rel="alternate stylesheet"指定候选样式
 
-> 浏览器对 link 支持早于 @import，可以使用 @import 对老浏览器隐藏样式
+浏览器对 link 支持早于 @import，可以使用 @import 对老浏览器隐藏样式
 
-> @import 必须在样式规则之前，可以在 css 文件中引用其他文件
+@import 必须在样式规则之前，可以在 css 文件中引用其他文件
 
-> 总体来说：link 优于 @import
+总体来说：link 优于 @import
 
 ### 盒子模型
 
 ![CSS框模型](./assets/web-css-CSS框模型.jpg)
 
-> 具备属性：内容(content)、填充(padding)、边框(border)、边界(margin)
+具备属性：内容(content)、填充(padding)、边框(border)、边界(margin)
 
 拓展阅读[《CSS盒模型》](./04.Web/04.CSS盒模型.md)
 
 ### 容器包含若干浮动元素时如何清理(包含)浮动
 
-> 容器元素闭合标签前添加额外元素并设置clear: both
+容器元素闭合标签前添加额外元素并设置clear: both
 
-> 父元素触发块级格式化上下文(见块级可视化上下文部分)
+父元素触发块级格式化上下文(见块级可视化上下文部分)
 
-> 设置容器元素伪元素进行清理推荐的清理浮动方法
+设置容器元素伪元素进行清理推荐的清理浮动方法
 
 ```html
 /**
@@ -906,27 +918,27 @@ $ phpize $ ./configure $ make && make install
 
 ### 如何水平居中一个元素
 
-> 被设置元素为文本、图片等行内元素时，水平居中是通过给父元素设置 text-align:center 来实现的
+被设置元素为文本、图片等行内元素时，水平居中是通过给父元素设置 text-align:center 来实现的
 
-> 定宽和块状可以通过设置 “左右margin” 值为 “auto” 实现居中
+定宽和块状可以通过设置 “左右margin” 值为 “auto” 实现居中
 
-> 不定宽块状使用 float:left 实现居中
+不定宽块状使用 float:left 实现居中
 
 拓展阅读[《CSS 水平居中设置》](./04.Web/05.CSS水平居中设置.md)
 
 ### 如何竖直居中一个元素
 
-> 父元素高度确定的单行文本
+父元素高度确定的单行文本
 
-> 父元素高度确定的多行文本
+父元素高度确定的多行文本
 
 拓展阅读[《CSS 垂直居中设置》](./04.Web/06.CSS垂直居中设置.md)
 
 ### flex 与 CSS 盒子模型有什么区别
 
-> 布局的传统解决方案，基于盒状模型，依赖 display 属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现
+布局的传统解决方案，基于盒状模型，依赖 display 属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现
 
-> Flex 布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能
+Flex 布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能
 
 拓展阅读 [《flex 布局的基本概念》](./04.Web/07.flex布局的基本概念.md)
 
@@ -946,19 +958,19 @@ $ phpize $ ./configure $ make && make install
 
 - GIF
 
-> 8位像素，256色；无损压缩；支持简单动画；支持boolean透明；适合简单动画
+8位像素，256色；无损压缩；支持简单动画；支持boolean透明；适合简单动画
 
 - JPEG
 
-> 颜色限于256；有损压缩；可控制压缩质量；不支持透明；适合照片
+颜色限于256；有损压缩；可控制压缩质量；不支持透明；适合照片
 
 - PNG
 
-> 有PNG8和truecolor PNG；PNG8类似GIF颜色上限为256，文件小，支持alpha透明度，无动画；适合图标、背景、按钮
+有PNG8和truecolor PNG；PNG8类似GIF颜色上限为256，文件小，支持alpha透明度，无动画；适合图标、背景、按钮
 
 ### 为什么把 JavaScript 文件放在 Html 底部
 
-> 脚本会阻塞页面其他资源的下载，因此推荐将所有`<script>`标签尽可能放到`<body>`标签的底部，以尽量减少对整个页面下载的影响
+脚本会阻塞页面其他资源的下载，因此推荐将所有`<script>`标签尽可能放到`<body>`标签的底部，以尽量减少对整个页面下载的影响
 
 拓展阅读 [《JavaScript 的性能优化：加载和执行》](./04.Web/09.JavaScript的性能优化-加载和执行.md)
 
@@ -970,21 +982,21 @@ $ phpize $ ./configure $ make && make install
 
 ### JavaScript 操作 DOM 的方法有哪些
 
-> 获取节点的方法getElementById、getElementsByClassName、getElementsByTagName、 getElementsByName、querySelector、querySelectorAll,对元素属性进行操作的 getAttribute、 setAttribute、removeAttribute方法，对节点进行增删改的appendChild、insertBefore、replaceChild、removeChild、 createElement等
+获取节点的方法getElementById、getElementsByClassName、getElementsByTagName、 getElementsByName、querySelector、querySelectorAll,对元素属性进行操作的 getAttribute、 setAttribute、removeAttribute方法，对节点进行增删改的appendChild、insertBefore、replaceChild、removeChild、 createElement等
 
 拓展阅读 [《JavaScript操作DOM常用的API》](./04.Web/11.JavaScript操作DOM常用的API.md)
 
 ### JavaScript 字符串方法有哪些
 
-> 简单分为获取类方法，获取类方法有charAt方法用来获取指定位置的字符，获取指定位置字符的unicode编码的charCodeAt方法， 与之相反的fromCharCode方法，通过传入的unicode返回字符串。查找类方法有indexof()、lastIndexOf()、search()、match() 方法。截取类的方法有substring、slice、substr三个方法，其他的还有replace、split、toLowerCase、toUpperCase方法
+简单分为获取类方法，获取类方法有charAt方法用来获取指定位置的字符，获取指定位置字符的unicode编码的charCodeAt方法， 与之相反的fromCharCode方法，通过传入的unicode返回字符串。查找类方法有indexof()、lastIndexOf()、search()、match() 方法。截取类的方法有substring、slice、substr三个方法，其他的还有replace、split、toLowerCase、toUpperCase方法
 
 ### JavaScript 字符串截取方法有哪些？有什么区别
 
-> js字符串截取方法有substring、slice、substr三个方法，substring和slice都是指定截取的首尾索引值，不同的是传递负值的时候 substring会当做0来处理，而slice传入负值的规则是-1指最后一个字符，substr方法则是第一个参数是开始截取的字符串，第二个是截取的字符数量， 和slice类似，传入负值也是从尾部算起的
+js字符串截取方法有substring、slice、substr三个方法，substring和slice都是指定截取的首尾索引值，不同的是传递负值的时候 substring会当做0来处理，而slice传入负值的规则是-1指最后一个字符，substr方法则是第一个参数是开始截取的字符串，第二个是截取的字符数量， 和slice类似，传入负值也是从尾部算起的
 
 ### setTimeout 和 setInterval 的区别
 
-> setTimeout表示间隔一段时间之后执行一次调用，而setInterval则是每间隔一段时间循环调用，直至clearInterval结束。 内存方面，setTimeout只需要进入一次队列，不会造成内存溢出，setInterval因为不计算代码执行时间，有可能同时执行多次代码， 导致内存溢出
+setTimeout表示间隔一段时间之后执行一次调用，而setInterval则是每间隔一段时间循环调用，直至clearInterval结束。 内存方面，setTimeout只需要进入一次队列，不会造成内存溢出，setInterval因为不计算代码执行时间，有可能同时执行多次代码， 导致内存溢出
 
 ### 使用 new 操作符实例化一个对象的具体步骤
 
@@ -998,7 +1010,7 @@ $ phpize $ ./configure $ make && make install
 
 ### 如何实现 ajax 请求
 
-> 通过实例化一个XMLHttpRequest对象得到一个实例，调用实例的open方法为这次 ajax请求设定相应的http方法、相应的地址和以及是否异步，当然大多数情况下我们都是选异步， 以异步为例，之后调用send方法ajax请求，这个方法可以设定需要发送的报文主体，然后通过 监听readystatechange事件，通过这个实例的readyState属性来判断这个ajax请求的状态，其中分为0,1,2,3,4这四种 状态，当状态为4的时候也就是接收数据完成的时候，这时候可以通过实例的status属性判断这个请求是否成功
+通过实例化一个XMLHttpRequest对象得到一个实例，调用实例的open方法为这次 ajax请求设定相应的http方法、相应的地址和以及是否异步，当然大多数情况下我们都是选异步， 以异步为例，之后调用send方法ajax请求，这个方法可以设定需要发送的报文主体，然后通过 监听readystatechange事件，通过这个实例的readyState属性来判断这个ajax请求的状态，其中分为0,1,2,3,4这四种 状态，当状态为4的时候也就是接收数据完成的时候，这时候可以通过实例的status属性判断这个请求是否成功
 
 ```javascript
 var xhr = new XMLHttpRequest();
@@ -1015,7 +1027,7 @@ xhr.onreadystatechange = function() {
 
 ### 同源策略是什么
 
-> 同源策略是指只有具有相同源的页面才能够共享数据，比如cookie，同源是指页面具有相同的协议、域名、端口号，有一项不同就不是同源。 有同源策略能够保证web网页的安全性
+同源策略是指只有具有相同源的页面才能够共享数据，比如cookie，同源是指页面具有相同的协议、域名、端口号，有一项不同就不是同源。 有同源策略能够保证web网页的安全性
 
 拓展阅读 [《浏览器的同源策略》](./04.Web/12.浏览器的同源策略.md)
 
@@ -1059,19 +1071,19 @@ xhr.onreadystatechange = function() {
 
 ### 对 JavaScript 原型的理解
 
-> 我们知道在es6之前，js没有类和继承的概念，js是通过原型来实现继承的。在js中一个构造函数默认自带有一个prototype属性， 这个的属性值是一个对象，同时这个prototype对象自带有一个constructor属性，这个属性指向这个构造函数，同时每一个实例 都有一个__proto__属性指向这个prototype对象，我们可以将这个叫做隐式原型，我们在使用一个实例的方法的时候，会先检查 这个实例中是否有这个方法，没有则会继续向上查找这个prototype对象是否有这个方法，刚刚我们说到prototype是一个对象， 那么也即是说这个是一个对象的实例，那么这个对象同样也会有一个__proto__属性指向对象的prototype对象
+我们知道在es6之前，js没有类和继承的概念，js是通过原型来实现继承的。在js中一个构造函数默认自带有一个prototype属性， 这个的属性值是一个对象，同时这个prototype对象自带有一个constructor属性，这个属性指向这个构造函数，同时每一个实例 都有一个__proto__属性指向这个prototype对象，我们可以将这个叫做隐式原型，我们在使用一个实例的方法的时候，会先检查 这个实例中是否有这个方法，没有则会继续向上查找这个prototype对象是否有这个方法，刚刚我们说到prototype是一个对象， 那么也即是说这个是一个对象的实例，那么这个对象同样也会有一个__proto__属性指向对象的prototype对象
 
 ### 对 JavaScript 模块化的理解
 
-> 在ES6出现之前，js没有标准的模块化概念，这也就造成了js多人写作开发容易造成全局污染的情况，以前我们可能会采用立即执行 函数、对象等方式来尽量减少变量这种情况，后面社区为了解决这个问题陆续提出了AMD规范和CMD规范，这里不同于Node.js的 CommonJS的原因在于服务端所有的模块都是存在于硬盘中的，加载和读取几乎是不需要时间的，而浏览器端因为加载速度取决于网速， 因此需要采用异步加载，AMD规范中使用define来定义一个模块，使用require方法来加载一个模块，现在ES6也推出了标准的模块 加载方案，通过export和import来导出和导入模块。
+在ES6出现之前，js没有标准的模块化概念，这也就造成了js多人写作开发容易造成全局污染的情况，以前我们可能会采用立即执行 函数、对象等方式来尽量减少变量这种情况，后面社区为了解决这个问题陆续提出了AMD规范和CMD规范，这里不同于Node.js的 CommonJS的原因在于服务端所有的模块都是存在于硬盘中的，加载和读取几乎是不需要时间的，而浏览器端因为加载速度取决于网速， 因此需要采用异步加载，AMD规范中使用define来定义一个模块，使用require方法来加载一个模块，现在ES6也推出了标准的模块 加载方案，通过export和import来导出和导入模块。
 
 ### 如何判断网页中图片加载成功或者失败
 
-> 使用onload事件运行加载成功，使用onerror事件判断失败
+使用onload事件运行加载成功，使用onerror事件判断失败
 
 ### 如何实现懒加载
 
-> 懒加载就是根据用户的浏览需要记载内容，也就是在用户即将浏览完当前的内容时进行继续加载内容，这种技术常常用来加载图片的时候使用。我们判断用户是否即将浏览到底部之后进行在家内容 这时候可能会需要加载大量的内容，可以使用fragment来优化一下，因为大部分是使用滑动和滚轮来触发的，因此很有可能会不断触发，可以使用函数节流做一个优化，防止用户不断触发
+懒加载就是根据用户的浏览需要记载内容，也就是在用户即将浏览完当前的内容时进行继续加载内容，这种技术常常用来加载图片的时候使用。我们判断用户是否即将浏览到底部之后进行在家内容 这时候可能会需要加载大量的内容，可以使用fragment来优化一下，因为大部分是使用滑动和滚轮来触发的，因此很有可能会不断触发，可以使用函数节流做一个优化，防止用户不断触发
 
 ### JSONP 原理
 
@@ -1098,21 +1110,21 @@ alert(myCookie);
 
 ### 渐进增强
 
-> 渐进增强(英语：Progressive enhancement)是网页设计的一种策略，强调可访问性，语义 HTML 标记，外部样式表和脚本技术。渐进增强使用 Web 技术以分层的方式，允许所有人访问网页的基本内容和功能，使用任何浏览器或互联网连接，同时还给更先进的浏览器软件或更大的带宽提供了这些页面的一个增强版本
+渐进增强(英语：Progressive enhancement)是网页设计的一种策略，强调可访问性，语义 HTML 标记，外部样式表和脚本技术。渐进增强使用 Web 技术以分层的方式，允许所有人访问网页的基本内容和功能，使用任何浏览器或互联网连接，同时还给更先进的浏览器软件或更大的带宽提供了这些页面的一个增强版本
 
 核心原则
 
-> 基本内容应该是被所有网络浏览器访问
+- 基本内容应该是被所有网络浏览器访问
 
-> 基本功能应该是被所有网络浏览器访问
+- 基本功能应该是被所有网络浏览器访问
 
-> 稀疏的，语义化的标记包含的所有内容
+- 稀疏的，语义化的标记包含的所有内容
 
-> 增强的布局是由外部链接的 CSS 提供
+- 增强的布局是由外部链接的 CSS 提供
 
-> 增强的行为是由外部链接的非侵入式 JavaScript 提供
+- 增强的行为是由外部链接的非侵入式 JavaScript 提供
 
-> 最终用户的网络浏览器偏好被受到尊重
+- 最终用户的网络浏览器偏好被受到尊重
 
 ### 从浏览器地址栏输入 URL 到显示页面的步骤
 

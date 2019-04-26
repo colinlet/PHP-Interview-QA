@@ -106,7 +106,7 @@
 
 - [include、require、include_once、require_once 的区别](./QA.md#includerequireinclude_oncerequire_once-的区别)
 
-- 数组处理函数
+- [数组处理函数](./QA.md#常见数组函数)
 
 - [Cookie 和 Session](./QA.md#cookie-和-session)
 
