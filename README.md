@@ -96,7 +96,7 @@
 
 ### PHP
 
-- [echo、print、print_r、var_dump 的区别](./QA.md#echoprintprint_rvar_dump-的区别)
+- [echo、print、print_r、var_dump 区别](./QA.md#echoprintprint_rvar_dump-区别)
 
 - [单引号和双引号的区别](./QA.md#单引号和双引号的区别)
 
@@ -387,10 +387,6 @@
 - JWT
 
 - 了解常用语言特性，及不同场景适用性
-
-## 赞赏
-
-<p align="left"><img width="320" src="./assets/wechat-tips.jpg" alt="wechat tips"></a></p>
 
 ## 声明
 

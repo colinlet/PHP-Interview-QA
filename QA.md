@@ -326,7 +326,7 @@ HTTP 报文组成部分
 
 ## PHP
 
-### echo、print、print_r、var_dump 的区别
+### echo、print、print_r、var_dump 区别
 
 > `echo`和`print`是语言结构、`print_r`和`var_dump`是普通函数
 
