@@ -328,6 +328,8 @@ HTTP 报文组成部分
 
 ### echo、print、print_r、var_dump 的区别
 
+> `echo`和`print`是语言结构、`print_r`和`var_dump`是普通函数
+
 - echo：输出一个或多个字符串
 
 - print：输出字符串
@@ -335,6 +337,8 @@ HTTP 报文组成部分
 - print_r：打印关于变量的易于理解的信息
 
 - var_dump：打印关于变量的易于理解的信息(带类型)
+
+拓展阅读 [《echo、print、print_r、var_dump区别》](./03.PHP/03.echo、print、print_r、var_dump区别.md)
 
 ### 单引号和双引号的区别
 
