@@ -184,10 +184,6 @@ HTTP 报文组成部分
 
 拓展阅读 [《HTTP状态码》](./01.网络协议/05.HTTP状态码.md)
 
-#### 错误原因
-
-500、502、503、504(待补充，暂未找到靠谱来源)
-
 ### 常见的 HTTP 方法
 
 ![HTTP方法](./assets/01-net/http-method.png)
@@ -493,6 +489,10 @@ PHP 5 新增了一个 final 关键字。如果父类中的方法被声明为 fin
 |log_errors|"0"|设置是否将错误日志记录到 error_log 中|
 |error_log|NULL|设置脚本错误将被记录到的文件|
 
+```shell
+php -ini | grep short_open_tag //查看 php.ini 配置
+```
+
 - 动态设置
 
 ```php
@@ -505,6 +505,34 @@ ini_set('memory_limit', '256M'); //设置最大内存限制
 
 ### php-fpm.conf 配置
 
+|名称|默认|备注|
+|-|-|-|
+|pid||PID文件的位置|
+|error_log||错误日志的位置|
+|log_level|notice|错误级别 alert:必须立即处理、error:错误情况、warning:警告情况、notice:一般重要信息、debug:调试信息|
+|daemonize|yes|设置 FPM 在后台运行|
+|listen|ip:port、port、/path/to/unix/socket|设置接受 FastCGI 请求的地址|
+|pm|static、ondemand、dynamic|设置进程管理器如何管理子进程|
+|request_slowlog_timeout|'0'|慢日志记录阀值|
+|slowlog||慢请求的记录日志|
+
+### 502、504 错误产生原因及解决方案
+
+#### 502
+
+502 表示网关错误，当 PHP-CGI 得到一个无效响应，网关就会输出这个错误
+
+- `php.ini` 的 memory_limit 过小
+- `php-fpm.conf` 中 max_children、max_requests 设置不合理
+- `php-fpm.conf` 中 request_terminate_timeout、max_execution_time 设置不合理
+- php-fpm 进程处理不过来，进程数不足、脚本存在性能问题
+
+#### 504
+
+504 表示网关超时，PHP-CGI 没有在指定时间响应请求，网关将输出这个错误
+
+- Nginx+PHP 架构，可以调整 FastCGI 超时时间，fastcgi_connect_timeout、fastcgi_send_timeout、fastcgi_read_timeout
+
 ### 如何返回一个301重定向
 
 ```php
@@ -514,32 +542,46 @@ header('Location: https://blog.maplemark.cn');
 
 ### PHP 与 MySQL 连接方式
 
-- MySQL
+#### MySQL
+
 ```php
 $conn = mysql_connect('127.0.0.1:3306', 'root', '123456');
-if (!$conn) die(mysql_error() . "\n");
+if (!$conn) {
+    die(mysql_error() . "\n");
+}
 mysql_query("SET NAMES 'utf8'");
 $select_db = mysql_select_db('app');
-if (!$select_db) die(mysql_error() . "\n");
+if (!$select_db) {
+    die(mysql_error() . "\n");
+}
 $sql = "SELECT * FROM `user` LIMIT 1";
 $res = mysql_query($sql);
-if (!$res) die(mysql_error() . "\n");
+if (!$res) {
+    die(mysql_error() . "\n");
+}
 while ($row = mysql_fetch_assoc($res)) {
     var_dump($row);
 }
 mysql_close($conn);
 ```
 
-- MySQLi
+#### MySQLi
+
 ```php
 $conn = @new mysqli('127.0.0.1:3306', 'root', '123456');
-if ($conn->connect_errno) die($conn->connect_error . "\n");
+if ($conn->connect_errno) {
+    die($conn->connect_error . "\n");
+}
 $conn->query("set names 'utf8';");
 $select_db = $conn->select_db('user');
-if (!$select_db) die($conn->error . "\n");
+if (!$select_db) {
+    die($conn->error . "\n");
+}
 $sql = "SELECT * FROM `user` LIMIT 1";
 $res = $conn->query($sql);
-if (!$res) die($conn->error . "\n");
+if (!$res) {
+    die($conn->error . "\n");
+}
 while ($row = $res->fetch_assoc()) {
     var_dump($row);
 }
@@ -547,7 +589,8 @@ $res->free();
 $conn->close();
 ```
 
-- PDO
+#### PDO
+
 ```php
 $pdo = new PDO('mysql:host=127.0.0.1:3306;dbname=user', 'root', '123456');
 $pdo->exec("set names 'utf8'");
@@ -565,9 +608,24 @@ $pdo = null;
 
 ### MySQL、MySQLi、PDO 区别
 
-MySQL：最常用，是过程式风格的一组应用
+#### MySQL
 
-MySQLi：是 MySQL 函数的增强改进版，提供过程化和面向对象两种风格的 API，增加了预编译和参数绑定等新的特性
+- 允许 PHP 应用与 MySQL 数据库交互的早期扩展
+- 提供了一个面向过程的接口，不支持后期的一些特性
+
+#### MySQLi
+
+- 面向对象接口
+- prepared 语句支持
+- 多语句执行支持
+- 事务支持
+- 增强的调试能力
+
+#### PDO
+
+- PHP 应用中的一个数据库抽象层规范
+- PDO 提供一个统一的 API 接口，无须关心数据库类型
+- 使用标准的 PDO API，可以快速无缝切换数据库
 
 PDO：从语法上讲，PDO 更接近 MySQLi
 
@@ -1326,8 +1384,6 @@ Slow log(有什么用，什么时候需要)
 
 ### 进程、线程、协程区别
 
-### 502 大概什么什么原因？ 如何排查 504呢
-
 ### 进程间通信几种方式，最快的是哪种？
 
 ## 安全
@@ -1415,6 +1471,8 @@ Slow log(有什么用，什么时候需要)
 ### OAuth 2 主要用在哪些场景下
 
 ### JWT
+
+### Kafka、zookeeper
 
 ### 了解常用语言特性，及不同场景适用性。
 
