@@ -488,6 +488,7 @@ PHP 5 新增了一个 final 关键字。如果父类中的方法被声明为 fin
 |display_errors|"1"|显示错误|
 |log_errors|"0"|设置是否将错误日志记录到 error_log 中|
 |error_log|NULL|设置脚本错误将被记录到的文件|
+|upload_max_filesize|"2M"|最大上传文件大小|
 
 ```shell
 php -ini | grep short_open_tag //查看 php.ini 配置
@@ -516,7 +517,7 @@ ini_set('memory_limit', '256M'); //设置最大内存限制
 |request_slowlog_timeout|'0'|慢日志记录阀值|
 |slowlog||慢请求的记录日志|
 
-### 502、504 错误产生原因及解决方案
+### 502、504 错误产生原因及解决方式
 
 #### 502
 
@@ -627,8 +628,6 @@ $pdo = null;
 - PDO 提供一个统一的 API 接口，无须关心数据库类型
 - 使用标准的 PDO API，可以快速无缝切换数据库
 
-PDO：从语法上讲，PDO 更接近 MySQLi
-
 ### 数据库持久连接
 
 把 PHP 用作多进程 web 服务器的一个模块，这种方法目前只适用于 Apache。
@@ -639,7 +638,7 @@ PDO：从语法上讲，PDO 更接近 MySQLi
 
 PHP 代码 => 启动 php 及 zend 引擎，加载注册拓展模块 => 对代码进行词法/语法分析 => 编译成opcode(opcache) => 执行 opcode
 
-当前作用域分配内存，充当运行栈，局部变量分配在当前栈，函数调用时压栈，返回时出栈
+> PHP7 新增了抽象语法树(AST)，在语法分析阶段生成 AST，然后再生成 opcode 数组
 
 ### base64 编码原理
 
@@ -655,77 +654,66 @@ MVC 架构中 M 是指数据模型，V 是指用户界面，C 则是控制器；
 
 ### 主流 PHP 框架特点
 
-- Laravel
+#### Laravel
 
-Simple, fast routing engine
+易于访问，功能强大，并提供大型，强大的应用程序所需的工具
 
-Powerful dependency injection container.
+- 简单快速的路由引擎
+- 强大的依赖注入容器
+- 富有表现力，直观的数据库 ORM
+- 提供数据库迁移功能
+- 灵活的任务调度器
+- 实时事件广播
 
-Multiple back-ends for session and cache storage.
+#### Symfony
 
-Expressive, intuitive database ORM.
+- Database engine-independent
+- Simple to use, in most cases, but still flexible enough to adapt to complex cases
+- Based on the premise of convention over configuration--the developer needs to configure only the unconventional
+- Compliant with most web best practices and design patterns
+- Enterprise-ready--adaptable to existing information technology (IT) policies and architectures, and stable enough for long-term projects
+- Very readable code, with phpDocumentor comments, for easy maintenance
+- Easy to extend, allowing for integration with other vendor libraries
 
-Database agnostic schema migrations.
+#### CodeIgniter
 
-Robust background job processing.
+- 基于模型-视图-控制器的系统
+- 框架比较轻量
+- 全功能数据库类，支持多个平台
+- Query Builder 数据库支持
+- 表单和数据验证
+- 安全性和 XSS 过滤
+- 全页面缓存
 
-Real-time event broadcasting.
+#### ThinkPHP
 
-- Symfony
-
-Database engine-independent
-
-Simple to use, in most cases, but still flexible enough to adapt to complex cases
-
-Based on the premise of convention over configuration--the developer needs to configure only the unconventional
-
-Compliant with most web best practices and design patterns
-
-Enterprise-ready--adaptable to existing information technology (IT) policies and architectures, and stable enough for long-term projects
-
-Very readable code, with phpDocumentor comments, for easy maintenance
-
-Easy to extend, allowing for integration with other vendor libraries
-
-- CodeIgniter
-
-https://www.codeigniter.com/userguide3/overview/features.html
-
-- ThinkPHP
-
-MVC支持-基于多层模型（M）、视图（V）、控制器（C）的设计模式
-
-ORM支持-提供了全功能和高性能的ORM支持，支持大部分数据库
-
-模板引擎支持-内置了高性能的基于标签库和XML标签的编译型模板引擎
-
-RESTFul支持-通过REST控制器扩展提供了RESTFul支持，为你打造全新的URL设计和访问体验
-
-云平台支持-提供了对新浪SAE平台和百度BAE平台的强力支持，具备“横跨性”和“平滑性”，支持本地化开发和调试以及部署切换，让你轻松过渡，打造全新的开发体验
-
-CLI支持-支持基于命令行的应用开发
-
-RPC支持-提供包括PHPRpc、HProse、jsonRPC和Yar在内远程调用解决方案
-
-MongoDb支持-提供NoSQL的支持
-
-缓存支持-提供了包括文件、数据库、Memcache、Xcache、Redis等多种类型的缓存支持
+- 采用容器统一管理对象
+- 支持 Facade
+- 更易用的路由
+- 注解路由支持
+- 路由跨域请求支持
+- 验证类增强
+- 配置和路由目录独立
+- 取消系统常量
+- 类库别名机制
+- 模型和数据库增强
+- 依赖注入完善
+- 支持 PSR-3 日志规范
+- 中间件支持
+- 支持 Swoole/Workerman 运行
 
 ### 对象关系映射/ORM
 
-- 优点
+#### 优点
 
-缩短编码时间、减少甚至免除对 model 的编码，降低数据库学习成本
+- 缩短编码时间、减少甚至免除对 model 的编码，降低数据库学习成本
+- 动态的数据表映射，在表结构发生改变时，减少代码修改
+- 可以很方便的引入附加功能(cache 层)
 
-动态的数据表映射，在表结构发生改变时，减少代码修改
+#### 缺点
 
-可以很方便的引入附加功能(cache 层)
-
-- 缺点
-
-映射消耗性能、ORM 对象消耗内存
-
-SQL 语句较为复杂时，ORM 语法可读性不高(使用原生 SQL)
+- 映射消耗性能、ORM 对象消耗内存
+- SQL 语句较为复杂时，ORM 语法可读性不高(使用原生 SQL)
 
 ### 链式调用实现
 
