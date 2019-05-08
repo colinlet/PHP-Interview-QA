@@ -489,6 +489,7 @@ PHP 5 新增了一个 final 关键字。如果父类中的方法被声明为 fin
 |log_errors|"0"|设置是否将错误日志记录到 error_log 中|
 |error_log|NULL|设置脚本错误将被记录到的文件|
 |upload_max_filesize|"2M"|最大上传文件大小|
+|post_max_size|"8M"|设置POST最大数据限制|
 
 ```shell
 php -ini | grep short_open_tag //查看 php.ini 配置
