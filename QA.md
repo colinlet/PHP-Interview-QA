@@ -1415,17 +1415,74 @@ MySQL 默认采用自动提交(AUTOCOMMIT)模式，每个查询都当作一个�
 - 支持全文索引，可以支持复杂的查询
 - MyISAM 将表存储在两个文件中，数据文件和索引文件
 
-### 索引是什么
+### 常见索引
+
+#### 索引概念
 
 索引是存储引擎用于快速找到记录的一种数据结构
 
-### 常见索引？有什么特点
+#### 索引分类
+
+![索引分类](./assets/05-mysql/index.png)
+
+#### 索引创建
+
+```mysql
+ALTER TABLE `table_name` ADD INDEX index_name (`column`); //普通索引
+```
+
+```mysql
+ALTER TABLE `table_name` ADD UNIQUE (`column`); //唯一索引
+```
+
+```mysql
+ALTER TABLE `table_name` ADD PRIMARY KEY (`column`); //主键索引
+```
+
+```mysql
+ALTER TABLE `table_name` ADD FULLTEXT (`column`); //全文索引
+```
+
+```mysql
+ALTER TABLE `table_name` ADD INDEX index_name (`column1`, `column2`, `column3`); //组合索引
+```
+
+#### 索引区别
+
+- 普通索引：最基本的索引，没有任何限制
+- 唯一索引：与"普通索引"类似，不同的就是：索引列的值必须唯一，但允许有空值
+- 主键索引：它是一种特殊的唯一索引，不允许有空值
+- 全文索引：仅可用于 MyISAM 表，针对较大的数据，生成全文索引很耗时好空间
+- 组合索引：为了更多的提高 MySQL 效率可建立组合索引，遵循"最左前缀"原则
 
 ### 聚族索引与非聚族索引的区别
 
+- 按物理存储分类：聚簇索引(clustered index)、非聚簇索引(non-clustered index)
+- 聚簇索引的叶子节点就是数据节点，而非聚簇索引的叶子节点仍然是索引节点，只不过有指向对应数据块的指针
+
 ### BTree 与 BTree-/BTree+ 索引原理
 
+- BTree
+
+二叉树导致树高度非常高，逻辑上很近的节点，物理上非常远，无法利用局部性，IO 次数多，查找效率低
+
+- BTree-
+
+每个节点都是二元数组[key,data]，所有节点都可以存储数据，key 为索引，data 为索引外的数据。插入删除数据会破坏 BTree 性质，插入数据时候，需要对数据进行分裂、合并、转移等操作保持 BTree 性质，造成 IO 操作频繁
+
+- BTree+
+
+非叶子节点不存储 data，只存储索引 key，只有叶子节点才存储 data
+
+- MySQL中的 BTree+
+
+在经典 BTree+ 的基础上进行了优化，增加了顺序访问指针。在 BTree+ 的每个叶子节点增加了一个指向相邻叶子节点的指针，形成了带顺序访问指针的 BTree+，提高了区间访问性能
+
 ### 分表数量级
+
+Mysql单表容量在`500万`左右，性能处于最佳状态，此时，MySQL 的 BTREE 索引树高在3～5之间
+
+### 查询性能优化
 
 ### 数据库优化手段
 索引、联合索引(命中条件)
@@ -1433,8 +1490,6 @@ MySQL 默认采用自动提交(AUTOCOMMIT)模式，每个查询都当作一个�
 分区
 会使用 explain 分析 SQL 性能问题，了解各参数含义(type、rows、key)
 Slow log(有什么用，什么时候需要)
-### 三范式、反三范式
-### 画下innodb主键索引的数据结构
 
 ## Redis
 
