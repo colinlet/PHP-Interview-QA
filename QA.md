@@ -1480,7 +1480,7 @@ ALTER TABLE `table_name` ADD INDEX index_name (`column1`, `column2`, `column3`);
 
 ### 分表数量级
 
-Mysql单表容量在`500万`左右，性能处于最佳状态，此时，MySQL 的 BTREE 索引树高在3～5之间
+MySQL 单表容量在`500万`左右，性能处于最佳状态，此时，MySQL 的 BTREE 索引树高在3～5之间
 
 ### 查询性能优化
 

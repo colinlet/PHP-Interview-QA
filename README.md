@@ -39,353 +39,200 @@
 ### 网络协议
 
 - [计算机网络体系结构](./QA.md#计算机网络体系结构)
-
 - [UDP 的主要特点](./QA.md#udp-的主要特点)
-
 - [TCP 的主要特点](./QA.md#tcp-的主要特点)
-
 - [简述三报文握手建立 TCP 连接](./QA.md#简述三报文握手建立-tcp-连接)
-
 - [建立 TCP 连接为什么最后还要发送确认](./QA.md#建立-tcp-连接为什么最后还要发送确认)
-
 - [简述 TCP 连接的释放](./QA.md#简述-tcp-连接的释放)
-
 - [TIME-WAIT 是什么，为什么必须等待 2MLS](./QA.md#time-wait-是什么为什么必须等待-2mls)
-
 - [TCP 粘包问题](./QA.md#tcp-粘包问题)
-
 - [UDP、TCP 区别，适用场景](./QA.md#udptcp-区别适用场景)
-
 - [建立 socket 需要哪些步骤](./QA.md#建立-socket-需要哪些步骤)
-
 - [DNS 主要作用是什么](./QA.md#dns-主要作用是什么)
-
 - [HTTP 报文组成](./QA.md#http-报文组成)
-
 - [HTTP 状态码](./QA.md#http-状态码)
-
 - [常见的 HTTP 方法](./QA.md#常见的-http-方法)
-
 - [HTTP 优缺点](./QA.md#http-优缺点)
-
 - [HTTPS 通信原理](./QA.md#https-通信原理)
-
 - [HTTP 2.0](./QA.md#http-2.0)
-
 - [IPv6 与 IPv4 有什么变化](./QA.md#ipv6-与-ipv4-有什么变化)
-
 - [什么是心跳机制](./QA.md#什么是心跳机制)
-
 - [什么是长连接](./QA.md#什么是长连接)
 
 ### 数据结构与算法
 
 - [衡量、比较算法优劣的指标](./QA.md#衡量比较算法优劣的指标)
-
 - [链表有哪些](./QA.md#链表有哪些)
-
 - [线性结构](./QA.md#线性结构)
-
 - [树](./QA.md#树)
-
 - [散列查找](./QA.md#散列查找)
-
 - [排序](./QA.md#排序)
-
 - [其他](./QA.md#其他)
 
 ### PHP
 
 - [echo、print、print_r、var_dump 区别](./QA.md#echoprintprint_rvar_dump-区别)
-
 - [单引号和双引号的区别](./QA.md#单引号和双引号的区别)
-
 - [isset 和 empty 的区别](./QA.md#isset-和-empty-的区别)
-
 - [static、self、$this 的区别](./QA.md#staticselfthis-的区别)
-
 - [include、require、include_once、require_once 的区别](./QA.md#includerequireinclude_oncerequire_once-的区别)
-
 - [数组处理函数](./QA.md#常见数组函数)
-
 - [Cookie 和 Session](./QA.md#cookie-和-session)
-
 - [预定义变量](./QA.md#预定义变量)
-
 - [传值和传引用的区别](./QA.md#传值和传引用的区别)
-
 - [构造函数和析构函数](./QA.md#构造函数和析构函数)
-
 - [魔术方法](./QA.md#魔术方法)
-
 - [public、protected、private、final 区别](./QA.md#publicprotectedprivatefinal-区别)
-
 - [客户端/服务端 IP 获取，了解代理透传 实际IP 的概念](./QA.md#客户端服务端-ip-获取了解代理透传-实际ip-的概念)
-
 - [类的静态调用和实例化调用](./QA.md#类的静态调用和实例化调用)
-
 - [PHP 不实例化调用方法](./QA.md#php-不实例化调用方法)
-
 - [php.ini 配置选项，ini_set 动态设置](./QA.md#phpini-配置选项ini_set-动态设置)
-
 - [如何返回一个301重定向](./QA.md#如何返回一个301重定向)
-
 - [PHP 与 MySQL 连接方式](./QA.md#php-与-mysql-连接方式)
-
 - [MySQL、MySQLi、PDO 区别](./QA.md#mysqlmysqlipdo-区别)
-
 - [MySQL 连接池](./QA.md#mysql-连接池)
-
 - [代码执行过程](./QA.md#代码执行过程)
-
 - [base64 编码原理](./QA.md#base64-编码原理)
-
 - [ip2long 实现](./QA.md#ip2long-实现)
-
 - [MVC 的理解](./QA.md#mvc-的理解)
-
 - [主流 PHP 框架特点](./QA.md#主流-php-框架特点)
-
 - [对象关系映射/ORM](./QA.md#对象关系映射orm)
 
 ### Web
 
 - [SEO 有哪些需要注意的](./QA.md#seo-有哪些需要注意的)
-
 - [img 标签的 title 和 alt 有什么区别](./QA.md#img-标签的-title-和-alt-有什么区别)
-
 - [CSS 选择器的分类](./QA.md#css-选择器的分类)
-
 - [CSS sprite 是什么，有什么优缺点](./QA.md#css-sprite-是什么有什么优缺点)
-
 - [display: none 与 visibility: hidden 的区别](./QA.md#display-none-与-visibility-hidden-的区别)
-
 - [display: block 和 display: inline 的区别](./QA.md#display-block-和-display-inline-的区别)
-
 - [CSS 文件、style 标签、行内 style 属性优先级](./QA.md#css-文件style-标签行内-style-属性优先级)
-
 - [link 与 @import 的区别](./QA.md#link-与-import-的区别)
-
 - [盒子模型](./QA.md#盒子模型)
-
 - [容器包含若干浮动元素时如何清理(包含)浮动](./QA.md#容器包含若干浮动元素时如何清理包含浮动)
-
 - [如何水平居中一个元素](./QA.md#如何水平居中一个元素)
-
 - [如何竖直居中一个元素](./QA.md#如何竖直居中一个元素)
-
 - [flex 与 CSS 盒子模型有什么区别](./QA.md#flex-与-css-盒子模型有什么区别)
-
 - [Position 属性](./QA.md#position-属性)
-
 - [PNG,GIF,JPG 的区别及如何选](./QA.md#pnggifjpg-的区别及如何选)
-
 - [为什么把 JavaScript 文件放在 Html 底部](./QA.md#为什么把-javascript-文件放在-html-底部)
-
 - [JavaScript 数据类型](./QA.md#javascript-数据类型)
-
 - [JavaScript 操作 DOM 的方法有哪些](./QA.md#javascript-操作-dom-的方法有哪些)
-
 - [JavaScript 字符串方法有哪些](./QA.md#javascript-字符串方法有哪些)
-
 - [JavaScript 字符串截取方法有哪些？有什么区别](./QA.md#javascript-字符串截取方法有哪些有什么区别)
-
 - [setTimeout 和 setInterval 的区别](./QA.md#settimeout-和-setinterval-的区别)
-
 - [使用 new 操作符实例化一个对象的具体步骤](./QA.md#使用-new-操作符实例化一个对象的具体步骤)
-
 - [如何实现 ajax 请求](./QA.md#如何实现-ajax-请求)
-
 - [同源策略是什么](./QA.md#同源策略是什么)
-
 - [如何解决跨域问题](./QA.md#如何解决跨域问题)
-
 - [引起内存泄漏的操作有哪些](./QA.md#引起内存泄漏的操作有哪些)
-
 - [闭包理解及应用](./QA.md#闭包理解及应用)
-
 - [对 JavaScript 原型的理解](./QA.md#对-javascript-原型的理解)
-
 - [对 JavaScript 模块化的理解](./QA.md#对-javascript-模块化的理解)
-
 - [如何判断网页中图片加载成功或者失败](./QA.md#如何判断网页中图片加载成功或者失败)
-
 - [如何实现懒加载](./QA.md#如何实现懒加载)
-
 - [JSONP 原理](./QA.md#jsonp-原理)
-
 - [Cookie 读写](./QA.md#cookie-读写)
-
 - 从浏览器地址栏输入 URL 到显示页面的步骤
-
 - [Vue.js 双向绑定原理](./QA.md#vuejs-双向绑定原理)
-
 - 如何进行网站性能优化
-
 - [渐进增强](./QA.md#渐进增强)
 
 ### MySQL
 
 - [体系结构](./QA.md#体系结构)
-
 - [基础操作](./QA.md#基础操作)
-
-- [char 和 varchar 数据类型区别](./QA.md#char-和-varchar-数据类型区别)
-
-- [JOIN、LEFT JOIN 、RIGHT JOIN、INNER JOIN](./QA.md#left-join-right-joininner-join)
-
-- UNION
-
+- [数据库设计范式](./QA.md#数据库设计范式)
+- [数据库设计原则](./QA.md#数据库设计原则)
+- [CHAR 和 VARCHAR 数据类型区别](./QA.md#char-和-varchar-数据类型区别)
+- [LEFT JOIN 、RIGHT JOIN、INNER JOIN](./QA.md#left-join-right-joininner-join)
+- [UNION、UNION ALL](./QA.md#unionunion-all)
 - GROUP BY + COUNT + WHERE 组合案例
-
-- 常用 MySQL 函数，如：now()、md5()、concat()、uuid()等
-
-- 了解触发器是什么，说个使用场景
-
-- 常见存储引擎，有什么区别
-
-- 常见索引？有什么特点
-
-- 聚族索引与非聚族索引的区别
-
-- 事务机制
-
-- BTree 与 BTree-/BTree+ 索引原理
-
-- 分表数量级
+- [常用 MySQL 函数](./QA.md#常用-mysql-函数)
+- [锁](./QA.md#锁)
+- [事务](./QA.md#事务)
+- [常见存储引擎](./QA.md#常见存储引擎)
+- [常见索引](./QA.md#常见索引)
+- [聚族索引与非聚族索引的区别](./QA.md#聚族索引与非聚族索引的区别)
+- [BTree 与 BTree-/BTree+ 索引原理](./QA.md#btree-与-btree-btree-索引原理)
+- [分表数量级](./QA.md#分表数量级)
+- 查询性能优化
 
 ### Redis
 
 - Redis 特点
-
 - Redis 有哪些数据类型
-
 - 有序集合底层实现？跳跃表和平衡二叉树效率对比
-
 - 一致性哈希
-
 - 如何实现分布式锁
-
 - Redis 如何实现持久化
-
 - 可利用 CPU 多核心
-
 - 内存淘汰机制
-
 - 集群 cluster
 
 ### Linux
 
 - 查看 CPU、内存、时间、系统版本等信息
-
 - find 、grep 查找文件
-
 - 批量删除文件
-
 - sed、awk使用
-
 - crontab
-
 - vim快捷键
-
 - 负载查看
-
 - 如何查看 PHP 进程的内存、CPU 占用
-
 - Linux进程
-
 - 进程、线程、协程区别
-
 - 502 大概什么什么原因？ 如何排查 504呢
-
 - 进程间通信几种方式，最快的是哪种？
 
 ### 安全
 
 - CSRF 攻击？请描述一个实例
-
 - XSS 攻击
-
 - SQL 注入
-
 - IP 地址能被伪造吗
-
 - include 请求参数
-
 - md5 逆向原理
-
 - DOS 攻击
-
 - 数据库存储用户密码时，应该是怎么做才安全
-
 - 目录权限安全
-
 - disable_functions 关闭高危函数
-
 - 文件上传 PHP 脚本
-
 - eval 函数执行脚本
-
 - 了解 Hash 与 Encrypt 区别
 
 ### 设计模式
 
 - Autoload、Composer 原理
-
 - OOP 思想
-
 - 抽象类、接口 分别使用场景
-
 - 依赖注入实现原理
-
 - 单例模式
-
 - 工厂模式
-
 - 观察者模式
-
 - 适配器模式
-
 - 依赖注入模式
-
 - 门面模式
 
 ### 架构
 
 - 负载均衡有哪几种，挑一种你熟悉的说明其原理
-
 - 介绍下 nginx
-
 - 反向代理
-
 - nginx 中 fastcgi_pass 监听，unix socket 和 tcp socket 的区别
-
 - 消息队列？RabbitMQ、ActiveMq、Nsq、kafka
-
 - 穿透、雪崩
-
 - DB 主从、读写分离
-
 - 如何保障数据的可用性，即使被删库了也能恢复到分钟级别。你会怎么做
-
 - 数据库连接过多，超过最大值，如何优化架构。从哪些方便处理
-
 - 数据冗余、备份（MySQL增量、全量 原理）
-
 - 画出常见 PHP 应用架构图
-
 - 介绍下 RESTful API
-
 - API 请求如何保证数据不被篡改
-
 - API 版本兼容怎么处理
-
 - 限流（木桶、令牌桶）
-
 - OAuth 2 主要用在哪些场景下
-
 - JWT
-
 - 了解常用语言特性，及不同场景适用性
 
 ## 声明
