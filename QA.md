@@ -1428,23 +1428,23 @@ MySQL 默认采用自动提交(AUTOCOMMIT)模式，每个查询都当作一个�
 #### 索引创建
 
 ```mysql
-ALTER TABLE `table_name` ADD INDEX index_name (`column`); //普通索引
+ALTER TABLE `table_name` ADD INDEX index_name (`column`); #普通索引
 ```
 
 ```mysql
-ALTER TABLE `table_name` ADD UNIQUE (`column`); //唯一索引
+ALTER TABLE `table_name` ADD UNIQUE (`column`); #唯一索引
 ```
 
 ```mysql
-ALTER TABLE `table_name` ADD PRIMARY KEY (`column`); //主键索引
+ALTER TABLE `table_name` ADD PRIMARY KEY (`column`); #主键索引
 ```
 
 ```mysql
-ALTER TABLE `table_name` ADD FULLTEXT (`column`); //全文索引
+ALTER TABLE `table_name` ADD FULLTEXT (`column`); #全文索引
 ```
 
 ```mysql
-ALTER TABLE `table_name` ADD INDEX index_name (`column1`, `column2`, `column3`); //组合索引
+ALTER TABLE `table_name` ADD INDEX index_name (`column1`, `column2`, `column3`); #组合索引
 ```
 
 #### 索引区别
