@@ -1482,6 +1482,23 @@ ALTER TABLE `table_name` ADD INDEX index_name (`column1`, `column2`, `column3`);
 
 MySQL 单表容量在`500万`左右，性能处于最佳状态，此时，MySQL 的 BTREE 索引树高在3～5之间
 
+### EXPLAIN 输出格式
+
+|Column|JSON Name|含义|
+|-|-|-|
+|id|select_id|SELECT 标识符|
+|select_type|None|SELECT 类型|
+|table|table_name|输出行描述的表的表名|
+|partitions|partitions|匹配的分区|
+|type|access_type|连接类型|
+|possible_keys|possible_keys|可供选择使用的索引|
+|key|key|实际使用的索引|
+|key_len|key_length|实际使用的索引的长度|
+|ref|ref|与索引进行比较的列，也就是关联表使用的列|
+|rows|rows|将要被检查的估算的行数|
+|filtered|filtered|被表条件过滤的行数的百分比|
+|Extra|None|附件信息|
+
 ### 查询性能优化
 
 ### 数据库优化手段

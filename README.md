@@ -156,6 +156,7 @@
 - [聚族索引与非聚族索引的区别](./QA.md#聚族索引与非聚族索引的区别)
 - [BTree 与 BTree-/BTree+ 索引原理](./QA.md#btree-与-btree-btree-索引原理)
 - [分表数量级](./QA.md#分表数量级)
+- EXPLAIN 输出格式
 - 查询性能优化
 
 ### Redis
