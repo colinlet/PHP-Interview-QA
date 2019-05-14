@@ -1499,15 +1499,6 @@ MySQL 单表容量在`500万`左右，性能处于最佳状态，此时，MySQL 
 |filtered|filtered|被表条件过滤的行数的百分比|
 |Extra|None|附件信息|
 
-### 查询性能优化
-
-### 数据库优化手段
-索引、联合索引(命中条件)
-分库分表(水平分表、垂直分表)
-分区
-会使用 explain 分析 SQL 性能问题，了解各参数含义(type、rows、key)
-Slow log(有什么用，什么时候需要)
-
 ## Redis
 
 ### Redis 特点
