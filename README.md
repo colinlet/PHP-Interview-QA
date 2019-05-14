@@ -147,7 +147,6 @@
 - [CHAR 和 VARCHAR 数据类型区别](./QA.md#char-和-varchar-数据类型区别)
 - [LEFT JOIN 、RIGHT JOIN、INNER JOIN](./QA.md#left-join-right-joininner-join)
 - [UNION、UNION ALL](./QA.md#unionunion-all)
-- GROUP BY + COUNT + WHERE 组合案例
 - [常用 MySQL 函数](./QA.md#常用-mysql-函数)
 - [锁](./QA.md#锁)
 - [事务](./QA.md#事务)
@@ -156,8 +155,7 @@
 - [聚族索引与非聚族索引的区别](./QA.md#聚族索引与非聚族索引的区别)
 - [BTree 与 BTree-/BTree+ 索引原理](./QA.md#btree-与-btree-btree-索引原理)
 - [分表数量级](./QA.md#分表数量级)
-- EXPLAIN 输出格式
-- 查询性能优化
+- [EXPLAIN 输出格式](./QA.md#explain-输出格式)
 
 ### Redis
 

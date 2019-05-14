@@ -1299,10 +1299,6 @@ INSERT、SELECT、UPDATE、DELETE
 - UNION 操作符用于连接两个以上的 SELECT 语句的结果组合到一个结果集合中。多个 SELECT 语句会删除重复的数据
 - UNION ALL 操作符重复数据全部显示，不去重
 
-### GROUP BY + COUNT + WHERE 组合案例
-
-GROUP BY 语句根据一个或多个列对结果集进行分组
-
 ### 常用 MySQL 函数
 
 #### 数学函数
