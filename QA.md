@@ -1542,9 +1542,9 @@ Redis 是一个高性能的 key-value 数据库。每秒可执行操作高达 10
 ### Redis 事务
 
 ```text
-redis> MULTI            #标记事务开始
+redis> MULTI  #标记事务开始
 OK
-redis> INCR user_id     #多条命令按顺序入队
+redis> INCR user_id  #多条命令按顺序入队
 QUEUED
 redis> INCR user_id
 QUEUED
@@ -1552,7 +1552,7 @@ redis> INCR user_id
 QUEUED
 redis> PING
 QUEUED
-redis> EXEC             #执行
+redis> EXEC  #执行
 1) (integer) 1
 2) (integer) 2
 3) (integer) 3
