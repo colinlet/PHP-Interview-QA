@@ -1565,6 +1565,61 @@ redis> EXEC  #执行
 
 ### 如何实现分布式锁
 
+#### 方式一
+
+```text
+tryLock() {
+    SETNX Key 1 Seconds
+}
+release() {
+    DELETE Key
+}
+```
+
+缺陷：C<sub>1</sub> 执行时间过长未主动释放锁，C<sub>2</sub> 在 C<sub>1</sub> 的锁超时后获取到锁，C<sub>1</sub> 和 C<sub>2</sub> 都同时在执行，可能造成数据不一致等未知情况。如果 C<sub>1</sub> 先执行完毕，则会释放 C<sub>2</sub> 的锁，此时可能导致另外一个 C<sub>3</sub> 获取到锁
+
+#### 方式二
+
+```text
+tryLock() {
+    SETNX Key UnixTimestamp Seconds
+}
+release() {
+    EVAL (
+        //LuaScript
+        if redis.call("get", KEYS[1] == ARGV[1]) then
+            return redis.call("del", KEYS[1])
+        else
+            return 0
+        end
+    )
+}
+```
+
+缺陷：极高并发场景下(如抢红包场景)，可能存在 UnixTimestamp 重复问题。分布式环境下物理时钟一致性，也无法保证，也可能存在 UnixTimestamp 重复问题
+
+#### 方式三
+
+```text
+tryLock() {
+    SET Key UniqId Seconds
+}
+release() {
+    EVAL (
+        //LuaScript
+        if redis.call("get", KEYS[1]) == ARGV[1] then
+            return redis.call("del", KEYS[1])
+        else
+            return 0
+        end
+    )
+}
+```
+
+> 执行 `SET key value NX` 的效果等同于执行 `SETNX key value`
+
+目前最优的分布式锁方案，但是如果在集群下依然存在问题。由于 Redis 集群数据同步为异步，假设在 Master 节点获取到锁后未完成数据同步情况下 Master 节点 crash，在新的 Master 节点依然可以获取锁，所以多个 Client 同时获取到了锁
+
 ### 有序集合底层实现？跳跃表和平衡二叉树效率对比
 
 ### 一致性哈希
