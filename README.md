@@ -156,11 +156,17 @@
 - [BTree 与 BTree-/BTree+ 索引原理](./QA.md#btree-与-btree-btree-索引原理)
 - [分表数量级](./QA.md#分表数量级)
 - [EXPLAIN 输出格式](./QA.md#explain-输出格式)
+- my.cnf 配置
+- 慢查询
 
 ### Redis
 
-- Redis 特点
-- Redis 有哪些数据类型
+- [Redis 特点](./QA.md#redis-特点)
+- [Redis 支持哪些数据结构](./QA.md#redis-支持哪些数据结构)
+- [发布订阅](./QA.md#发布订阅)
+- [持久化策略](./QA.md#持久化策略)
+- [Redis 事务](./QA.md#redis-事务)
+- [如何实现分布式锁](./QA.md#如何实现分布式锁)
 - 有序集合底层实现？跳跃表和平衡二叉树效率对比
 - 一致性哈希
 - 如何实现分布式锁
