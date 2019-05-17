@@ -1620,13 +1620,36 @@ release() {
 
 目前最优的分布式锁方案，但是如果在集群下依然存在问题。由于 Redis 集群数据同步为异步，假设在 Master 节点获取到锁后未完成数据同步情况下 Master 节点 crash，在新的 Master 节点依然可以获取锁，所以多个 Client 同时获取到了锁
 
+### Redis 过期策略及内存淘汰机制
+
+#### 过期策略
+
+Redis 的过期策略就是指当 Redis 中缓存的 Key 过期了，Redis 如何处理
+
+- 定时过期：每个设置过期时间的 Key 创建定时器，到过期时间立即清除。内存友好，CPU 不友好
+
+- 惰性过期：访问 Key 时判断是否过期，过期则清除。CPU 友好，内存不友好
+
+- 定期过期：隔一定时间，扫描一定数量的 expires 字典中一定数量的 Key，清除其中已过期的 Key。内存和 CPU 资源达到最优的平衡效果
+
+#### 内存淘汰机制
+
+The exact behavior Redis follows when the maxmemory limit is reached is configured using the maxmemory-policy configuration directive.
+
+The following policies are available:
+
+noeviction: return errors when the memory limit was reached and the client is trying to execute commands that could result in more memory to be used (most write commands, but DEL and a few more exceptions).
+allkeys-lru: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added.
+volatile-lru: evict keys by trying to remove the less recently used (LRU) keys first, but only among keys that have an expire set, in order to make space for the new data added.
+allkeys-random: evict keys randomly in order to make space for the new data added.
+volatile-random: evict keys randomly in order to make space for the new data added, but only evict keys with an expire set.
+volatile-ttl: evict keys with an expire set, and try to evict keys with a shorter time to live (TTL) first, in order to make space for the new data added.
+
 ### 有序集合底层实现？跳跃表和平衡二叉树效率对比
 
 ### 一致性哈希
 
 ### 可利用 CPU 多核心
-
-### 过期策略及内存淘汰机制
 
 ### 集群 cluster
 
