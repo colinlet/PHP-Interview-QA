@@ -1638,12 +1638,12 @@ The exact behavior Redis follows when the maxmemory limit is reached is configur
 
 The following policies are available:
 
-noeviction: return errors when the memory limit was reached and the client is trying to execute commands that could result in more memory to be used (most write commands, but DEL and a few more exceptions).
-allkeys-lru: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added.
-volatile-lru: evict keys by trying to remove the less recently used (LRU) keys first, but only among keys that have an expire set, in order to make space for the new data added.
-allkeys-random: evict keys randomly in order to make space for the new data added.
-volatile-random: evict keys randomly in order to make space for the new data added, but only evict keys with an expire set.
-volatile-ttl: evict keys with an expire set, and try to evict keys with a shorter time to live (TTL) first, in order to make space for the new data added.
+- noeviction: return errors when the memory limit was reached and the client is trying to execute commands that could result in more memory to be used (most write commands, but DEL and a few more exceptions).
+- allkeys-lru: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added.
+- volatile-lru: evict keys by trying to remove the less recently used (LRU) keys first, but only among keys that have an expire set, in order to make space for the new data added.
+- allkeys-random: evict keys randomly in order to make space for the new data added.
+- volatile-random: evict keys randomly in order to make space for the new data added, but only evict keys with an expire set.
+- volatile-ttl: evict keys with an expire set, and try to evict keys with a shorter time to live (TTL) first, in order to make space for the new data added.
 
 ### 有序集合底层实现？跳跃表和平衡二叉树效率对比
 
