@@ -1634,16 +1634,18 @@ Redis 的过期策略就是指当 Redis 中缓存的 Key 过期了，Redis 如�
 
 #### 内存淘汰机制
 
-The exact behavior Redis follows when the maxmemory limit is reached is configured using the maxmemory-policy configuration directive.
+```shell
+[root]# redis-cli config get maxmemory-policy
+1) "maxmemory-policy"
+2) "noeviction"
+```
 
-The following policies are available:
-
-- noeviction: return errors when the memory limit was reached and the client is trying to execute commands that could result in more memory to be used (most write commands, but DEL and a few more exceptions).
-- allkeys-lru: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added.
-- volatile-lru: evict keys by trying to remove the less recently used (LRU) keys first, but only among keys that have an expire set, in order to make space for the new data added.
-- allkeys-random: evict keys randomly in order to make space for the new data added.
-- volatile-random: evict keys randomly in order to make space for the new data added, but only evict keys with an expire set.
-- volatile-ttl: evict keys with an expire set, and try to evict keys with a shorter time to live (TTL) first, in order to make space for the new data added.
+- noeviction：新写入操作会报错
+- allkeys-lru：移除最近最少使用的 key
+- allkeys-random：随机移除某些 key
+- volatile-lru：在设置了过期时间的键中，移除最近最少使用的 key
+- volatile-random：在设置了过期时间的键中，随机移除某些 key
+- volatile-ttl：在设置了过期时间的键中，有更早过期时间的 key 优先移除
 
 ### 有序集合底层实现？跳跃表和平衡二叉树效率对比
 
@@ -1652,10 +1654,6 @@ The following policies are available:
 ### 可利用 CPU 多核心
 
 ### 集群 cluster
-
-### 事务支持
-
-### 你之前为了解决什么问题使用的什么，为什么选它
 
 ### Redis 与 Memcache 区别
 
