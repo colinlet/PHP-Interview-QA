@@ -179,9 +179,10 @@
 
 ### Linux
 
-- 查看 CPU、内存、时间、系统版本等信息
-- find 、grep 查找文件
-- 批量删除文件
+- [Linux 目录结构](./QA.md#linux-目录结构)
+- [Linux 基础](./QA.md#linux-基础)
+- [命令与文件查找](./QA.md#命令与文件查找)
+- [数据流重定向](./QA.md#数据流重定向)
 - sed、awk使用
 - crontab
 - vim快捷键
