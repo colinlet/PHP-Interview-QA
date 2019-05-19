@@ -1727,25 +1727,83 @@ Redis 是基于内存的操作，CPU 不是 Redis 的瓶颈，Redis 瓶颈最有
 
 ### Linux 基础
 
-查看 CPU 、内存、时间、系统版本、进程
+查看系统信息、内存信息、磁盘信息、负载信息、路由信息、端口信息、进程、登录用户、关机、重启、系统时间、用户管理、文件权限、压缩解压
 
-### find 、grep 查找文件
+### 命令与文件查找
 
-### 批量删除文件
+#### which-寻找可执行文件
 
-### sed、awk使用
+```text
+[root@localhost ~]# which php
+/usr/bin/php
+```
+
+#### whereis-特定目录寻找
+
+```text
+[root@localhost ~]# whereis php
+php: /usr/bin/php /usr/lib64/php /etc/php.d /etc/php.ini /usr/include/php /usr/share/php /usr/share/man/man1/php.1.gz
+```
+
+#### find-直接搜索硬盘
+
+```text
+[root@localhost ~]# find / -name php-fpm
+/run/php-fpm
+/etc/sysconfig/php-fpm
+/etc/logrotate.d/php-fpm
+/var/log/php-fpm
+/usr/sbin/php-fpm
+```
+
+### 数据流重定向
+
+#### 数据流
+
+数据流分为三类：标准输入(stdin)、标准输出(stdout)、标准错误输出(stderr)
+
+> /dev/null：是一个特殊的设备文件，这个文件接收到的任何数据都会被丢弃。因此，null 这个设备通常也被成为位桶(bit bucket)或黑洞
+
+#### 管道命令
+
+可以处理前一个标准输出信息，对标准错误输出没有处理能力
+
+#### 截取命令
+
+cut：将以行为单位的字符串进行切割
+grep：分析一行字符，截取所需要的特定信息
+
+#### 排序命令
+
+sort：可以依据不同的数据类型进行排序
+uniq：数据去重
+wc：统计行数、字符数
+
+#### 参数转换
+
+xargs：将标准输入转换成命令行参数
+
+### sed、awk 使用
 
 ### crontab
 
-### vim快捷键
+### vim
 
 ### 负载查看
 
-### 如何查看 PHP 进程的内存、CPU 占用
-
-### Linux进程
-
 ### 进程、线程、协程区别
+
+#### 进程
+
+进程是一个程序在一个数据集中的一次动态执行过程，可以简单理解为“正在执行的程序”，它是CPU 资源分配和调度的独立单位
+
+#### 线程
+
+线程是在进程之后发展出来的概念。 线程也叫轻量级进程，它是一个基本的 CPU 执行单元，也是程序执行过程中的最小单元，由线程 ID、程序计数器、寄存器集合和堆栈共同组成。一个进程可以包含多个线程
+
+#### 协程
+
+协程是一种用户态的轻量级线程，又称微线程，英文名 Coroutine，协程的调度完全由用户控制
 
 ### 进程间通信几种方式，最快的是哪种？
 
