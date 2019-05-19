@@ -167,7 +167,6 @@
 - [Redis 与 Memcache 区别](./QA.md#redis-与-memcache-区别)
 - [发布订阅](./QA.md#发布订阅)
 - [持久化策略](./QA.md#持久化策略)
-- redis.conf
 - [Redis 事务](./QA.md#redis-事务)
 - [如何实现分布式锁](./QA.md#如何实现分布式锁)
 - [Redis 过期策略及内存淘汰机制](./QA.md#redis-过期策略及内存淘汰机制)
@@ -175,6 +174,8 @@
 - [如何利用 CPU 多核心](./QA.md#如何利用-cpu-多核心)
 - [集合命令的实现方法](./QA.md#集合命令的实现方法)
 - [有序集合命令的实现方法](./QA.md#有序集合命令的实现方法)
+- redis.conf
+- 慢查询
 
 ### Linux
 
