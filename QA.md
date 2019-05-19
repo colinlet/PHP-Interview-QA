@@ -1507,6 +1507,8 @@ MySQL 单表容量在`500万`左右，性能处于最佳状态，此时，MySQL 
 
 ## Redis
 
+### Redis 介绍
+
 Redis 是一个高性能的 key-value 数据库。每秒可执行操作高达 10万+ QPS
 
 ### Redis 特点
