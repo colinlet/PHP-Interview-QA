@@ -1964,13 +1964,29 @@ include、require、include_once、require_once，使用这4个函数包含文�
 
 危险函数`exec`、`shell_exec`、`system`可以直接执行系统命令。`eval`函数可以执行 PHP 代码
 
-### IP 地址能被伪造吗
+### 伪随机数和真随机数
 
-### md5 逆向原理
+#### 伪随机数
 
-### 数据库存储用户密码时，应该是怎么做才安全
+通过一些数学算法生成的随机数，并非真正的随机数
 
-### 了解 Hash 与 Encrypt 区别
+#### 真随机数
+
+通过一些物理系统生成的随机数
+
+#### 安全随机数
+
+- Linux
+
+使用 /dev/random 或者 /dev/urandom 来生成随机数，只需读取即可
+
+- PHP
+
+若是支持 openSSL 扩展，可以直接使用函数来生成随机数
+
+```php
+openssl_random_pseudo_bytes ( int $length [, bool &$crypto_strong ] ) : string
+```
 
 ## 设计模式篇
 
