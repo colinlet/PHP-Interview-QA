@@ -2205,9 +2205,11 @@ LVS集群采用 IP 负载均衡技术和基于内容请求分发技术。调度�
 
 ![LVS集群的体系结构](./assets/10-架构/lvs-architecture.jpg)
 
-- 负载调度器（load balancer），它是整个集群对外面的前端机，负责将客户的请求发送到一组服务器上执行，而客户认为服务是来自一个IP地址（我们可称之为虚拟IP地址）上的。
-- 服务器池（server pool），是一组真正执行客户请求的服务器，执行的服务有WEB、MAIL、FTP和DNS等。
+- 负载调度器（load balancer），它是整个集群对外面的前端机，负责将客户的请求发送到一组服务器上执行，而客户认为服务是来自一个IP地址（我们可称之为虚拟IP地址）上的
+- 服务器池（server pool），是一组真正执行客户请求的服务器，执行的服务有WEB、MAIL、FTP和DNS等
 - 共享存储（shared storage），它为服务器池提供一个共享的存储区，这样很容易使得服务器池拥有相同的内容，提供相同的服务
+
+![基于LVS的Web集群](./assets/10-架构/lvs-web-cluster.jpg)
 
 ### Ngnix
 
