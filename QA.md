@@ -176,6 +176,7 @@ HTTP 报文组成部分
 |406|Not Acceptable|无可接受实体||
 |408|Request Timeout|完成请求耗时太长服务器关闭连接||
 |409|Conflict|请求可能在资源上引发冲突||
+|413|Request entiry too large|请求实体过大|
 |500|Internal Server Error|服务器遇到错误|***|
 |501|Not Implemented|请求超过服务器的能力范围||
 |502|Bad Gateway|代理或网关错误(无法连接到其父网关)|***|
@@ -2192,6 +2193,22 @@ JSON Web Token 是一种跨域认证解决方案
 
 ![PHP业务架构图](./assets/10-架构/PHP业务架构图.jpg)
 
+### LVS
+
+#### LVS 介绍
+
+Linux 虚拟服务器(Linux Virtual Server，LVS)是一个虚拟的服务器集群系统，用于实现负载均衡
+
+LVS集群采用 IP 负载均衡技术和基于内容请求分发技术。调度器具有很好的吞吐率，将请求均衡地转移到不同的服务器上执行，且调度器自动屏蔽掉服 务器的故障，从而将一组服务器构成一个高性能的、高可用的虚拟服务器。整个服务器集群的结构对客户是透明的，而且无需修改客户端和服务器端的程序
+
+#### LVS 体系结构
+
+![LVS集群的体系结构](./assets/10-架构/lvs-architecture.jpg)
+
+- 负载调度器（load balancer），它是整个集群对外面的前端机，负责将客户的请求发送到一组服务器上执行，而客户认为服务是来自一个IP地址（我们可称之为虚拟IP地址）上的。
+- 服务器池（server pool），是一组真正执行客户请求的服务器，执行的服务有WEB、MAIL、FTP和DNS等。
+- 共享存储（shared storage），它为服务器池提供一个共享的存储区，这样很容易使得服务器池拥有相同的内容，提供相同的服务
+
 ### Ngnix
 
 Nginx 是异步架构的 Web 服务器，也可以用作反向代理、负载均衡器和 HTTP 缓存
@@ -2212,9 +2229,95 @@ Apache 有许多优点，如稳定、开源、跨平台，但它出现的时间�
 
 #### Nginx 配置
 
-反向代理
+- 基本配置
 
-### 负载均衡
+|配置项|默认|用途|
+|-|-|-|
+|daemon on\|off;|on|是否以守护进程方式运行 Nginx|
+|master_process on\|off;|on|是否以 master/worker 方式工作|
+|error_log /path/file level;|logs/error.log error;|error 日志的设置|
+|include /path/file;||嵌入其他配置文件|
+|pid path/file|logs/nginx.pid|pid 文件的路径|
+|user username [groupname];|nobody nobody|Nginx worker 进程运行的用户及用户组|
+|worker_processes number;|4|Nginx worker 进程个数|
+|worker_connections number;||每个 worker 的最大连接数|
+|worker_cpu_affinity cpumask [cpumask...]|1000 0100 0010 0001;|绑定 Nginx worker 进程到指定的 CPU 内核|
+|accept_mutex on\|off;|on|是否打开 accept 锁|
+|accept_mutex_delay Nms;|500ms|再次获取锁延迟时间|
+
+- Web 服务器配置
+
+配置块：http 块、server 块、location 块、upstream 块
+
+|配置项|默认|用途|配置块|
+|-|-|-|
+|listen 80;||监听端口|server|
+|server_name name;|""|主机名称|server|
+|root path;|html|以 root 方式设置资源路径|http、server、location|
+|index file ...;|index index.html|访问首页|http、server、location|
+|error_page 404 /404.html||根据 HTTP 返回码重定向页面|http、server、location|
+|try_files path1 [path2] uri;||try_files|server、location|
+|location [=\|~\|~*\|^~\|@]/uri/{...}|location|server|
+
+> location 参数说明：`=`表示完全匹配、`~`表示字母大小写敏感、`~*`表示忽略字母大小写、`^~`表示只需匹配前半部分、`@`表示 Nginx 服务内部之间重定向；参数支持正则表达式
+
+```nginx
+location ~* \.(gif|jpg|jepg)$ {
+    # 匹配以 .gif、.jpg、.jpeg 结尾的请求
+}
+```
+
+- 网络连接配置
+
+|配置项|默认|用途|配置块|
+|-|-|-|-|
+|client_header_timeout time;|60|读取 HTTP 头部的超时时间|http、server、location|
+|client_body_timeout time;|60|读取 HTTP 包体的超时时间|http、server、location|
+|send_timeout time;|60|发送响应的超时时间|http、server、location|
+|lingering_close off\|on\|always;|on|该配置控制 Nginx 关闭用户连接的方式|http、server、location|
+|lingering_time time;|30s|lingering_time|http、server、location|
+
+- 客户端请求配置
+
+|配置项|默认|用途|配置块|
+|-|-|-|-|
+|limit_except method ...{...}||按 HTTP 方法名限制用户请求|location|
+|client_max_body_size size;|1m|HTTP 请求包体的最大值|http、server、location|
+|limit_rate speed;|0|对请求的限速|http、server、location|
+|limit_rate_after time;|1m|发送响应长度超过1m后限速|http、server、location|
+
+#### 反向代理
+
+反向代理(reverse proxy)方式是指代理服务器来接受 Internet 上的连接请求，然后将请求转发给内部网络中的上游服务器，并将从上游服务器上得到的结果返回给 Internet 上请求连接的客户端，此时代理服务器对外的表现就是一个 Web 服务器
+
+> 反向代理服务器必须能够处理大量并发请求
+
+- Nginx 反向代理
+
+![反向代理](./assets/10-架构/reverse-proxy.png)
+
+当客户端发来 HTTP 请求时，Nginx 并不会立即转发到上游服务器，而是先把用户的请求(包括 HTTP 包体)完整地接受到 Nginx 所在服务器的硬盘或者内存中，然后再向上游服务器发起连接，把缓存的客户端请求转发到上游服务器
+
+缺点是延长了请求的处理时间，并增加了用于缓存请求内容的内存和磁盘空间。优点则是降低了上游服务器的负载，尽量把压力放在了 Nginx 服务器上
+
+- 反向代理配置
+
+```nginx
+upstream backend {
+    ip_hash; #保持相同 IP 用户落点一致
+    server backend1.example.com;
+    server backend2.example.com;
+    server backend3.example.com down; #机器暂时不可用
+}
+```
+
+```nginx
+server {
+    location / {
+        proxy_pass http://backend;
+    }
+}
+```
 
 ### 一致性哈希
 
