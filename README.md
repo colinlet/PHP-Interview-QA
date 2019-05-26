@@ -16,7 +16,7 @@
 
 ## 微信群
 
-扫码加微信，备注：Github
+扫码加微信，备注：PIQA
 
 <p align="left"><img width="320" src="./docs/wechat.jpg" alt="wechat"></a></p>
 
