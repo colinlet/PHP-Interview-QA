@@ -4,7 +4,7 @@
 
 网络、数据结构与算法、PHP、Web、MySQL、Redis、Linux、安全、设计模式、架构、面试等部分
 
-> 本仓库将持续更新，建议 Watch 或 Star，不建议 fork~~
+> 本仓库将持续更新，fork 无法看到最新内容，建议 Watch 或 Star ~~
 
 ## 面试流程
 
@@ -249,4 +249,6 @@
 
 欢迎转载，转载请标明来源出处，谢谢~~
 
-作者：凌枫 Email：colinlets@gmail.com 链接：https://github.com/colinlet/PHP-Interview-QA
+作者：凌枫 Email：colinlets@gmail.com
+
+链接：https://github.com/colinlet/PHP-Interview-QA
