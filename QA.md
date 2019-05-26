@@ -2414,20 +2414,17 @@ RabbitMQ、ActiveMq、Nsq、kafka、zookeeper
 
 ### 服务降级
 
-### 了解常用语言特性，及不同场景适用性。
+### 语言对比
 
-PHP VS Golang
+PHP VS Java
 PHP VS Python
-PHP VS JAVA
+PHP VS Golang
 
-## 业务相关篇
+## 业务篇
 
-> 做了很多活动，经验总结？
-> 重点介绍一个项目，分工，职责？
+重点介绍一个项目，分工，职责
 
-> https://img.qq52o.me/wp-content/uploads/2017/10/2017102909352282.png
-
-## 其他
+## 非技术篇
 
 ### Git 与 SVN 区别
 ### Git 基本使用
@@ -2436,19 +2433,13 @@ PHP VS JAVA
 ## 面试篇
 
 ### 个人简历
+
 ### 自我介绍
+
 ### 离职原因
+
 ### 职业规划
+
 ### 准备问题
+
 ### 劳动合同
-
-> https://github.com/xianyunyh/PHP-Interview/blob/master/%E9%9D%A2%E8%AF%95/README.md
-
-
-- 整体知识结构
-
-- 关键问题列表
-
-- 深入剖析原理
-
-- 初级、中级、高级
