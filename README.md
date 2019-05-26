@@ -4,6 +4,8 @@
 
 网络、数据结构与算法、PHP、Web、MySQL、Redis、Linux、安全、设计模式、架构、面试等部分
 
+> 本仓库将持续更新，建议 Watch 或 Star，不建议 fork~~
+
 ## 面试流程
 
 ![面试流程](./docs/interview.png)
@@ -12,9 +14,11 @@
 
 ![skill tree](./docs/skill-tree.png)
 
-## 交流讨论组
+## 微信群
 
-<p align="left"><img width="320" src="./docs/wechat-groups.jpg" alt="wechat groups"></a></p>
+扫码加微信，备注：Github
+
+<p align="left"><img width="320" src="./docs/wechat.jpg" alt="wechat"></a></p>
 
 ## 问题列表
 
@@ -240,6 +244,7 @@
 ## 参考
 
 [术语对照表](./docs/术语对照表.md)：顾名思义，帮助联想知识点
+
 [参考资料](./docs/参考资料.md)：站在巨人的肩膀上，你将能看的更远
 
 ## 声明
