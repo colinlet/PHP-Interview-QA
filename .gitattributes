@@ -1,1 +1,3 @@
-*.md linguist-language=php
+*.md linguist-language=PHP
+*.jpg linguist-language=PHP
+*.png linguist-language=PHP
