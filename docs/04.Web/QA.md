@@ -18,19 +18,19 @@
 
 提高网站速度：网站速度是搜索引擎排序的一个重要指标
 
-拓展阅读[《初探 SEO》](./04.Web/01.初探SEO.md)
+拓展阅读[《初探 SEO》](./01.初探SEO.md)
 
 ### img 标签的 title 和 alt 有什么区别
 
 title 属性规定关于元素的额外信息，这些信息通常会在鼠标移到元素上时显示一段提示文本
 
-alt 是<img\>标签的特有属性，是图片内容的等价描述。图片无法加载时显示。搜索引擎会重点分析
+alt 是`<img>`标签的特有属性，是图片内容的等价描述。图片无法加载时显示。搜索引擎会重点分析
 
 ### CSS 选择器的分类
 
 ![CSS选择器](./assets/web-css-CSS选择器.png)
 
-拓展阅读[《CSS选择器的分类》](./04.Web/02.CSS选择器的分类.md)
+拓展阅读[《CSS选择器的分类》](./02.CSS选择器的分类.md)
 
 ### CSS sprite 是什么，有什么优缺点
 
@@ -50,7 +50,7 @@ alt 是<img\>标签的特有属性，是图片内容的等价描述。图片无�
 
 维护麻烦，修改一个图片可能需要从新布局整个图片，样式
 
-拓展阅读[《雪碧图CSS Sprite的应用》](./04.Web/03.CSS-Sprite的应用.md)
+拓展阅读[《雪碧图CSS Sprite的应用》](./03.CSS-Sprite的应用.md)
 
 ### display: none 与 visibility: hidden 的区别
 
@@ -126,7 +126,7 @@ link 可以通过 rel="alternate stylesheet"指定候选样式
 
 具备属性：内容(content)、填充(padding)、边框(border)、边界(margin)
 
-拓展阅读[《CSS盒模型》](./04.Web/04.CSS盒模型.md)
+拓展阅读[《CSS盒模型》](./04.CSS盒模型.md)
 
 ### 容器包含若干浮动元素时如何清理(包含)浮动
 
@@ -163,7 +163,7 @@ link 可以通过 rel="alternate stylesheet"指定候选样式
 
 不定宽块状使用 float:left 实现居中
 
-拓展阅读[《CSS 水平居中设置》](./04.Web/05.CSS水平居中设置.md)
+拓展阅读[《CSS 水平居中设置》](./05.CSS水平居中设置.md)
 
 ### 如何竖直居中一个元素
 
@@ -171,7 +171,7 @@ link 可以通过 rel="alternate stylesheet"指定候选样式
 
 父元素高度确定的多行文本
 
-拓展阅读[《CSS 垂直居中设置》](./04.Web/06.CSS垂直居中设置.md)
+拓展阅读[《CSS 垂直居中设置》](./06.CSS垂直居中设置.md)
 
 ### flex 与 CSS 盒子模型有什么区别
 
@@ -179,7 +179,7 @@ link 可以通过 rel="alternate stylesheet"指定候选样式
 
 Flex 布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能
 
-拓展阅读 [《flex 布局的基本概念》](./04.Web/07.flex布局的基本概念.md)
+拓展阅读 [《flex 布局的基本概念》](./07.flex布局的基本概念.md)
 
 ### Position 属性
 
@@ -191,7 +191,7 @@ Flex 布局，可以简便、完整、响应式地实现各种页面布局。目
 |static|默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）|
 |inherit|规定应该从父元素继承 position 属性的值|
 
-拓展阅读 [《CSS Position学习》](./04.Web/08.CSS-Position学习.md)
+拓展阅读 [《CSS Position学习》](./08.CSS-Position学习.md)
 
 ### PNG,GIF,JPG 的区别及如何选
 
@@ -211,19 +211,19 @@ Flex 布局，可以简便、完整、响应式地实现各种页面布局。目
 
 脚本会阻塞页面其他资源的下载，因此推荐将所有`<script>`标签尽可能放到`<body>`标签的底部，以尽量减少对整个页面下载的影响
 
-拓展阅读 [《JavaScript 的性能优化：加载和执行》](./04.Web/09.JavaScript的性能优化-加载和执行.md)
+拓展阅读 [《JavaScript 的性能优化：加载和执行》](./09.JavaScript的性能优化-加载和执行.md)
 
 ### JavaScript 数据类型
 
 ![JavaScript 数据类型](./assets/web-javascript-数据类型.png)
 
-拓展阅读 [《JavaScript 数据类型和数据结构》](./04.Web/10.JavaScript数据类型和数据结构.md)
+拓展阅读 [《JavaScript 数据类型和数据结构》](./10.JavaScript数据类型和数据结构.md)
 
 ### JavaScript 操作 DOM 的方法有哪些
 
 获取节点的方法getElementById、getElementsByClassName、getElementsByTagName、 getElementsByName、querySelector、querySelectorAll,对元素属性进行操作的 getAttribute、 setAttribute、removeAttribute方法，对节点进行增删改的appendChild、insertBefore、replaceChild、removeChild、 createElement等
 
-拓展阅读 [《JavaScript操作DOM常用的API》](./04.Web/11.JavaScript操作DOM常用的API.md)
+拓展阅读 [《JavaScript操作DOM常用的API》](./11.JavaScript操作DOM常用的API.md)
 
 ### JavaScript 字符串方法有哪些
 
@@ -268,7 +268,7 @@ xhr.onreadystatechange = function() {
 
 同源策略是指只有具有相同源的页面才能够共享数据，比如cookie，同源是指页面具有相同的协议、域名、端口号，有一项不同就不是同源。 有同源策略能够保证web网页的安全性
 
-拓展阅读 [《浏览器的同源策略》](./04.Web/12.浏览器的同源策略.md)
+拓展阅读 [《浏览器的同源策略》](./12.浏览器的同源策略.md)
 
 ### 如何解决跨域问题
 
@@ -282,7 +282,7 @@ xhr.onreadystatechange = function() {
 - nodejs 中间件代理跨域
 - WebSocket 协议跨域
 
-拓展阅读 [《前端常见跨域解决方案》](./04.Web/13.前端常见跨域解决方案.md)
+拓展阅读 [《前端常见跨域解决方案》](./13.前端常见跨域解决方案.md)
 
 ### 引起内存泄漏的操作有哪些
 
@@ -306,7 +306,7 @@ xhr.onreadystatechange = function() {
 
 - 模拟私有方法，用于定义公共函数
 
-拓展阅读 [《JavaScript闭包》](./04.Web/14.JavaScript闭包.md)
+拓展阅读 [《JavaScript闭包》](./14.JavaScript闭包.md)
 
 ### 对 JavaScript 原型的理解
 
@@ -328,7 +328,7 @@ xhr.onreadystatechange = function() {
 
 创建一个回调函数，然后在远程服务上调用这个函数并且将 JSON 数据形式作为参数传递，完成回调
 
-拓展阅读 [《jsonp的原理与简单实现》](./04.Web/15.jsonp的原理与简单实现.md)
+拓展阅读 [《jsonp的原理与简单实现》](./15.jsonp的原理与简单实现.md)
 
 ### Cookie 读写
 
@@ -369,7 +369,7 @@ alert(myCookie);
 
 ### Vue.js 双向绑定原理
 
-拓展阅读 [《vue的双向绑定原理及实现》](./04.Web/16.vue的双向绑定原理及实现.md)
+拓展阅读 [《vue的双向绑定原理及实现》](./16.vue的双向绑定原理及实现.md)
 
 ### 如何进行网站性能优化
 
