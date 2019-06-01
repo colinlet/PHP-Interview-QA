@@ -176,7 +176,7 @@ HTTP 报文组成部分
 |406|Not Acceptable|无可接受实体||
 |408|Request Timeout|完成请求耗时太长服务器关闭连接||
 |409|Conflict|请求可能在资源上引发冲突||
-|413|Request entiry too large|请求实体过大|
+|413|Request entiry too large|请求实体过大|*|
 |500|Internal Server Error|服务器遇到错误|***|
 |501|Not Implemented|请求超过服务器的能力范围||
 |502|Bad Gateway|代理或网关错误(无法连接到其父网关)|***|

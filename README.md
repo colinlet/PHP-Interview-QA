@@ -2,7 +2,7 @@
 
 结合实际PHP面试，汇总自己遇到的问题，以及网上其他人遇到的问题，尝试提供简洁准确的答案
 
-网络、数据结构与算法、PHP、Web、MySQL、Redis、Linux、安全、设计模式、架构、面试等部分
+包含网络、数据结构与算法、PHP、Web、MySQL、Redis、Linux、安全、设计模式、架构、面试等部分
 
 > 本仓库将持续更新，fork 无法看到最新内容，建议 Watch 或 Star ~~
 
@@ -68,7 +68,9 @@
 - [客户端/服务端 IP 获取，了解代理透传 实际IP 的概念](./docs/03.PHP/QA.md#客户端服务端-ip-获取了解代理透传-实际ip-的概念)
 - [类的静态调用和实例化调用](./docs/03.PHP/QA.md#类的静态调用和实例化调用)
 - [PHP 不实例化调用方法](./docs/03.PHP/QA.md#php-不实例化调用方法)
-- [php.ini 配置选项，ini_set 动态设置](./docs/03.PHP/QA.md#phpini-配置选项ini_set-动态设置)
+- [php.ini 配置选项](./docs/03.PHP/QA.md#phpini-配置选项)
+- [php-fpm.conf 配置](./docs/03.PHP/QA.md#php-fpmconf-配置)
+- [502、504 错误产生原因及解决方式](./docs/03.PHP/QA.md#502504-错误产生原因及解决方式)
 - [如何返回一个301重定向](./docs/03.PHP/QA.md#如何返回一个301重定向)
 - [PHP 与 MySQL 连接方式](./docs/03.PHP/QA.md#php-与-mysql-连接方式)
 - [MySQL、MySQLi、PDO 区别](./docs/03.PHP/QA.md#mysqlmysqlipdo-区别)
