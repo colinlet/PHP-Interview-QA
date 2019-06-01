@@ -56,7 +56,7 @@ INSERT、SELECT、UPDATE、DELETE
 ### char 和 varchar 数据类型区别
 
 - char：擅于存储经常改变的值，或者长度相对固定的值。比如 type、ip 地址或 md5 之类的数据，不容易产生碎片
-- varchar：善于存储值的长短不一的列，也是用的最多的一种类型，节省磁盘空间 保存可变长度字符串。这也是 innodb 官方推荐的类型
+- varchar：善于存储值的长短不一的列，也是用的最多的一种类型，节省磁盘空间，保存可变长度字符串。这也是 innodb 官方推荐的类型
 
 ### LEFT JOIN 、RIGHT JOIN、INNER JOIN
 
@@ -195,7 +195,7 @@ MySQL 默认采用自动提交(AUTOCOMMIT)模式，每个查询都当作一个�
 
 #### 索引分类
 
-![索引分类](./assets/05-mysql/index.png)
+![索引分类](./assets/index.png)
 
 #### 索引创建
 
