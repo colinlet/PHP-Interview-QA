@@ -36,7 +36,7 @@
 - [常见的 HTTP 方法](./docs/01.网络/QA.md#常见的-http-方法)
 - [HTTP 优缺点](./docs/01.网络/QA.md#http-优缺点)
 - [HTTPS 通信原理](./docs/01.网络/QA.md#https-通信原理)
-- [HTTP 2.0](./docs/01.网络/QA.md#http-2.0)
+- [HTTP 2.0](./docs/01.网络/QA.md#http-20)
 - WebSocket
 - [IPv6 与 IPv4 有什么变化](./docs/01.网络/QA.md#ipv6-与-ipv4-有什么变化)
 - [什么是心跳机制](./docs/01.网络/QA.md#什么是心跳机制)
