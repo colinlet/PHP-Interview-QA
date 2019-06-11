@@ -152,33 +152,17 @@ HTTP 报文组成部分
 
 |状态码|原因短语|含义|考察概率|
 |-|-|-|-|
-|100|Continue|收到了请求的初始部分，请客户端继续||
-|101|Switching Protocols|正在将协议切换成客户端指定协议||
 |200|OK|请求没有问题|***|
-|201|Created|用于创建服务器对象的请求||
-|202|Accepted|请求已接收，服务器还未执行操作||
-|203|Non-Authoritative Information|实体首部包含信息来自资源副本||
-|204|No Content|响应报文中没有实体的主体部分||
-|205|Reset Content|告知浏览器清除 HTML 表单元素||
 |206|Partial Content|部分或 Range(范围) 请求|*|
-|300|Multiple Choices|请求指向多个资源的链接||
 |301|Moved Permanently|在请求的链接被移除时使用|**|
 |302|Found|在请求临时的链接使用|**|
-|303|See Other|告知使用另外一个链接来获取资源||
 |304|Not Modified|资源未被修改可使用旧资源|**|
-|305|Use Proxy|必须使用代理来访问资源||
 |307|Temporary Redirect|在请求临时的链接使用|**|
 |400|Bad Request|告知客户端发送了错误请求|***|
-|401|Unauthorized|获取资源许先进行认证||
 |403|Forbidden|请求被服务器拒绝|***|
 |404|Not Found|无法找到所请求的 URL|***|
-|405|Method Not Allowed|不支持该请求方法||
-|406|Not Acceptable|无可接受实体||
-|408|Request Timeout|完成请求耗时太长服务器关闭连接||
-|409|Conflict|请求可能在资源上引发冲突||
 |413|Request entiry too large|请求实体过大|*|
 |500|Internal Server Error|服务器遇到错误|***|
-|501|Not Implemented|请求超过服务器的能力范围||
 |502|Bad Gateway|代理或网关错误(无法连接到其父网关)|***|
 |503|Service Unavailable|无法为请求提供服务|***|
 |504|Gateway Timeout|代理或网关超时(等待另一服务器响应超时)|***|
