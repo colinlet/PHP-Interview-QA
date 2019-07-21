@@ -16,14 +16,13 @@
 
 ## 面试流程
 
-![面试流程](./docs/interview.png)
+![面试流程](./docs/assets/interview.png)
 
 ## 微信群
 
 扫码加微信，备注：`PIQA`，有时候可能在忙，稍等片刻
 
-<p align="left"><img width="320" src="./docs/wechat.jpg" alt="wechat"></a></p>
-
+<p align="left"><img width="320" src="./docs/assets/wechat.jpg" alt="wechat"></a></p>
 ## 问题列表
 
 ### 网络篇
