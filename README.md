@@ -18,10 +18,6 @@
 
 ![面试流程](./docs/assets/interview.png)
 
-## 微信公众号
-
-<p align="left"><img width="320" src="https://siiwoo.oss-cn-hangzhou.aliyuncs.com/blog/gzh.jpg" alt="wechat"></a></p>
-
 ## 问题列表
 
 ### 网络篇
