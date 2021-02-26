@@ -77,6 +77,7 @@
 - [public、protected、private、final 区别](./docs/03.PHP/QA.md#publicprotectedprivatefinal-区别)
 - [客户端/服务端 IP 获取，了解代理透传 实际IP 的概念](./docs/03.PHP/QA.md#客户端服务端-ip-获取了解代理透传-实际ip-的概念)
 - [类的静态调用和实例化调用](./docs/03.PHP/QA.md#类的静态调用和实例化调用)
+- [接口类和抽象类的区别](./docs/03.PHP/QA.md#接口类和抽象类的区别)
 - [PHP 不实例化调用方法](./docs/03.PHP/QA.md#php-不实例化调用方法)
 - [php.ini 配置选项](./docs/03.PHP/QA.md#phpini-配置选项)
 - [php-fpm.conf 配置](./docs/03.PHP/QA.md#php-fpmconf-配置)
@@ -91,6 +92,11 @@
 - [MVC 的理解](./docs/03.PHP/QA.md#mvc-的理解)
 - [主流 PHP 框架特点](./docs/03.PHP/QA.md#主流-php-框架特点)
 - [对象关系映射/ORM](./docs/03.PHP/QA.md#对象关系映射orm)
+- [串行、并行、并发的区别](./docs/03.PHP/QA.md#串行、并行、并发的区别)
+- [同步与异步的理解](./docs/03.PHP/QA.md#同步与异步的理解)
+- [阻塞与非阻塞的理解](./docs/03.PHP/QA.md#阻塞与非阻塞的理解)
+- [同步阻塞与非同步阻塞的理解](./docs/03.PHP/QA.md#同步阻塞与非同步阻塞的理解)
+- [异步阻塞与异步非阻塞的理解](./docs/03.PHP/QA.md#异步阻塞与异步非阻塞的理解)
 
 ### Web 篇
 
