@@ -520,7 +520,13 @@ $ phpize $ ./configure $ make && make install
 
 ### yield 是什么，说个使用场景 yield、yield 核心原理是什么
 
-一个生成器函数看起来像一个普通的函数，不同的是普通函数返回一个值，而一个生成器可以yield生成许多它所需要的值
+一个生成器函数看起来像一个普通的函数，不同的是普通函数返回一个值，而一个生成器可以yield生成许多它所需要的值。
+
+yield核心原理: PHP在使用生成器的时候，会返回一个Generator类的对象。每一次迭代，PHP会通过Generator实例计算出下一次需要迭代的值。简述即yield用于生成值。
+
+yield使用场景：读取大文件、大量计算。
+
+yield好处：节省内存、优化性能
 
 ### traits 与 interfaces 区别 及 traits 解决了什么痛点
 
@@ -549,6 +555,14 @@ task进程处理work进程投递的任务
 manager进程用于管理work进程和task进程
 
 ### PHP 数组底层实现 （HashTable + Linked list）
+
+PHP 数组底层依赖的散列表数据结构，定义如下（位于 Zend/zend_types.h）。
+
+数据存储在一个散列表中，通过中间层来保存索引与实际存储在散列表中位置的映射。
+
+由于哈希函数会存在哈希冲突的可能，因此对冲突的值采用链表来保存。
+
+哈希表的查询效率是o（1），链表查询效率是o（n）；因此PHP数据索引速度很快；但是相对比较占用空间。
 
 ### Copy on write 原理，何时 GC
 
