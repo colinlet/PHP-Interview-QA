@@ -598,3 +598,7 @@ WINDOWS自带的记事本，在保存一个以 UTF-8 编码的文件时，会在
 去除方法：$result = trim($result, "\xEF\xBB\xBF");
 
 ### 模板引擎是什么，解决什么问题、实现原理（Smarty、Twig、Blade）
+
+
+### 写一个函数，尽可能高效的从一个标准 URL 中取出文件的扩展名
+parse_str,explode
