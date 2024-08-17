@@ -93,7 +93,10 @@ mysql/redis/es/kafka
 #### 5、设计模式
 创建/结构/行为
 #### 6、服务器
-linux/ecs/容器
+- [计算机体系结构](./docs/计算机体系结构.md)
+- linux 
+- ecs
+- 容器
 #### 7、前端
 安卓/ios/小程序/web
 #### 8、架构
@@ -130,3 +133,5 @@ speeding up software development and deployment.
 #### 招聘数据
 
 #### 面试别人
+
+## 参考资料
