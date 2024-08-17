@@ -25,7 +25,13 @@
 
 ## 指南体系
 
-附一张无边际手绘图
+### 成长三角定律
+![成长三角定律](./assets/指南体系-三角定律.png)
+
+### 知识模版
+
+### roadmaps
+
 backend engineer roadmaps
 
 ## 序言
