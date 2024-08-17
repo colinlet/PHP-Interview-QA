@@ -81,7 +81,10 @@ backend engineer roadmaps
 ### 第一部分: 庶民之剑-技术篇
 
 #### 1、编程语言
-java/php/go
+- [编程语言简介](./docs/编程语言简介.md)
+- [java](./docs/java.md)
+- [php](./docs/php.md)
+- [go](./docs/go.md)
 #### 2、存储
 mysql/redis/es/kafka
 #### 3、网络
