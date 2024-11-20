@@ -26,7 +26,7 @@
 - HR面
 - offer
 
-## 二、问题列表
+## 二、问答列表
 
 问题和内容分级
 
@@ -101,6 +101,7 @@
 - [EXPLAIN 输出格式](./docs/05.MySQL/QA.md#explain-输出格式)
 - my.cnf 配置
 - 慢查询
+- [一条SQL查询语句是如何执行的](./docs/存储/一条SQL查询语句是如何执行的.md)
 - [Redis 介绍](./docs/06.Redis/QA.md#redis-介绍)
 - [Redis 特点](./docs/06.Redis/QA.md#redis-特点)
 - [Redis 支持哪些数据结构](./docs/06.Redis/QA.md#redis-支持哪些数据结构)
