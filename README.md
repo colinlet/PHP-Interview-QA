@@ -80,6 +80,7 @@
 - [阻塞与非阻塞的理解](./docs/03.PHP/QA.md#阻塞与非阻塞的理解)
 - [同步阻塞与非同步阻塞的理解](./docs/03.PHP/QA.md#同步阻塞与非同步阻塞的理解)
 - [异步阻塞与异步非阻塞的理解](./docs/03.PHP/QA.md#异步阻塞与异步非阻塞的理解)
+- [一条echo输出语句是如何执行的](./docs/php/一条echo输出语句是如何执行的.md)
 
 ### 2、存储篇
 
@@ -102,6 +103,7 @@
 - my.cnf 配置
 - 慢查询
 - [一条SQL查询语句是如何执行的](./docs/存储/一条SQL查询语句是如何执行的.md)
+- [一条SQL更新语句是如何执行的](./docs/存储/一条SQL更新语句是如何执行的.md)
 - [Redis 介绍](./docs/06.Redis/QA.md#redis-介绍)
 - [Redis 特点](./docs/06.Redis/QA.md#redis-特点)
 - [Redis 支持哪些数据结构](./docs/06.Redis/QA.md#redis-支持哪些数据结构)
