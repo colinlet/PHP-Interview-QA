@@ -86,8 +86,6 @@
 - [同步与异步的理解](./docs/03.PHP/QA.md#同步与异步的理解)
 - [阻塞与非阻塞的理解](./docs/03.PHP/QA.md#阻塞与非阻塞的理解)
 - [同步阻塞与非同步阻塞的理解](./docs/03.PHP/QA.md#同步阻塞与非同步阻塞的理解)
-
-
 - [一条echo输出语句是如何执行的](./docs/php/一条echo输出语句是如何执行的.md)
 - [FastCGI Process Manager](./docs/php/FastCGI Process Manager.md)
 - [php支持哪些注释风格](./docs/php/php支持哪些注释风格.md)
@@ -112,8 +110,6 @@
 - [EXPLAIN 输出格式](./docs/05.MySQL/QA.md#explain-输出格式)
 - my.cnf 配置
 - 慢查询
-
-
 - [一条SQL查询语句是如何执行的](./docs/存储/一条SQL查询语句是如何执行的.md)
 - [一条SQL更新语句是如何执行的](./docs/存储/一条SQL更新语句是如何执行的.md)
 - [事务隔离：为什么你改了我还看不见？](./docs/存储/事务隔离-为什么你改了我还看不见.md)
@@ -142,7 +138,6 @@
 - [主库出问题了，从库怎么办](./docs/存储/主库出问题了，从库怎么办.md)
 - [读写分离有哪些坑](./docs/存储/读写分离有哪些坑.md)
 - [如何判断一个数据库是不是出问题了](./docs/存储/如何判断一个数据库是不是出问题了.md)
-
 - [Redis 介绍](./docs/06.Redis/QA.md#redis-介绍)
 - [Redis 特点](./docs/06.Redis/QA.md#redis-特点)
 - [Redis 支持哪些数据结构](./docs/06.Redis/QA.md#redis-支持哪些数据结构)
