@@ -87,7 +87,7 @@
 - [阻塞与非阻塞的理解](./docs/03.PHP/QA.md#阻塞与非阻塞的理解)
 - [同步阻塞与非同步阻塞的理解](./docs/03.PHP/QA.md#同步阻塞与非同步阻塞的理解)
 - [一条echo输出语句是如何执行的](./docs/php/一条echo输出语句是如何执行的.md)
-- [FastCGI Process Manager](./docs/php/FastCGI Process Manager.md)
+- [FastCGI Process Manager](./docs/php/FastCGI-Process-Manager.md)
 - [php支持哪些注释风格](./docs/php/php支持哪些注释风格.md)
 
 ### 2、存储篇
