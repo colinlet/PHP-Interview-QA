@@ -4,6 +4,7 @@
 
 - [编程语言基础](./docs/php/编程语言简介.md)
 - [当下最流行的PHP本地环境搭建方式](./docs/php/当下最流行的PHP本地环境搭建方式.md)
+- [将变量打印出来，你知道哪些方式](./docs/php/将变量打印出来你知道哪些方式.md)
 
 结合实际PHP面试，汇总自己遇到的问题，以及网上其他人遇到的问题，尝试提供简洁准确的答案
 
@@ -58,7 +59,6 @@
 
 ### 1、PHP篇
 
-- [echo、print、print_r、var_dump 区别](./docs/03.PHP/QA.md#echoprintprint_rvar_dump-区别)
 - [单引号和双引号的区别](./docs/03.PHP/QA.md#单引号和双引号的区别)
 - [isset 和 empty 的区别](./docs/03.PHP/QA.md#isset-和-empty-的区别)
 - [static、self、$this 的区别](./docs/03.PHP/QA.md#staticselfthis-的区别)

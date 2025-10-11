@@ -2,20 +2,6 @@
 
 ## PHP 篇
 
-### echo、print、print_r、var_dump 区别
-
-> `echo`和`print`是语言结构、`print_r`和`var_dump`是普通函数
-
-- echo：输出一个或多个字符串
-
-- print：输出字符串
-
-- print_r：打印关于变量的易于理解的信息
-
-- var_dump：打印关于变量的易于理解的信息(带类型)
-
-拓展阅读 [《echo、print、print_r、var_dump区别》](./03.echo、print、print_r、var_dump区别.md)
-
 ### 单引号和双引号的区别
 
 双引号可以被分析器解析，单引号则不行
