@@ -63,7 +63,6 @@
 
 ### 1、PHP篇
 
-- [isset 和 empty 的区别](./docs/03.PHP/QA.md#isset-和-empty-的区别)
 - [static、self、$this 的区别](./docs/03.PHP/QA.md#staticselfthis-的区别)
 - [include、require、include_once、require_once 的区别](./docs/03.PHP/QA.md#includerequireinclude_oncerequire_once-的区别)
 - [数组处理函数](./docs/03.PHP/QA.md#常见数组函数)
