@@ -9,7 +9,7 @@
 - [【试读】将变量打印出来，你知道哪些方式](./docs/php/将变量打印出来你知道哪些方式.md)
 - [【试读】单引号和双引号的区别](./docs/php/单引号和双引号的区别.md)
 - [【试读】isset 和 empty 的区别之如何判空](./docs/php/isset和empty的区别之如何判空.md)
-- [【试读】composer 包升级】(./docs/php/composer 包升级.md)
+- [【试读】composer 包升级](./docs/php/composer包升级.md)
 
 ## 番外篇
 
